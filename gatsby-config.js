@@ -8,15 +8,41 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-mdx`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },  
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `works`,
+        path: `${__dirname}/works`,
+      },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-theme-i18n`,
+      options: {
+        defaultLang: `en`,
+        configPath: require.resolve(`./i18n/config.json`),
+      },
+    },
+    {
+      // Gatsby will automatically resolve from the 
+      // /plugins directory
+      resolve: `gatsby-theme-i18n-i18next-wrapper`,
+      options: {
+        // Provide the relative path to our translation files
+        // to our plugin
+        locales: `./i18n/l10n`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
