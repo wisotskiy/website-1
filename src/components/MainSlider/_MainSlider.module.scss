@@ -1,5 +1,19 @@
 .main-slider {
-    height: 800px;
+    max-height: 800px;
     overflow: hidden;
     top: -25%;
+    position: relative;
+
+    .hero-title {
+        position: absolute;
+        bottom: 10%;
+        left: 10vw;
+        background: #2c2c2c6b;      
+        padding: 30px;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
 }

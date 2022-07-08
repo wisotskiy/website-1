@@ -1,17 +1,29 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import * as styles from "./_MainSlider.module.scss"
+import { useTranslation } from "react-i18next"
+import { LocalizedLink } from "gatsby-theme-i18n"
+import * as style from "./_MainSlider.module.scss"
 
 const MainSlider = () => {
 
+    const { t } = useTranslation()
+
     return (
-        <div className={styles.mainSlider}>
+        <div className={style.mainSlider}>
             <StaticImage 
-                src="../../images/slider_1.jpg" 
+                src="../../images/mainSlider/slider_1.jpg" 
                 alt="slider"
                 layout="fullWidth"
                 placeholder="blurred"
-                 />
+            />
+            <div className={style.heroTitle}>
+                <h2>
+                    <LocalizedLink to="/">
+                        {t("slider_titles_1")}
+                    </LocalizedLink>
+                </h2>
+            </div>
+
         </div>
     )
 }

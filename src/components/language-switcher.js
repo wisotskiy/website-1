@@ -1,7 +1,8 @@
 import * as React from "react"
 import { navigate } from "gatsby"
 import { useLocalization } from "gatsby-theme-i18n"
-// …
+import Form from 'react-bootstrap/Form'
+
 function LanguageSwitcher() {
   const { locale, defaultLang, config } = useLocalization()
   const switchLanguage = e => {
@@ -20,16 +21,19 @@ function LanguageSwitcher() {
   }
   return (
     <div>
-      <select
+      <Form.Select value={locale}
+        onChange={switchLanguage}>
+{/*       <select
         value={locale}
         onChange={switchLanguage}
-      >
+      > */}
         {config.map(c => (
           <option key={c.code} value={c.code}>
             {c.localName} ({c.name})
           </option>
         ))}
-      </select>
+      {/* </select> */}
+      </Form.Select>
     </div>
   )
 }
