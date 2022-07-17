@@ -9,29 +9,33 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import * as style from "../style/_style.module.scss"
 import me from "../images/me.jpg"
+import CarouselSlider from "../components/CarouselSlider/CarouselSlider"
 
 const IndexPage = ({ data }) => {
   const { t } = useTranslation()
-
   return (
     <Layout>
       <Seo title={t("home")} />
-
+      <CarouselSlider />
       <div className={style.container}>
         <h1 className={style.title}>{t("main_page_title")}</h1>
 
         <div className={style.about}>
           <img src={me}></img>
-          <p>{t("main_page_desc", { count: 3 })}</p>
+          <p className={style.aboutText}>{t("main_page_desc", { count: 3 })}</p>
         </div>
-      
-
-      {data.allMdx.nodes.map(post => {
-        const image = getImage(post.frontmatter.hero_image.image)
-
-        return <Teaser key={post.id} post={post} image={image} />
-      })}
       </div>
+
+      <div className={style.servicesList}>       
+        {data.allMdx.nodes.map(post => {
+          const image = getImage(post.frontmatter.hero_image.image)
+          return <div className={style.serviceItem} key={post.id}>
+            <div className={style.container}>
+              <Teaser post={post} image={image} />
+            </div>
+          </div>
+        })}       
+      </div>      
     </Layout>
   )
 }
@@ -47,7 +51,7 @@ export const query = graphql`
             image {
               childImageSharp {
                 gatsbyImageData(
-                  width: 150
+                  width: 300
                   placeholder: BLURRED
                   formats: [AUTO, WEBP, AVIF]
                 )
@@ -60,7 +64,7 @@ export const query = graphql`
           published_at
         }
         id
-        excerpt(pruneLength: 150, truncate: true)
+        excerpt(pruneLength: 170, truncate: true)
       }
     }
   }

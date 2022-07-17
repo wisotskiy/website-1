@@ -1,14 +1,12 @@
 import * as React from "react"
 import { Trans } from "react-i18next"
+import * as style from "../style/_style.module.scss"
 
 function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer
-      className="mt-6 pt-3 border-t-[1px]
-              border-gray-100 border-solid text-center"
-    >
+    <footer className={style.footer}>
       <Trans i18nKey="footer">
         © {{ year }} | Built with
         {` `}

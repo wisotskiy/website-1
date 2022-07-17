@@ -44,6 +44,17 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: 'Roboto',
+            weights: ['100..600']
+          }
+        ]
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,

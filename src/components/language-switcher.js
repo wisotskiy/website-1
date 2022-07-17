@@ -2,6 +2,8 @@ import * as React from "react"
 import { navigate } from "gatsby"
 import { useLocalization } from "gatsby-theme-i18n"
 import Form from 'react-bootstrap/Form'
+import en from "../images/en.svg"
+import * as style from "../style/_style.module.scss"
 
 function LanguageSwitcher() {
   const { locale, defaultLang, config } = useLocalization()
@@ -20,19 +22,15 @@ function LanguageSwitcher() {
     }
   }
   return (
-    <div>
+    <div> 
+      {/* <img className={style.flag} src={`../images/${locale}.png`}></img> */}    
       <Form.Select value={locale}
         onChange={switchLanguage}>
-{/*       <select
-        value={locale}
-        onChange={switchLanguage}
-      > */}
         {config.map(c => (
           <option key={c.code} value={c.code}>
-            {c.localName} ({c.name})
+            {c.localName}         
           </option>
         ))}
-      {/* </select> */}
       </Form.Select>
     </div>
   )

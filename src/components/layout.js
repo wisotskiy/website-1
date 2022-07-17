@@ -8,7 +8,7 @@
  import * as React from "react"
  import { useTranslation } from "react-i18next"
  import "./layout.css"
- import MainSlider from "./MainSlider/MainSlider"
+ //import MainSlider from "./MainSlider/MainSlider"
  import Header from "./header"
  import Footer from "./footer"
  
@@ -18,8 +18,7 @@
    return (
      <>
        <Header siteTitle={t("app_name") || `Title`} />
-       <MainSlider />
-       <div className="mx-auto max-w-4xl pt-2 px-8 pb-4">
+       <div>
          <main>{children}</main>
  
          <Footer />
