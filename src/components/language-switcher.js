@@ -1,9 +1,7 @@
 import * as React from "react"
 import { navigate } from "gatsby"
 import { useLocalization } from "gatsby-theme-i18n"
-import Form from 'react-bootstrap/Form'
-import en from "../images/en.svg"
-import * as style from "../style/_style.module.scss"
+import Form from "react-bootstrap/Form"
 
 function LanguageSwitcher() {
   const { locale, defaultLang, config } = useLocalization()

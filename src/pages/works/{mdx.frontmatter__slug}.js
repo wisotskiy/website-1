@@ -2,23 +2,19 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { useTranslation } from "react-i18next"
-//import { useLocalization } from "gatsby-theme-i18n"
+//import { useTranslation } from "react-i18next"
 import Seo from "../../components/seo"
+import * as style from "../../style/_style.module.scss"
 import Layout from "../../components/layout"
 
-import * as style from "../../style/_style.module.scss"
+
 import Gallery from "../../components/Carousel/Carousel"
 
 
 const BlogPost = ({ data }) => {
   const post = data.mdx
   const images = data.allFile.nodes
-  //const { t } = useTranslation()
-  //const { locale, config } = useLocalization()
 
-  //console.log(data.allFile)
-  //console.log(post)
   return (
     <Layout>
       <Seo title={post.frontmatter.title} />
