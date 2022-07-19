@@ -30,7 +30,7 @@ const Header = ({ data }) => {
   `)
 
 const flags = query.allFile.nodes
-  console.log(query.allFile.nodes)
+  
   return (
     <header className={style.header}>
       <div className={style.container}>
@@ -55,9 +55,7 @@ const flags = query.allFile.nodes
               </LocalizedLink>
             </li>
             <li>
-               {flags.map(flag => {
-                console.log(flag.childImageSharp.gatsbyImageData)
-                console.log(flag.childImageSharp)
+              {flags.map(flag => {
                 if(flag.name === locale) {
                   return <GatsbyImage
                   image={flag.childImageSharp.gatsbyImageData}
