@@ -22,7 +22,7 @@ const CarouselSlider = () => {
     )
     
     return (
-        <Carousel cols={1} rows={1} dot={MyDot} showDots loop>
+        <Carousel cols={1} rows={1} dot={MyDot} autoplay={2000} showDots loop>
             <Carousel.Item>
                 <div className={style.mainSlider}>
                     <StaticImage 
