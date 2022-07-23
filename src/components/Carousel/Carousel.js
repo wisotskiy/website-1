@@ -1,5 +1,5 @@
 import React from 'react'
-import Carousel from 'better-react-carousel'
+import Carousel from '../../better-react-carousel/src/app'
 
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
