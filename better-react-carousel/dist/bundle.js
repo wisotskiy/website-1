@@ -264,7 +264,7 @@ var RailWrapper = styled.div.withConfig({
   componentId: "sc-hyhecw-1"
 })(["overflow:hidden;margin:", ";@media screen and (max-width:", "px){overflow-x:auto;margin:0;scroll-snap-type:", ";scrollbar-width:none;&::-webkit-scrollbar{display:none;}}"], function (_ref) {
   var showDots = _ref.showDots;
-  return showDots ? '0 20px 15px 20px' : '0 20px';
+  return showDots ? '0 0 15px 0' : '0';
 }, function (_ref2) {
   var mobileBreakpoint = _ref2.mobileBreakpoint;
   return mobileBreakpoint;

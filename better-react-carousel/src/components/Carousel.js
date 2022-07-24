@@ -12,7 +12,7 @@ const Container = styled.div`
 
 const RailWrapper = styled.div`
   overflow: hidden;
-  margin: ${({ showDots }) => (showDots ? '0 20px 15px 20px' : '0 20px')};
+  margin: ${({ showDots }) => (showDots ? '0 0 15px 0' : '0')};
 
   @media screen and (max-width: ${({ mobileBreakpoint }) =>
     mobileBreakpoint}px) {

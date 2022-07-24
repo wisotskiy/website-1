@@ -2,7 +2,8 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { LocalizedLink } from "gatsby-theme-i18n"
-import Carousel from 'better-react-carousel'
+/* import Carousel from 'better-react-carousel' */
+import Carousel from '../../../better-react-carousel/src/app'
 import * as style from "./_CarouselSlider.module.scss"
 
 const CarouselSlider = () => {
