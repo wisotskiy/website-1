@@ -15,6 +15,7 @@ h3 {
 .container {
     max-width: $containerWidth;
     margin: auto;
+    width: 90%;
 }
 
 .header {
@@ -70,6 +71,7 @@ h3 {
 
     .about-text {
         width: 50%;
+        align-self: center;
     }
 }
 
@@ -84,12 +86,13 @@ h3 {
 
     article {
         display: inline-flex;
-        justify-content: space-between;
-        width: 100%;
-        margin: 20px;
+        justify-content: space-evenly;
+        width: 85%;
+        margin: 50px;
     } 
 
     .info {
+
         width: 60%;
 
         a {
@@ -98,9 +101,19 @@ h3 {
     }
 }
 
-.service-item .container:hover {
-    transition: all ease 0.3s;
-    background: #f1f1f1;
+.service-item:nth-child(odd) {
+
+    .container {
+        background: #f1f1f1;
+
+        article {
+
+            .info {
+                padding: 0 0 0 20px;
+            }
+        }
+    }
+    
 }
 
 .service-item:nth-child(even) {
@@ -111,6 +124,11 @@ h3 {
 
         article {
             flex-direction: row-reverse;
+            width: 100%;
+
+            .info {
+                padding: 0 20px 0 0;
+            }
         }
     }
 }
@@ -142,3 +160,36 @@ h3 {
     background: #3b3b3b;
 }
 
+
+/* mobile */
+
+@media screen and (max-width: 992px){
+    .about {
+    
+        img {
+            width: 25vw;
+            height: 25vw;
+        }
+
+        .about-text {
+            width: 50vw;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .about {   
+        flex-direction: column;
+
+        img {
+            margin: auto;
+            width: 35vw;
+            height: 35vw;
+        }
+
+        .about-text {
+            width: 80vw;
+            margin-top: 20px;
+        }
+    }
+}

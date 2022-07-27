@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 import * as style from "../style/_style.module.scss"
 
-export default function Teaser({ post, image }) {
+export default function Teas({ post, image }) {
 
   const { t } = useTranslation()
  
@@ -14,7 +14,7 @@ export default function Teaser({ post, image }) {
     <article>
       <GatsbyImage
         image={image}
-        style={{maxWidth: "300px", aspectRatio: "1/1"}}
+        style={{"aspectRatio": "1/1"}}
         alt={post.frontmatter.hero_image.alt}
       />
       <div className={style.info}>
