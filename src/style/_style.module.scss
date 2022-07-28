@@ -65,10 +65,10 @@ h3 {
     justify-content: space-evenly;
     margin-bottom: 70px;
 
-    img {
+    .about-photo img {
         border-radius: 50%;
         max-height: 300px;
-        margin: 0 20px;
+        /* margin: 0 20px; */
     }
 
     .about-text {
@@ -167,14 +167,15 @@ h3 {
 
 @media screen and (max-width: 992px){
     .about {
+        padding: 0;
     
-        img {
+        .about-photo img {
             width: 25vw;
             height: 25vw;
         }
 
         .about-text {
-            width: 50vw;
+            width: 55vw;
         }
     }
 }
@@ -183,7 +184,7 @@ h3 {
     .about {   
         flex-direction: column;
 
-        img {
+        .about-photo img {
             margin: auto;
             width: 35vw;
             height: 35vw;

@@ -21,6 +21,7 @@ const IndexPage = ({ data }) => {
 
         <div className={style.about}>
           <StaticImage 
+            className={style.aboutPhoto}
             src="../images/me.jpg" 
             alt="my foto"
             /* style={{maxHeight: "300px", margin: "0 20px"}} */
