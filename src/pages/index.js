@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
           <StaticImage 
             src="../images/me.jpg" 
             alt="my foto"
-            style={{maxHeight: "300px", margin: "0 20px"}}
+            /* style={{maxHeight: "300px", margin: "0 20px"}} */
              />
           <p className={style.aboutText}>{t("main_page_desc", { count: 3 })}</p>
         </div>
