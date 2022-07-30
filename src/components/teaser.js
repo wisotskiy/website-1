@@ -13,12 +13,12 @@ export default function Teaser({ post, image }) {
   return (
     <article>
       <GatsbyImage
+        className={style.teaserPhoto}
         image={image}
-        style={{maxWidth: "300px", aspectRatio: "1/1"}}
         alt={post.frontmatter.hero_image.alt}
       />
       <div className={style.info}>
-        <h3>
+        <h3 className={style.teaserTitle}>
           <Link to={`/works/${post.frontmatter.slug}`}>
             {post.frontmatter.title}
           </Link>

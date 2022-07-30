@@ -18,6 +18,8 @@ h3 {
     width: 90%;
 }
 
+/* header */
+
 .header {
 
     .container {
@@ -41,15 +43,36 @@ h3 {
                 display: flex;
                 list-style: none;
                 margin-bottom: 0;
+            }
+    
+            .pages {
+                margin-left: 28px;
 
                 li {
                     margin-bottom: 0;
                     margin-right: 10px;
                 }
+                
+                a {
+                    text-decoration: none;
+                }
+            } 
+        }
+
+        .socials {
+            display: flex;
+
+            li {
+                margin: 0;
             }
-    
-            .main-menu-item a {
-                text-decoration: none;
+
+            .fb {
+                width: 21px;
+            }
+
+            .yt {
+                width: 26px;
+                margin: 0 0 0 20px;
             }
         }
     }
@@ -58,6 +81,8 @@ h3 {
         height: 20px;
     }
 }
+
+/* end of header */
 
 .about {
     display: flex;
@@ -155,6 +180,13 @@ h3 {
     grid-area: c;
 }
 
+/* teaser */
+
+.teaser-photo {
+    max-width: 300px;
+    aspect-ratio: 1/1;
+}
+
 /* footer */
 
 .footer {
@@ -167,6 +199,21 @@ h3 {
 /* mobile */
 
 @media screen and (max-width: 992px){
+
+    .header {
+
+        .container {
+
+            .logo {
+                width: 170px;
+                margin: 10px 0;
+                /* opacity: 0; */
+            }
+        }
+    }
+
+
+
     .about {
         padding: 0;
     
@@ -179,6 +226,17 @@ h3 {
             width: 55vw;
         }
     }
+
+    /* teaser */
+
+    .teaserTitle {
+        font-size: calc(1rem + 1vw);
+    }
+
+    .teaser-photo {
+        max-width: 30vw;
+    }
+
 }
 
 @media screen and (max-width: 768px){
@@ -196,4 +254,11 @@ h3 {
             margin-top: 20px;
         }
     }
+
+    /* teaser */
+
+
+/*     .teaser-photo {
+        max-width: 200px;
+    } */
 }

@@ -9,6 +9,8 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import * as style from "../style/_style.module.scss"
 import logo from "../images/logo.svg"
+import yt from "../images/yt-icon.svg"
+import fb from "../images/fb.svg"
 
 
 const Header = ({ data }) => {
@@ -39,18 +41,32 @@ const flags = query.allFile.nodes
         <LocalizedLink to="/"><img src={logo} alt="logo"></img></LocalizedLink>
         </div>
         <nav className={style.mainMenu}>
-          <ul>
-            <li className={style.mainMenuItem}>
+          
+          <ul className={style.socials}>
+            <li className={style.socialsItem}>             
+              <a href="https://www.facebook.com/wisotskiy">
+                <img className={style.fb} src={fb}></img>
+              </a>
+            </li>
+            <li className={style.socialsItem}>             
+              <a href="https://www.youtube.com/user/forcedc26">
+                <img className={style.yt} src={yt}></img>
+              </a>
+            </li>
+          </ul>     
+        
+          <ul className={style.pages}>
+            <li className={style.pagesItem}>
               <LocalizedLink to="/">
                 {t("about")}
               </LocalizedLink>
             </li>
-            <li className={style.mainMenuItem}>
+            <li className={style.pagesItem}>
               <LocalizedLink to="/">
                 {t("works")}
               </LocalizedLink>
             </li>
-            <li className={style.mainMenuItem}>
+            <li className={style.pagesItem}>
               <LocalizedLink to="/">
                 {t("contacts")}
               </LocalizedLink>
@@ -61,15 +77,18 @@ const flags = query.allFile.nodes
                   return <GatsbyImage
                   key={flag.id}
                   image={flag.childImageSharp.gatsbyImageData}
-                  style={{"aspectRatio": "1/1"}}
+                  style={{"aspectRatio": "1/1", position: "relative", top: "3px"}}
                   alt="flag"
                 />
                 }
               })}
             </li>
           </ul>
+          
           <LanguageSwitcher />
+          
         </nav>
+        
       </div>
       
     </header>
