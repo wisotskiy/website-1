@@ -24,7 +24,6 @@ const IndexPage = ({ data }) => {
             className={style.aboutPhoto}
             src="../images/me.jpg" 
             alt="my foto"
-            /* style={{maxHeight: "300px", margin: "0 20px"}} */
              />
           <p className={style.aboutText}>{t("main_page_desc", { count: 3 })}</p>
         </div>

@@ -18,42 +18,38 @@ h3 {
     width: 90%;
 }
 
-/* header */
+/* aside */
 
-.header {
+.aside {
+    width: 300px;
 
-    .container {
-        display: flex;      
-        justify-content: space-between;
-        align-items: center;
+    .aside-container {
+        position: fixed;
 
         img {
             margin-bottom: 0;
         }
 
         .logo {
-            margin: 5px 0;
+            margin: 50px;
         }
     
         .main-menu {
-            display: flex;
-            align-items: center;
+            margin: 0 50px;
 
             ul {
-                display: flex;
                 list-style: none;
-                margin-bottom: 0;
+                margin: 0;
             }
     
             .pages {
-                margin-left: 28px;
 
                 li {
-                    margin-bottom: 0;
-                    margin-right: 10px;
+                    margin: 22px 0;
                 }
                 
                 a {
+                    color: #787878;
                     text-decoration: none;
                 }
             } 
@@ -75,14 +71,24 @@ h3 {
                 margin: 0 0 0 20px;
             }
         }
-    }
-    
-    .flag {
-        height: 20px;
+
+        .languages {
+            display: flex;
+            align-items: center;
+            padding: 0 0 20px 0;
+
+            li {
+                margin: 0;
+
+                .flag {
+                    height: 20px;
+                }
+            }
+        }
     }
 }
 
-/* end of header */
+/* end of aside */
 
 .about {
     display: flex;
@@ -93,7 +99,6 @@ h3 {
     .about-photo img {
         border-radius: 50%;
         max-height: 300px;
-        /* margin: 0 20px; */
     }
 
     .about-text {
@@ -104,7 +109,6 @@ h3 {
 
 .services-list {
     display: block;
-    background: #f9f9f9;
     padding: 70px 0;
 }
 
@@ -119,11 +123,11 @@ h3 {
     } 
 
     .info {
-
         width: 60%;
 
         a {
             text-decoration: none;
+            color: #f1f1f1;
         }
     }
 }
@@ -131,7 +135,7 @@ h3 {
 .service-item:nth-child(odd) {
 
     .container {
-        background: #f1f1f1;
+        background: #353535;
 
         article {
 
@@ -198,16 +202,15 @@ h3 {
 
 /* mobile */
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 1280px){
 
-    .header {
+    .aside {
 
         .container {
 
             .logo {
                 width: 170px;
                 margin: 10px 0;
-                /* opacity: 0; */
             }
         }
     }
@@ -218,12 +221,13 @@ h3 {
         padding: 0;
     
         .about-photo img {
-            width: 25vw;
-            height: 25vw;
+            width: 22vw;
+            height: 22vw;
+            margin-right: 1vw;
         }
 
         .about-text {
-            width: 55vw;
+            width: 40vw;
         }
     }
 

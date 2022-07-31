@@ -222,3 +222,14 @@ pre tt:before,
 pre tt:after {
   content: none;
 }
+
+/* custom styles */
+
+#gatsby-focus-wrapper {
+  display: flex;
+}
+.content {
+  width: calc(100% - 300px);
+  background-color: #1f1f1f;
+  color: #ffffff;
+}

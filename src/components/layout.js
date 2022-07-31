@@ -8,7 +8,7 @@
  import * as React from "react"
  import { useTranslation } from "react-i18next"
  import "./layout.css"
- import Header from "./header"
+ import Aside from "./aside"
  import Footer from "./footer"
  
  const Layout = ({ children }) => {
@@ -16,8 +16,8 @@
  
    return (
      <>
-       <Header siteTitle={t("app_name") || `Title`} />
-       <div>
+       <Aside siteTitle={t("app_name") || `Title`} />
+       <div className="content">
          <main>{children}</main>
  
          <Footer />

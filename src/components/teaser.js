@@ -24,7 +24,9 @@ export default function Teaser({ post, image }) {
           </Link>
         </h3>
         <p>{post.excerpt}</p>
-        <Button variant="outline-dark">{t("slider_link")}</Button>
+        <Button variant="outline-light"
+          className={style.seeMore}
+        >{t("slider_link")}</Button>
       </div>
     </article>
   )

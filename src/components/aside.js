@@ -13,7 +13,7 @@ import yt from "../images/yt-icon.svg"
 import fb from "../images/fb.svg"
 
 
-const Header = ({ data }) => {
+const Aside = ({ data }) => {
   const { t } = useTranslation()
   const { locale/* , defaultLang, config  */} = useLocalization()
 
@@ -35,26 +35,31 @@ const Header = ({ data }) => {
 const flags = query.allFile.nodes
   
   return (
-    <header className={style.header}>
-      <div className={style.container}>
+    <aside className={style.aside}>
+      <div className={style.asideContainer}>
         <div className={style.logo}>
         <LocalizedLink to="/"><img src={logo} alt="logo"></img></LocalizedLink>
         </div>
         <nav className={style.mainMenu}>
-          
-          <ul className={style.socials}>
-            <li className={style.socialsItem}>             
-              <a href="https://www.facebook.com/wisotskiy">
-                <img className={style.fb} src={fb}></img>
-              </a>
+
+          <ul className={style.languages}>
+            <li>
+              {flags.map(flag => {
+                if(flag.name === locale) {
+                  return <GatsbyImage
+                  key={flag.id}
+                  image={flag.childImageSharp.gatsbyImageData}
+                  style={{"aspectRatio": "1/1", position: "relative", top: "2px", marginRight: "10px"}}
+                  alt="flag"
+                />
+                }
+              })}
             </li>
-            <li className={style.socialsItem}>             
-              <a href="https://www.youtube.com/user/forcedc26">
-                <img className={style.yt} src={yt}></img>
-              </a>
+            <li>
+              <LanguageSwitcher />
             </li>
-          </ul>     
-        
+          </ul>
+
           <ul className={style.pages}>
             <li className={style.pagesItem}>
               <LocalizedLink to="/">
@@ -63,7 +68,7 @@ const flags = query.allFile.nodes
             </li>
             <li className={style.pagesItem}>
               <LocalizedLink to="/">
-                {t("works")}
+                {t("works")}&nbsp;<span style={{display: "inline-block", color: "grey",  /* transform: "rotate(90deg)", */}}>&#10095;</span>
               </LocalizedLink>
             </li>
             <li className={style.pagesItem}>
@@ -71,28 +76,30 @@ const flags = query.allFile.nodes
                 {t("contacts")}
               </LocalizedLink>
             </li>
-            <li>
-              {flags.map(flag => {
-                if(flag.name === locale) {
-                  return <GatsbyImage
-                  key={flag.id}
-                  image={flag.childImageSharp.gatsbyImageData}
-                  style={{"aspectRatio": "1/1", position: "relative", top: "3px"}}
-                  alt="flag"
-                />
-                }
-              })}
-            </li>
+
           </ul>
           
-          <LanguageSwitcher />
+          <ul className={style.socials}>
+            <li className={style.socialsItem}>             
+              <a href="https://www.facebook.com/wisotskiy">
+                <img className={style.fb} src={fb}></img>
+              </a>
+            </li>
+            <li className={style.socialsItem}>             
+              <a href="https://www.youtube.com/watch?v=zhJha7ePr3w">
+                <img className={style.yt} src={yt}></img>
+              </a>
+            </li>
+          </ul>             
           
+          
+                   
         </nav>
         
       </div>
       
-    </header>
+    </aside>
   )
 }
-export default Header
+export default Aside
 
