@@ -16,7 +16,7 @@ import fb from "../images/fb.svg"
 const Aside = ({ titles }) => {
   const { t } = useTranslation()
   const { locale/* , defaultLang, config  */} = useLocalization()
-console.log(titles)
+
   const query = useStaticQuery(graphql`
   query Aside {
     allFile(filter: {extension: {eq: "png"}}) {
