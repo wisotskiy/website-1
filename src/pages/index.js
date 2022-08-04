@@ -13,7 +13,7 @@ import CarouselSlider from "../components/CarouselSlider/CarouselSlider"
 const IndexPage = ({ data }) => {
   const { t } = useTranslation()
   return (
-    <Layout titles={data.allMdx.nodes}>
+    <Layout>
       <Seo title={t("home")} />
       <CarouselSlider />
       <div className={style.container}>

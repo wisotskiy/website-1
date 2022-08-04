@@ -13,12 +13,12 @@ import yt from "../images/yt-icon.svg"
 import fb from "../images/fb.svg"
 
 
-const Aside = ({ titles }) => {
+const Aside = ({ data }) => {
   const { t } = useTranslation()
   const { locale/* , defaultLang, config  */} = useLocalization()
 
   const query = useStaticQuery(graphql`
-  query Aside {
+  query Flags {
     allFile(filter: {extension: {eq: "png"}}) {
       nodes {
         relativePath
@@ -33,7 +33,6 @@ const Aside = ({ titles }) => {
   `)
 
 const flags = query.allFile.nodes
-//const titles = query.allMdx.nodes
   
   return (
     <aside className={style.aside}>
@@ -62,26 +61,17 @@ const flags = query.allFile.nodes
           </ul>
 
           <ul className={style.pages}>
-            <li>
+            <li className={style.pagesItem}>
               <LocalizedLink to="/">
                 {t("about")}
               </LocalizedLink>
             </li>
-            <li className={style.works}>
+            <li className={style.pagesItem}>
               <LocalizedLink to="/">
-                {t("works")}&nbsp;
-                  <span style={{
-                    display: "inline-block", 
-                    color: "grey",  /* transform: "rotate(90deg)", */}}>&#10095;</span>
+                {t("works")}&nbsp;<span style={{display: "inline-block", color: "grey",  /* transform: "rotate(90deg)", */}}>&#10095;</span>
               </LocalizedLink>
-              <ul className={style.worksList}>
-                {titles.map(title => {
-                  return <li key={title.id}>{title.frontmatter.title}</li>
-                })}
-
-              </ul>
             </li>
-            <li>
+            <li className={style.pagesItem}>
               <LocalizedLink to="/">
                 {t("contacts")}
               </LocalizedLink>
@@ -101,7 +91,9 @@ const flags = query.allFile.nodes
               </a>
             </li>
           </ul>             
-                 
+          
+          
+                   
         </nav>
         
       </div>

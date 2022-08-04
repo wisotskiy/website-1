@@ -11,12 +11,12 @@
  import Aside from "./aside"
  import Footer from "./footer"
  
- const Layout = ({ children, titles }) => {
+ const Layout = ({ children }) => {
    const { t } = useTranslation()
-
+ 
    return (
      <>
-       <Aside titles={titles} siteTitle={t("app_name") || `Title`} />
+       <Aside siteTitle={t("app_name") || `Title`} />
        <div className="content">
          <main>{children}</main>
  
