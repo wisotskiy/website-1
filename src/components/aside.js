@@ -13,12 +13,12 @@ import yt from "../images/yt-icon.svg"
 import fb from "../images/fb.svg"
 
 
-const Aside = ({ data }) => {
+const Aside = ({ titles }) => {
   const { t } = useTranslation()
   const { locale/* , defaultLang, config  */} = useLocalization()
-
+console.log(titles)
   const query = useStaticQuery(graphql`
-  query Flags {
+  query Aside {
     allFile(filter: {extension: {eq: "png"}}) {
       nodes {
         relativePath
@@ -33,6 +33,7 @@ const Aside = ({ data }) => {
   `)
 
 const flags = query.allFile.nodes
+//const titles = query.allMdx.nodes
   
   return (
     <aside className={style.aside}>
@@ -61,17 +62,26 @@ const flags = query.allFile.nodes
           </ul>
 
           <ul className={style.pages}>
-            <li className={style.pagesItem}>
+            <li>
               <LocalizedLink to="/">
                 {t("about")}
               </LocalizedLink>
             </li>
-            <li className={style.pagesItem}>
+            <li className={style.works}>
               <LocalizedLink to="/">
-                {t("works")}&nbsp;<span style={{display: "inline-block", color: "grey",  /* transform: "rotate(90deg)", */}}>&#10095;</span>
+                {t("works")}&nbsp;
+                  <span style={{
+                    display: "inline-block", 
+                    color: "grey",  /* transform: "rotate(90deg)", */}}>&#10095;</span>
               </LocalizedLink>
+              <ul className={style.worksList}>
+                {titles.map(title => {
+                  return <li key={title.id}>{title.frontmatter.title}</li>
+                })}
+
+              </ul>
             </li>
-            <li className={style.pagesItem}>
+            <li>
               <LocalizedLink to="/">
                 {t("contacts")}
               </LocalizedLink>
@@ -91,9 +101,7 @@ const flags = query.allFile.nodes
               </a>
             </li>
           </ul>             
-          
-          
-                   
+                 
         </nav>
         
       </div>

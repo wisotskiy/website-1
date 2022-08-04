@@ -10,7 +10,7 @@
     "contacts": "Kontakty",
     "articles_published_one": "{{count}} article",
     "articles_published_other": "{{count}} articles",
-    "footer": "© {{year}} | Built with <4>Gatsby</4> for the <8>Phographer and videographer Vysotskii Yaroslav</8>",
+    "footer": "© 2021 - {{year}} | All rights reserved <8>Phographer and videographer Vysotskii Yaroslav</8>",
     "home": "Domů",
     "published": "Vytvořeno {{date}}",
     "main_page_title": "Služby foto a videa",

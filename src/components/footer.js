@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer className={style.footer}>
       <Trans i18nKey="footer">
-        © {{ year }} | Built with
+        © 2021 - {{ year }} | All rights reserved
         {` `}
         <a href="https://www.gatsbyjs.com" className="underline">
           Gatsby
