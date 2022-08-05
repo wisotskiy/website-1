@@ -46,11 +46,49 @@ h3 {
 
                 li {
                     margin: 22px 0;
+                    width: fit-content;
                 }
                 
                 a {
                     color: #787878;
                     text-decoration: none;
+                }
+                
+                li:hover, span:hover {
+                    color: #c4c4c4;
+                }
+
+                li:hover span {
+                    transform: rotate(90deg);
+                }
+
+                a:hover {
+                    color: #c4c4c4;
+                }
+
+                /* works submenu */
+
+/*                 .works {
+                    position: relative;
+                } */
+
+                .works-list {
+                    display: none;
+                    /* position: absolute; */
+                    width: max-content;
+                    background: rgb(247, 247, 247);
+                    padding: 10px 12px;
+
+                    li {
+                        margin: 10px 5px;
+                        font-size: 14px;
+                        color: #353535;
+                        border-bottom: 1px solid #afafaf;
+                    }
+                }
+
+                .works:hover .works-list {
+                    display: block;
                 }
             } 
         }
@@ -87,6 +125,8 @@ h3 {
         }
     }
 }
+
+
 
 /* end of aside */
 

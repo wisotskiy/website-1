@@ -62,26 +62,24 @@ const flags = query.allFile.nodes
           </ul>
 
           <ul className={style.pages}>
-            <li className={style.pagesItem}>
+            <li>
               <LocalizedLink to="/">
                 {t("about")}
               </LocalizedLink>
             </li>
-            <li className={style.pagesItem}>
-              <LocalizedLink to="/">
-                {t("works")}&nbsp;
-                  <span style={{
-                    display: "inline-block", 
-                    color: "grey",  /* transform: "rotate(90deg)", */}}>&#10095;
-                  </span>
-                  <ul>
-                    {titlesList?.map(title => {
-                      return <li key={title.id}>{title.frontmatter.title}</li>
-                    })}
-                  </ul>
-              </LocalizedLink>
+            <li className={style.works}>
+              {t("works")}&nbsp;
+                <span style={{
+                  display: "inline-block", 
+                  /* color: "grey", */  /* transform: "rotate(90deg)", */}}>&#10095;
+                </span>
+              <ul className={style.worksList}>
+                {titlesList?.map(title => {
+                  return <li key={title.id}>{title.frontmatter.title}</li>
+                })}
+              </ul>
             </li>
-            <li className={style.pagesItem}>
+            <li>
               <LocalizedLink to="/">
                 {t("contacts")}
               </LocalizedLink>
