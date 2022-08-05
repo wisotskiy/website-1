@@ -13,7 +13,7 @@ import yt from "../images/yt-icon.svg"
 import fb from "../images/fb.svg"
 
 
-const Aside = ({ titles }) => {
+const Aside = ({ data }) => {
   const { t } = useTranslation()
   const { locale/* , defaultLang, config  */} = useLocalization()
 
@@ -74,12 +74,7 @@ const flags = query.allFile.nodes
                     display: "inline-block", 
                     color: "grey",  /* transform: "rotate(90deg)", */}}>&#10095;</span>
               </LocalizedLink>
-              <ul className={style.worksList}>
-                {titles.map(title => {
-                  return <li key={title.id}>{title.frontmatter.title}</li>
-                })}
 
-              </ul>
             </li>
             <li>
               <LocalizedLink to="/">
