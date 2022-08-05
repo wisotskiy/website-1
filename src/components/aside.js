@@ -16,6 +16,7 @@ import fb from "../images/fb.svg"
 const Aside = ({ titles }) => {
   const { t } = useTranslation()
   const { locale/* , defaultLang, config  */} = useLocalization()
+  const titlesList = titles
 
   const query = useStaticQuery(graphql`
   query Flags {
@@ -74,8 +75,7 @@ const flags = query.allFile.nodes
                     color: "grey",  /* transform: "rotate(90deg)", */}}>&#10095;
                   </span>
                   <ul>
-                    {titles.map(title => {
-                      console.log(title)
+                    {titlesList.map(title => {
                       return <li key={title.id}>{title.frontmatter.title}</li>
                     })}
                   </ul>
