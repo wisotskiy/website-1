@@ -75,7 +75,8 @@ const flags = query.allFile.nodes
                   </span>
                   <ul>
                     {titles.map(title => {
-                      return <li ley={title.id}>{title.frontmatter.title}</li>
+                      console.log(title)
+                      return <li key={title.id}>{title.frontmatter.title}</li>
                     })}
                   </ul>
               </LocalizedLink>
@@ -99,9 +100,7 @@ const flags = query.allFile.nodes
                 <img className={style.yt} src={yt}></img>
               </a>
             </li>
-          </ul>             
-          
-          
+          </ul>                     
                    
         </nav>
         
