@@ -75,7 +75,7 @@ const flags = query.allFile.nodes
                     color: "grey",  /* transform: "rotate(90deg)", */}}>&#10095;
                   </span>
                   <ul>
-                    {titlesList.map(title => {
+                    {titlesList?.map(title => {
                       return <li key={title.id}>{title.frontmatter.title}</li>
                     })}
                   </ul>
