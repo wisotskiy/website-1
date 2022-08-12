@@ -75,7 +75,7 @@ const flags = query.allFile.nodes
                 </span>
               <ul className={style.worksList}>
                 {titlesList?.map(title => {
-                  return <li key={title.id}>{title.frontmatter.title}</li>
+                  if (title.frontmatter.category === 'root') return <li key={title.id}>{title.frontmatter.title}</li>
                 })}
               </ul>
             </li>

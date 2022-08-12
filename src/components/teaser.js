@@ -19,7 +19,7 @@ export default function Teaser({ post, image }) {
       />
       <div className={style.info}>
         <h3 className={style.teaserTitle}>
-          <Link to={`/works/${post.frontmatter.slug}`}>
+          <Link to={`/${post.frontmatter.slug}`}>
             {post.frontmatter.title}
           </Link>
         </h3>
