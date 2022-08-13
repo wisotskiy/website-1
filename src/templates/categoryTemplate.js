@@ -60,16 +60,5 @@ export const query = graphql`
       }
       body
     }
-    allFile(
-      filter: {extension: {eq: "jpg"}, relativeDirectory: {eq: $slug}}
-    ) {
-      nodes {
-        relativeDirectory
-        id
-        childImageSharp {
-          gatsbyImageData
-        }
-      }
-    }
   }
 `
