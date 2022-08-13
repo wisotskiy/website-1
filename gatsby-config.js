@@ -6,13 +6,12 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-mdx`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,13 +19,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },  
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `projects`,
-        path: `${__dirname}/projects`,
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -46,27 +46,28 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const query = graphql`
-query BlogPosts($locale: String) {
-  allMdx(
-    filter: {fields: {locale: {eq: $locale}}, frontmatter: {category: {eq: "root"}}}
-  ) {
-    nodes {
-      frontmatter {
-        hero_image {
-          image {
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+  query BlogPosts($locale: String) {
+    allMdx(filter: { fields: { locale: { eq: $locale } } }) {
+      nodes {
+        frontmatter {
+          hero_image {
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
             }
+            alt
           }
-          alt
+          slug
+          title
         }
-        slug
-        title
-        category
+        id
+        excerpt(pruneLength: 170, truncate: true)
       }
-      id
-      excerpt(pruneLength: 170, truncate: true)
     }
   }
-}
 `
