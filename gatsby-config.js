@@ -13,25 +13,25 @@ module.exports = {
     `gatsby-plugin-mdx`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify`,
-    {
+/*     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
-    },  
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `works`,
-        path: `${__dirname}/works`,
-      },
-    },
+    }, */  
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,
         path: `${__dirname}/projects`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `works`,
+        path: `${__dirname}/works`,
       },
     },
     {
