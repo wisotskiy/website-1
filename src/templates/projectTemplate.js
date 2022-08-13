@@ -8,12 +8,12 @@ import * as style from "../style/_style.module.scss"
 import Layout from "../components/layout"
 
 
-//import Gallery from "../components/Carousel/Carousel"
+import Gallery from "../components/Carousel/Carousel"
 
 
 const Project = ({ data }) => {
   const projectData = data.mdx
-  //const images = data.allFile.nodes
+  const images = data.allFile.nodes
 //console.log(data)
   return (
     <Layout>
@@ -33,7 +33,7 @@ const Project = ({ data }) => {
         </article>
       </div>
       <div className={style.container}>
-      {/* <Gallery images={images}/> */}
+      <Gallery images={images}/>
       </div>
  
     </Layout>

@@ -15,7 +15,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  data.allMdx.nodes.forEach(node => {
+/*   data.allMdx.nodes.forEach(node => {
 
     
     const slug = node.frontmatter.slug
@@ -24,10 +24,10 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve('./src/templates/categoryTemplate.js'),
       context: { slug }
     })
-  }); 
+  });  */
 
 
-/*   data.allMdx.nodes.forEach(node => {
+  data.allMdx.nodes.forEach(node => {
 
     const category = node.frontmatter.category
     const slug = node.frontmatter.slug
@@ -46,7 +46,7 @@ exports.createPages = async ({ graphql, actions }) => {
         component: path.resolve('./src/templates/projectTemplate.js'),
         context: { category, slug, fullSlug }
       })
-  }); */
+  });
 
 /*   data.allMdx.nodes.forEach(node => {
 
