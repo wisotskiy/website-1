@@ -65,7 +65,7 @@ export const query = graphql`
         relativeDirectory
         id
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
         }
       }
     }
