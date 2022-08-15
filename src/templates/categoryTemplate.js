@@ -52,7 +52,7 @@ export const query = graphql`
         hero_image {
           image {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
             }
           }
           alt

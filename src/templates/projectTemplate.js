@@ -14,7 +14,7 @@ import Gallery from "../components/Carousel/Carousel"
 const Project = ({ data }) => {
   const projectData = data.mdx
   const images = data.allFile.nodes
-console.log(data)
+//console.log(data)
   return (
     <Layout>
       <Seo title={projectData.frontmatter.title} />
@@ -22,11 +22,11 @@ console.log(data)
       <div className={`${style.container} ${style.itemService}`}>
         <h1>Project: {projectData.frontmatter.title}</h1>
 
-{/*         <GatsbyImage
+        <GatsbyImage
           alt={projectData.frontmatter.hero_image.alt}
           image={getImage(projectData.frontmatter.hero_image.image)}
           layout="constrained"
-        /> */}
+        />
 
         <article>
           <MDXRenderer>{projectData.body}</MDXRenderer>
@@ -47,6 +47,14 @@ export const query = graphql`
     mdx(frontmatter: {slug: {eq: $slug}}, fields: {locale: {eq: $locale}}) {
       frontmatter {
         title
+        hero_image {
+          image {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            }
+          }
+          alt
+        }
       }
       body
     }
