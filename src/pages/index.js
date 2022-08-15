@@ -31,10 +31,10 @@ const IndexPage = ({ data }) => {
 
       <div className={style.servicesList}>       
         {data.allMdx.nodes.map(post => {
-          const image = getImage(post.frontmatter.hero_image.image)
+          //const image = getImage(post.frontmatter.hero_image.image)
           return <div className={style.serviceItem} key={post.id}>
             <div className={style.container}>
-              <Teaser post={post} image={image} />
+              <Teaser post={post} />
             </div>
           </div>
         })}       

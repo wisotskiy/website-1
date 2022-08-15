@@ -1,20 +1,20 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { LocalizedLink as Link } from "gatsby-theme-i18n"
 import { useTranslation } from "react-i18next"
 import Button from 'react-bootstrap/Button';
 
 import * as style from "../style/_style.module.scss"
 
-export default function Teaser({ post, image }) {
+export default function Teaser({ post }) {
 
   const { t } = useTranslation()
- 
+ console.log(post)
   return (
     <article>
       <GatsbyImage
         className={style.teaserPhoto}
-        image={image}
+        image={getImage(post.frontmatter.hero_image.image)}
         alt={post.frontmatter.hero_image.alt}
       />
       <div className={style.info}>
