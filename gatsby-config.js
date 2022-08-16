@@ -6,6 +6,9 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,9 +31,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-image`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-mdx`,
     `gatsby-plugin-sass`,
