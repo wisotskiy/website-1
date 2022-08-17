@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { StaticImage, getImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import Seo from "../components/seo"
@@ -18,7 +18,6 @@ const IndexPage = ({ data }) => {
       <CarouselSlider />
       <div className={style.container}>
         <h1 className={style.title}>{t("main_page_title")}</h1>
-
         <div className={style.about}>
           <StaticImage 
             className={style.aboutPhoto}

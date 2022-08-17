@@ -9,7 +9,7 @@ import * as style from "../style/_style.module.scss"
 export default function Teaser({ post }) {
 
   const { t } = useTranslation()
- console.log(post)
+
   return (
     <article>
       <GatsbyImage
