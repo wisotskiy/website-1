@@ -25,11 +25,11 @@ console.log(data.allMdx)
           return <li><LocalizedLink to={`/${node.frontmatter.category}/${node.frontmatter.slug}`}>{node.frontmatter.title}</LocalizedLink></li>
         })}
           </ul>
-        <GatsbyImage
+{/*         <GatsbyImage
           alt={categoryData.frontmatter.hero_image?.alt}
           image={getImage(categoryData.frontmatter?.hero_image?.image)}
           layout="constrained"
-        />
+        /> */}
 
         <article>
           <MDXRenderer>{categoryData.body}</MDXRenderer>
