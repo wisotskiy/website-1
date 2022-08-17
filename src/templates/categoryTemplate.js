@@ -13,7 +13,7 @@ import { LocalizedLink as Link, LocalizedLink } from "gatsby-theme-i18n"
 const Category = ({data}) => {
   //const { locale/* , defaultLang, config  */} = useLocalization()
   const categoryData = data.mdx
-console.log(data.allMdx)
+console.log(data)
   return (
     <Layout>
       <Seo title={categoryData.frontmatter.title} />
@@ -25,11 +25,11 @@ console.log(data.allMdx)
           return <li><LocalizedLink to={`/${node.frontmatter.category}/${node.frontmatter.slug}`}>{node.frontmatter.title}</LocalizedLink></li>
         })}
           </ul>
-{/*         <GatsbyImage
+        <GatsbyImage
           alt={categoryData.frontmatter.hero_image?.alt}
           image={getImage(categoryData.frontmatter?.hero_image?.image)}
           layout="constrained"
-        /> */}
+        />
 
         <article>
           <MDXRenderer>{categoryData.body}</MDXRenderer>
