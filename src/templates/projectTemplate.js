@@ -13,7 +13,7 @@ import Gallery from "../components/Carousel/Carousel"
 
 const Project = ({ data }) => {
   const projectData = data.mdx
-  //const images = data.allFile.nodes
+  const images = data.allFile.nodes
 //console.log(data)
   return (
     <Layout>
@@ -33,7 +33,7 @@ const Project = ({ data }) => {
         </article>
       </div>
       <div className={style.container}>
-      {/* <Gallery images={images}/> */}
+      <Gallery images={images}/>
       </div>
  
     </Layout>
@@ -43,7 +43,7 @@ const Project = ({ data }) => {
 export default Project
 
 export const query = graphql`
-  query ProjectBySlug($slug: String, $locale: String) {
+  query ProjectBySlug($slug: String, $locale: String, $fullSlug: String) {
     mdx(frontmatter: {slug: {eq: $slug}}, fields: {locale: {eq: $locale}}) {
       frontmatter {
         title
@@ -58,6 +58,16 @@ export const query = graphql`
       }
       body
     }
-    
+    allFile(
+      filter: {extension: {eq: "jpg"}, relativeDirectory: {eq: $fullSlug}}
+    ) {
+      nodes {
+        relativeDirectory
+        id
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        }
+      }
+    }
   }
 `
