@@ -24,8 +24,8 @@ console.log(data)
         <h1>Project: {projectData.frontmatter.title}</h1>
 
         <GatsbyImage
-          alt={projectData.frontmatter.hero_image.alt}
-          image={getImage(projectData.frontmatter.hero_image.image)}
+          alt={projectData.frontmatter.hero_image?.alt}
+          image={getImage(projectData.frontmatter.hero_image?.image)}
           layout="constrained"
         />
 

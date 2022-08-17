@@ -1,6 +1,6 @@
 import * as React from "react"
-import { graphql, Link } from "gatsby"
-import { StaticImage, getImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import Seo from "../components/seo"
 import Teaser from "../components/teaser"

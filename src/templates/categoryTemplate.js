@@ -26,7 +26,7 @@ console.log(data.allMdx)
         })}
           </ul>
         <GatsbyImage
-          alt={categoryData.frontmatter.hero_image.alt}
+          alt={categoryData.frontmatter.hero_image?.alt}
           image={getImage(categoryData.frontmatter?.hero_image?.image)}
           layout="constrained"
         />
