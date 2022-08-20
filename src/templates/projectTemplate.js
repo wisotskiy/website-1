@@ -15,7 +15,7 @@ import Gallery from "../components/Carousel/Carousel"
 const Project = ({ data }) => {
   const projectData = data.mdx
   const images = data.allFile.nodes
-console.log(data)
+
   return (
     <Layout>
       <Seo title={projectData.frontmatter.title} />

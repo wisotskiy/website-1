@@ -13,13 +13,10 @@ import yt from "../images/yt-icon.svg"
 import fb from "../images/fb.svg"
 
 
-const Aside = ({ titles }) => {
-  const { t } = useTranslation()
-  const { locale/* , defaultLang, config  */} = useLocalization()
-  const titlesList = titles
+const Aside = () => {
 
   const query = useStaticQuery(graphql`
-  query Flags {
+  query Menu {
     allFile(filter: {extension: {eq: "png"}}) {
       nodes {
         relativePath
@@ -30,10 +27,33 @@ const Aside = ({ titles }) => {
         id
       }
     }
+    allMdx(filter: {frontmatter: {category: {eq: "root"}}}) {
+      nodes {
+        frontmatter {
+          slug
+          title
+        }
+        id
+        fields {
+          locale
+        }
+      }
+    }
+    file(name: {eq: "order"}, sourceInstanceName: {eq: "works"}) {
+      childMdx {
+        exports {
+          categories
+        }
+      }
+    }
   }
   `)
 
+const { t } = useTranslation()
+const { locale/* , defaultLang, config  */} = useLocalization()
 const flags = query.allFile.nodes
+const categories = query.allMdx.nodes
+const categoriesRightOrder = query.file.childMdx.exports.categories
   
   return (
     <aside className={style.aside}>
@@ -70,17 +90,20 @@ const flags = query.allFile.nodes
             <li className={style.works}>
               {t("works")}&nbsp;
                 <span style={{
-                  display: "inline-block", 
-                  /* color: "grey", */  /* transform: "rotate(90deg)", */}}>&#10095;
+                  display: "inline-block"}}>&#10095;
                 </span>
               <ul className={style.worksList}>
-                {titlesList?.map(title => {
-                  return <li key={title.id}>{title.frontmatter.title}</li>
-                })}
+                {categoriesRightOrder.map(category => {
+                  return categories.map(title => {
+                    if(category === title.frontmatter.slug && title.fields.locale === locale) {
+                      return <li key={title.id}>{title.frontmatter.title}</li>
+                    }
+                  })
+                })}     
               </ul>
             </li>
             <li>
-              <LocalizedLink to="/">
+              <LocalizedLink to="/contacts">
                 {t("contacts")}
               </LocalizedLink>
             </li>
