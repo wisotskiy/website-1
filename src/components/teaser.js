@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 import * as style from "../style/_style.module.scss"
 
-export default function Teaser({ post }) {
+export default function Teaser({ cat }) {
 
   const { t } = useTranslation()
 
@@ -14,16 +14,16 @@ export default function Teaser({ post }) {
     <article>
       <GatsbyImage
         className={style.teaserPhoto}
-        image={getImage(post.frontmatter.hero_image.image)}
-        alt={post.frontmatter.hero_image.alt}
+        image={getImage(cat.frontmatter?.hero_image.image)}
+        alt={cat.frontmatter.hero_image.alt}
       />
       <div className={style.info}>
         <h3 className={style.teaserTitle}>
-          <Link to={`/${post.frontmatter.slug}`}>
-            {post.frontmatter.title}
+          <Link to={`/${cat.frontmatter.slug}`}>
+            {cat.frontmatter.title}
           </Link>
         </h3>
-        <p>{post.excerpt}</p>
+        <p>{cat.excerpt}</p>
         <Button variant="outline-light"
           className={style.seeMore}
         >{t("slider_link")}</Button>
