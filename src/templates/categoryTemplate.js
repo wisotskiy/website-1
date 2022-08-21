@@ -7,7 +7,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
 import * as style from "../style/_style.module.scss"
 import Layout from "../components/layout"
-import { LocalizedLink as Link, LocalizedLink } from "gatsby-theme-i18n"
+import { LocalizedLink } from "gatsby-theme-i18n"
 
 
 const Category = ({data}) => {
@@ -21,10 +21,10 @@ console.log(data)
       <div className={`${style.container} ${style.itemService}`}>
         <h1>Category: {categoryData.frontmatter.title}</h1>
         <ul>
-          {data.allMdx.nodes.map(node => {
-          return <li><LocalizedLink to={`/${node.frontmatter.category}/${node.frontmatter.slug}`}>{node.frontmatter.title}</LocalizedLink></li>
-        })}
-          </ul>
+          {data.allMdx.nodes.length > 0 ? data.allMdx.nodes.map(node => {
+            return <li key={node.id}><LocalizedLink to={`/${node.frontmatter.category}/${node.frontmatter.slug}`}>{node.frontmatter.title}</LocalizedLink></li>
+          }) : `There are no projects yet`}
+        </ul>
         <GatsbyImage
           alt={categoryData.frontmatter.hero_image?.alt}
           image={getImage(categoryData.frontmatter?.hero_image?.image)}
@@ -79,6 +79,7 @@ query CategoryBySlug($slug: String, $locale: String) {
         slug
         category
       }
+      id
     }
   }
 }
