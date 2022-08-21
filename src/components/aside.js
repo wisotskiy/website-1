@@ -103,7 +103,7 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
               </ul>
             </li>
             <li>
-              <LocalizedLink to="/contacts">
+              <LocalizedLink to="/">
                 {t("contacts")}
               </LocalizedLink>
             </li>
