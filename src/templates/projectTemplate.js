@@ -18,19 +18,19 @@ const Project = ({ data }) => {
 console.log(data)
   return (
     <Layout>
-      <Seo title={projectData.frontmatter.title} />
+      <Seo title={projectData?.frontmatter?.title} />
 
       <div className={`${style.container} ${style.itemService}`}>
-        <h1>Project: {projectData.frontmatter.title}</h1>
+        <h1>Project: {projectData?.frontmatter?.title}</h1>
 
-        <GatsbyImage
-          alt={projectData.frontmatter.hero_image?.alt}
-          image={getImage(projectData.frontmatter.hero_image?.image)}
+        {projectData && <GatsbyImage
+          alt={projectData?.frontmatter?.hero_image?.alt}
+          image={getImage(projectData?.frontmatter?.hero_image?.image)}
           layout="constrained"
-        />
+        />}
 
         <article>
-          <MDXRenderer>{projectData.body}</MDXRenderer>
+          <MDXRenderer>{projectData?.body}</MDXRenderer>
         </article>
       </div>
       <div className={style.container}>
