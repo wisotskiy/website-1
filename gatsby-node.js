@@ -41,21 +41,17 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-
-
-
-
   const projectsQuery = await graphql(`
-    {
-      allMdx(filter: {frontmatter: {category: {ne: "root"}}}) {
-        nodes {
-          frontmatter {
-            category
-            slug
-          }
+  {
+    allMdx(filter: {frontmatter: {category: {ne: "root"}}, slug: {ne: "order"}}) {
+      nodes {
+        frontmatter {
+          category
+          slug
         }
       }
     }
+  }
   `).then((result) => {
     if (result.errors) {
       result.errors.forEach((e) => console.error(e.toString()));
