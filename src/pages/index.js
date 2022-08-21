@@ -11,12 +11,9 @@ import * as style from "../style/_style.module.scss"
 import CarouselSlider from "../components/CarouselSlider/CarouselSlider"
 
 const IndexPage = ({ data }) => {
-  
   const { t } = useTranslation()
-  const categoriesRightOrder = data.file.childMdx.exports.categories
-//console.log(data.allMdx.nodes)
   return (
-    <Layout>
+    <Layout titles={data.allMdx.nodes}>
       <Seo title={t("home")} />
       <CarouselSlider />
       <div className={style.container}>
@@ -31,18 +28,14 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
 
-      <div className={style.servicesList}>  
-        {categoriesRightOrder.map(category => {
-          return data.allMdx.nodes.map(cat => {
-            if(category === cat.frontmatter.slug) {
-              return <div className={style.serviceItem} key={cat.id}>
-              <div className={style.container}>
-                <Teaser cat={cat} />
-              </div>
+      <div className={style.servicesList}>       
+        {data.allMdx.nodes.map(post => {
+          //const image = getImage(post.frontmatter.hero_image.image)
+          return <div className={style.serviceItem} key={post.id}>
+            <div className={style.container}>
+              <Teaser post={post} />
             </div>
-            }
-          })
-
+          </div>
         })}       
       </div>      
     </Layout>
@@ -52,7 +45,7 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const query = graphql`
-query Categories($locale: String) {
+query BlogPosts($locale: String) {
   allMdx(
     filter: {fields: {locale: {eq: $locale}}, frontmatter: {category: {eq: "root"}}}
   ) {
@@ -71,13 +64,6 @@ query Categories($locale: String) {
       }
       id
       excerpt(pruneLength: 170, truncate: true)
-    }
-  }
-  file(name: {eq: "order"}, sourceInstanceName: {eq: "works"}) {
-    childMdx {
-      exports {
-        categories
-      }
     }
   }
 }

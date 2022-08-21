@@ -13,10 +13,13 @@ import yt from "../images/yt-icon.svg"
 import fb from "../images/fb.svg"
 
 
-const Aside = () => {
+const Aside = ({ titles }) => {
+  const { t } = useTranslation()
+  const { locale/* , defaultLang, config  */} = useLocalization()
+  const titlesList = titles
 
   const query = useStaticQuery(graphql`
-  query Menu {
+  query Flags {
     allFile(filter: {extension: {eq: "png"}}) {
       nodes {
         relativePath
@@ -27,33 +30,10 @@ const Aside = () => {
         id
       }
     }
-    allMdx(filter: {frontmatter: {category: {eq: "root"}}}) {
-      nodes {
-        frontmatter {
-          slug
-          title
-        }
-        id
-        fields {
-          locale
-        }
-      }
-    }
-    file(name: {eq: "order"}, sourceInstanceName: {eq: "works"}) {
-      childMdx {
-        exports {
-          categories
-        }
-      }
-    }
   }
   `)
 
-const { t } = useTranslation()
-const { locale/* , defaultLang, config  */} = useLocalization()
 const flags = query.allFile.nodes
-const categories = query.allMdx.nodes
-const categoriesRightOrder = query.file.childMdx.exports.categories
   
   return (
     <aside className={style.aside}>
@@ -90,20 +70,17 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
             <li className={style.works}>
               {t("works")}&nbsp;
                 <span style={{
-                  display: "inline-block"}}>&#10095;
+                  display: "inline-block", 
+                  /* color: "grey", */  /* transform: "rotate(90deg)", */}}>&#10095;
                 </span>
               <ul className={style.worksList}>
-                {categoriesRightOrder.map(category => {
-                  return categories.map(title => {
-                    if(category === title.frontmatter.slug && title.fields.locale === locale) {
-                      return <li key={title.id}>{title.frontmatter.title}</li>
-                    }
-                  })
-                })}     
+                {titlesList?.map(title => {
+                  return <li key={title.id}>{title.frontmatter.title}</li>
+                })}
               </ul>
             </li>
             <li>
-              <LocalizedLink to="/contacts">
+              <LocalizedLink to="/">
                 {t("contacts")}
               </LocalizedLink>
             </li>
