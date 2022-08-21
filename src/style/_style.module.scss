@@ -248,6 +248,25 @@ h3 {
 
 /* end of categoryTemplate */
 
+/* feedbackForm */
+
+button[type="submit"] {
+    border: 1px solid #f1f1f1;
+    border-radius: 3px;
+    background: transparent;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    transition: all ease .3s;
+
+    &:hover {
+        border: 1px solid #747474;
+        background: #f1f1f1;
+        color: #242424;
+    }
+}
+
+/* end of feedbackForm */
+
 /* footer */
 
 .footer {

@@ -2,7 +2,7 @@ import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { LocalizedLink as Link } from "gatsby-theme-i18n"
 import { useTranslation } from "react-i18next"
-import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button'
 
 import * as style from "../style/_style.module.scss"
 

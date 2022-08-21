@@ -4,7 +4,6 @@ import * as React from "react"
 import { useTranslation } from "react-i18next"
 
 import Seo from "../components/seo"
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from "../components/layout"
 
 import * as style from "../style/_style.module.scss"
@@ -19,6 +18,12 @@ const IndexPage = () => {
       <Seo title={t("contacts")} />
       <div className={style.container}>
         <h1 className={style.title}>{t("contacts")}</h1>
+
+        <form className={style.contactsForm} action="https://submit-form.com/m6LCQqtH">
+          <input type="text" name="message" placeholder={t("your_message")} />
+          <input type="email" name="email" placeholder={t("your_email")} />
+          <button type="submit">{t("send")}</button>
+        </form>
 
       </div>
 
