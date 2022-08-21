@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 //import { useTranslation } from "react-i18next"
 import Seo from "../components/seo"
 import * as style from "../style/_style.module.scss"
@@ -23,11 +23,14 @@ console.log(data)
       <div className={`${style.container} ${style.itemService}`}>
         <h1>Project: {projectData?.frontmatter?.title}</h1>
 
-        {projectData && <GatsbyImage
-          alt={projectData?.frontmatter?.hero_image?.alt}
-          image={getImage(projectData?.frontmatter?.hero_image?.image)}
-          layout="constrained"
-        />}
+        {projectData ? 
+          <GatsbyImage
+            alt={projectData?.frontmatter?.hero_image?.alt}
+            image={getImage(projectData?.frontmatter?.hero_image?.image)}
+            layout="constrained"
+          /> : 
+          <StaticImage src="../images/placeholder-image.png" alt="A placeholder" />
+        }
 
         <article>
           <MDXRenderer>{projectData?.body}</MDXRenderer>
