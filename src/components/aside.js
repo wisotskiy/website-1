@@ -83,9 +83,14 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
 
           <ul className={style.pages}>
             <li>
-              <AnchorLink to={`/${locale}#about`}>
+              {locale === 'en' ?
+              <AnchorLink to={`/#about`}>
                 {t("about")}
-              </AnchorLink>
+              </AnchorLink> :
+              <AnchorLink to={`/${locale}#about`}>
+              {t("about")}
+            </AnchorLink>
+              }
             </li>
             <li className={style.works}>
               {t("works")}&nbsp;
