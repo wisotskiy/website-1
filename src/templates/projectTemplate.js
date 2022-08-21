@@ -21,7 +21,7 @@ console.log(data)
       <Seo title={projectData?.frontmatter?.title} />
 
       <div className={`${style.container} ${style.itemService}`}>
-        <h1>Project: {projectData?.frontmatter?.title}</h1>
+        <h1>{projectData?.frontmatter?.title}</h1>
 
         {projectData ? 
           <GatsbyImage

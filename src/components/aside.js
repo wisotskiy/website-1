@@ -5,7 +5,7 @@ import LanguageSwitcher from "./language-switcher"
 import { useLocalization } from "gatsby-theme-i18n"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-//import 'bootstrap/dist/css/bootstrap.min.css'
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import * as style from "../style/_style.module.scss"
 import logo from "../images/logo.svg"
@@ -83,9 +83,9 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
 
           <ul className={style.pages}>
             <li>
-              <LocalizedLink to="/">
+              <AnchorLink to={`/${locale}#about`}>
                 {t("about")}
-              </LocalizedLink>
+              </AnchorLink>
             </li>
             <li className={style.works}>
               {t("works")}&nbsp;
@@ -96,7 +96,9 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
                 {categoriesRightOrder.map(category => {
                   return categories.map(title => {
                     if(category === title.frontmatter.slug && title.fields.locale === locale) {
-                      return <li key={title.id}>{title.frontmatter.title}</li>
+                      return <li key={title.id}>
+                        <LocalizedLink to={`/${title.frontmatter.slug}`}>{title.frontmatter.title}</LocalizedLink>
+                      </li>
                     }
                   })
                 })}     

@@ -42,6 +42,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        duration: 1000
+      }
+    },
+    {
       // Gatsby will automatically resolve from the 
       // /plugins directory
       resolve: `gatsby-theme-i18n-i18next-wrapper`,

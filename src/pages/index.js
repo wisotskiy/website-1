@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Seo title={t("home")} />
       <CarouselSlider />
-      <div className={style.container}>
+      <div id="about" className={style.container}>
         <h1 className={style.title}>{t("main_page_title")}</h1>
         <div className={style.about}>
           <StaticImage 
