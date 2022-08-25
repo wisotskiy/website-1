@@ -1,9 +1,10 @@
-import * as React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import Seo from "../components/seo"
 import Teaser from "../components/teaser"
+import MobileTeaser from "../components/teaserMobile"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from "../components/layout"
 
@@ -14,7 +15,16 @@ const IndexPage = ({ data }) => {
   
   const { t } = useTranslation()
   const categoriesRightOrder = data.file.childMdx.exports.categories
-//console.log(data.allMdx.nodes)
+  
+  const [width, setWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    window.addEventListener('resize', () => setWidth(window.innerWidth))
+    window.removeEventListener('resize', () => setWidth())
+    return () => { 
+      setWidth(null)}
+  }, [window.innerWidth])
+
   return (
     <Layout>
       <Seo title={t("home")} />
@@ -37,7 +47,7 @@ const IndexPage = ({ data }) => {
             if(category === cat.frontmatter.slug) {
               return <div className={style.serviceItem} key={cat.id}>
               <div className={style.container}>
-                <Teaser cat={cat} />
+                {width > "576" ? <Teaser cat={cat} /> : <MobileTeaser cat={cat} />}
               </div>
             </div>
             }

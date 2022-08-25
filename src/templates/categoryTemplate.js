@@ -10,6 +10,7 @@ import Layout from "../components/layout"
 import { LocalizedLink} from "gatsby-theme-i18n"
 
 
+
 const Category = ({data}) => {
   //const { locale/* , defaultLang, config  */} = useLocalization()
   const categoryData = data.mdx
@@ -19,7 +20,7 @@ const Category = ({data}) => {
       <Seo title={categoryData.frontmatter.title} />
 
       <div className={style.container}>
-        <h1>{categoryData.frontmatter.title}</h1>
+        <h1  className={style.title}>{categoryData.frontmatter.title}</h1>
 
         <article>
           <MDXRenderer>{categoryData.body}</MDXRenderer>

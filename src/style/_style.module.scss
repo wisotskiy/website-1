@@ -69,7 +69,13 @@ h3 {
 
                 /* works submenu */
 
+                .works  {
+                    position: relative;
+                }
+
                 .works-list {
+                    position: absolute;
+                    left: 40px;
                     display: none;
                     width: max-content;
                     background: #f7f7f7;
@@ -124,11 +130,15 @@ h3 {
 
 /* end of aside */
 
+.title {
+    margin-top: 30px;
+}
+
 .about {
     display: flex;
     padding: 0 30px;
     justify-content: space-evenly;
-    margin-bottom: 70px;
+    /* margin-bottom: 70px; */
 
     .about-photo img {
         border-radius: 50%;
@@ -151,8 +161,8 @@ h3 {
 
     article {
         display: inline-flex;
-        justify-content: space-evenly;
-        width: 85%;
+        justify-content: space-between;
+        width: 100%;
         margin: 50px;
     } 
 
@@ -187,7 +197,7 @@ h3 {
         display: flex;
         flex-direction: row-reverse;
 
-        article {
+        article.desktop {
             flex-direction: row-reverse;
             width: 100%;
 
@@ -198,7 +208,7 @@ h3 {
     }
 }
 
-.item-service {
+/* .item-service {
     display: grid;
     grid-template-areas: "a a" "b c";
     grid-template-columns: 60% 40%;
@@ -216,7 +226,7 @@ h3 {
 
 .item-service > article {
     grid-area: c;
-}
+} */
 
 /* teaser */
 
@@ -324,6 +334,13 @@ button[type="submit"] {
         }
     }
 
+    .service-item .container {
+
+        article {
+            margin: 3vw;
+        }
+    }
+
     /* teaser */
 
     .teaser-photo {
@@ -331,6 +348,27 @@ button[type="submit"] {
     }
 
 }
+
+@media screen and (max-width: 1024px){
+
+    .content {
+        width: 100%;
+    }
+
+    .aside {
+        display: none;
+    }
+
+    .about {
+
+        .about-text {
+            width: 50vw;
+        }
+    }
+
+
+}
+
 
 @media screen and (max-width: 768px){
     .about {   
@@ -354,4 +392,29 @@ button[type="submit"] {
 /*     .teaser-photo {
         max-width: 200px;
     } */
+}
+
+@media screen and (max-width: 576px) {
+
+    .service-item {
+
+        .container {
+            
+            article.mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .teaser-photo {
+                    max-width: 55vw;
+                    margin: 20px 0;
+                }
+
+                .info {
+                    padding: 0;
+                    width: 90%;
+                }
+            }
+        }
+    }
 }
