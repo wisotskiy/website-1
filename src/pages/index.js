@@ -25,12 +25,14 @@ const IndexPage = ({ data }) => {
 
     if(isBrowser) {
       window.addEventListener('resize', () => setWidth(window.innerWidth))
+
+      window.removeEventListener('resize', () => setWidth())
+      return () => { 
+        setWidth(null)}
     }
     
-    window.removeEventListener('resize', () => setWidth())
-    return () => { 
-      setWidth(null)}
-  }, [window.innerWidth])
+
+  }, [width])
 
   return (
     <Layout>
