@@ -11,15 +11,22 @@ import Layout from "../components/layout"
 import * as style from "../style/_style.module.scss"
 import CarouselSlider from "../components/CarouselSlider/CarouselSlider"
 
+const isBrowser = typeof window !== "undefined"
+
 const IndexPage = ({ data }) => {
   
   const { t } = useTranslation()
   const categoriesRightOrder = data.file.childMdx.exports.categories
   
-  const [width, setWidth] = useState(window.innerWidth)
+  
+  const [width, setWidth] = useState(0)
 
   useEffect(() => {
-    window.addEventListener('resize', () => setWidth(window.innerWidth))
+
+    if(isBrowser) {
+      window.addEventListener('resize', () => setWidth(window.innerWidth))
+    }
+    
     window.removeEventListener('resize', () => setWidth())
     return () => { 
       setWidth(null)}
