@@ -138,7 +138,6 @@ h3 {
     display: flex;
     padding: 0 30px;
     justify-content: space-evenly;
-    /* margin-bottom: 70px; */
 
     .about-photo img {
         border-radius: 50%;
@@ -413,6 +412,11 @@ button[type="submit"] {
                 .info {
                     padding: 0;
                     width: 90%;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #f1f1f1;
                 }
             }
         }

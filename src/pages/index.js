@@ -18,8 +18,7 @@ const IndexPage = ({ data }) => {
   const { t } = useTranslation()
   const categoriesRightOrder = data.file.childMdx.exports.categories
   
-  
-  const [width, setWidth] = useState(1000)
+  const [width, setWidth] = useState("100%")
 
   useEffect(() => {
 

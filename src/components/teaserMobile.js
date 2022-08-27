@@ -12,7 +12,7 @@ export default function MobileTeaser({ cat }) {
 
   return (
     <article className={style.mobile}>
-      <h3 className={style.teaserTitle}>kk
+      <h3 className={style.teaserTitle}>
         <Link to={`/${cat.frontmatter.slug}`}>
           {cat.frontmatter.title}
         </Link>
