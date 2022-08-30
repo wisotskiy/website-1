@@ -1,51 +1,73 @@
-import * as React from "react"
+import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { LocalizedLink } from "gatsby-theme-i18n"
-import LanguageSwitcher from "./language-switcher"
+import LanguageSwitcher from "../language-switcher"
 import { useLocalization } from "gatsby-theme-i18n"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import * as style from "../style/_style.module.scss"
-import logo from "../images/logo.svg"
-import yt from "../images/yt-icon.svg"
-import fb from "../images/fb.svg"
+import * as style from "./_Menu.module.scss"
+import logo from "../../images/logo.svg"
+import yt from "../../images/yt-icon.svg"
+import fb from "../../images/fb.svg"
+import menu from "../../images/menu_2.svg"
+import close from "../../images/close_menu.svg"
 
 
-const Aside = () => {
+const Menu = () => {
+
+  const [show, setShow] = useState(false)
+
+  const shadowHidden = {
+    display: "none"
+  }
+  
+  const shadowShown = {
+    display: "block"
+  }
+
+  const backgroundHidden = {
+    right: "-300px",
+    transition: "all ease .5s"
+  }
+
+  const backgroundShown = {
+    right: "0",
+    transition: "all ease .5s"
+  }
 
   const query = useStaticQuery(graphql`
-  query Menus {
-    allFile(filter: {extension: {eq: "png"}}) {
-      nodes {
-        relativePath
-        name
-        childImageSharp {
-          gatsbyImageData
-        }
-        id
-      }
-    }
-    allMdx(filter: {frontmatter: {category: {eq: "root"}}}) {
-      nodes {
-        frontmatter {
-          slug
-          title
-        }
-        id
-        fields {
-          locale
+    query Menu {
+      allFile(filter: {extension: {eq: "png"}}) {
+        nodes {
+          relativePath
+          name
+          childImageSharp {
+            gatsbyImageData
+          }
+          id
         }
       }
-    }
-    file(name: {eq: "order"}, sourceInstanceName: {eq: "works"}) {
-      childMdx {
-        exports {
-          categories
+      allMdx(filter: {frontmatter: {category: {eq: "root"}}}) {
+        nodes {
+          frontmatter {
+            slug
+            title
+          }
+          id
+          fields {
+            locale
+          }
+        }
+      }
+      file(name: {eq: "order"}, sourceInstanceName: {eq: "works"}) {
+        childMdx {
+          exports {
+            categories
+          }
         }
       }
     }
-  }
   `)
 
 const { t } = useTranslation()
@@ -121,14 +143,25 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
                   <img className={style.yt} src={yt}></img>
                 </a>
               </li>
-            </ul>                     
-                    
-          </nav>
-          
-        </div>
-        
+            </ul>                                         
+          </nav>         
+        </div>       
       </aside>
+
+      <div className={style.mobileMenu}>
+        <button onClick={() => setShow(true)}>
+          <img className={style.hamburger} src={menu} alt="menu"></img>
+        </button>
+        <div className={style.shadow} style={show ? shadowShown : shadowHidden}>
+          <div className={style.background} style={show ? backgroundShown : backgroundHidden}>
+            <button onClick={() => setShow(false)}>
+              <img className={style.hamburger} src={close} alt="close menu"></img>
+            </button>
+          </div>
+        </div>
+
+      </div>
     </>
   )
 }
-export default Aside
+export default Menu

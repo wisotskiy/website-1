@@ -1,37 +1,20 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import Seo from "../components/seo"
 import Teaser from "../components/teaser"
-import MobileTeaser from "../components/teaserMobile"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from "../components/layout"
 
 import * as style from "../style/_style.module.scss"
 import CarouselSlider from "../components/CarouselSlider/CarouselSlider"
 
-const isBrowser = typeof window !== "undefined"
 
 const IndexPage = ({ data }) => {
   
   const { t } = useTranslation()
   const categoriesRightOrder = data.file.childMdx.exports.categories
-  
-  const [width, setWidth] = useState("100%")
-
-  useEffect(() => {
-
-    if(isBrowser) {
-      window.addEventListener('resize', () => setWidth(window.innerWidth))
-
-      window.removeEventListener('resize', () => setWidth())
-      return () => { 
-        setWidth(null)}
-    }
-    
-
-  }, [width])
 
   return (
     <Layout>
@@ -55,12 +38,11 @@ const IndexPage = ({ data }) => {
             if(category === cat.frontmatter.slug) {
               return <div className={style.serviceItem} key={cat.id}>
               <div className={style.container}>
-                {width > "576" ? <Teaser cat={cat} /> : <MobileTeaser cat={cat} />}
+                <Teaser cat={cat} />
               </div>
             </div>
-            }
+            } else return false
           })
-
         })}       
       </div>      
     </Layout>

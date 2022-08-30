@@ -11,23 +11,23 @@ export default function Teaser({ cat }) {
   const { t } = useTranslation()
 
   return (
-    <article>
+    <article className={style.desktop}>
       <GatsbyImage
         className={style.teaserPhoto}
         image={getImage(cat.frontmatter?.hero_image.image)}
         alt={cat.frontmatter.hero_image.alt}
       />
-      
-      <h3 className={style.teaserTitle}>
-        <Link to={`/${cat.frontmatter.slug}`}>
-          {cat.frontmatter.title}
-        </Link>
-      </h3>
-      <p className={style.teaserDescription}>{cat.excerpt}</p>
-      <Button variant="outline-light"
-        className={style.seeMore}
-      >{t("slider_link")}</Button>
-      
+      <div className={style.info}>
+        <h3 className={style.teaserTitle}>
+          <Link to={`/${cat.frontmatter.slug}`}>
+            {cat.frontmatter.title}
+          </Link>
+        </h3>
+        <p>{cat.excerpt}</p>
+        <Button variant="outline-light"
+          className={style.seeMore}
+        >{t("slider_link")}</Button>
+      </div>
     </article>
   )
 }
