@@ -116,7 +116,7 @@ button {
 
 .hamburger {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     height: 50px;
     right: 20px;
@@ -130,9 +130,8 @@ button {
     left: 0;
     right: 0;
     background: #35353585;
-    z-index: 5;
+    z-index: 20;
     
-    /* display: none; */
 }
 
 .background {
@@ -140,10 +139,120 @@ button {
     width: 300px;
     top: 0;
     bottom: 0;
-    /* right: -300px; */
+    padding: 0 20px 10px;
     background: #ffffff;
-    z-index: 20;
-    transition: all ease .5s;
+    z-index: 30;
+    overflow-y: scroll;
+
+    select {
+        font-size: 20px;
+    }
+
+    img {
+        margin-bottom: 0;
+    }
+
+    .logo {
+        width: 65%;
+        margin: 20px 0 50px;
+    }
+
+    .main-menu {
+        margin: 0;
+
+        ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .pages {
+
+            li {
+                margin: 22px 0;
+                font-size: 18px;
+                text-transform: uppercase;
+                width: fit-content;
+            }
+            
+            a {
+                color: #787878;
+                text-decoration: none;
+            }
+            
+            li:hover, span:hover {
+                color: #c4c4c4;
+            }
+
+            li:hover span {
+                transform: rotate(90deg);
+            }
+
+            a:hover {
+                color: #c4c4c4;
+            }
+
+            /* works submenu */
+
+            .works  {
+                position: relative;
+            }
+
+            li.works-mobile {
+                color: #787878;
+                font-weight: 500;
+            }
+
+            .works-list {
+                left: 40px;
+                width: max-content;
+                padding: 10px 12px;
+
+                li {
+                    margin: 10px 5px;
+                    color: #353535;
+
+                    a {
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .works:hover .works-list {
+                display: block;
+            }
+        } 
+    }
+
+    .socials {
+        display: flex;
+
+        li {
+            margin: 0;
+        }
+
+        .fb {
+            width: 21px;
+        }
+
+        .yt {
+            width: 26px;
+            margin: 0 0 0 20px;
+        }
+    }
+
+    .languages {
+        display: flex;
+        align-items: center;
+        padding: 0 0 20px 0;
+
+        li {
+            margin: 0;
+
+            .flag {
+                height: 20px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1024px){

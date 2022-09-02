@@ -27,13 +27,11 @@ const Menu = () => {
   }
 
   const backgroundHidden = {
-    right: "-300px",
-    transition: "all ease .5s"
+    right: "-300px"
   }
 
   const backgroundShown = {
     right: "0",
-    transition: "all ease .5s"
   }
 
   const query = useStaticQuery(graphql`
@@ -157,6 +155,68 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
             <button onClick={() => setShow(false)}>
               <img className={style.hamburger} src={close} alt="close menu"></img>
             </button>
+            <div className={style.logo}>
+          <LocalizedLink to="/"><img src={logo} alt="logo"></img></LocalizedLink>
+          </div>
+          <nav className={style.mainMenu}>
+
+            <ul className={style.languages}>
+              <li>
+                {flags.map(flag => {
+                  if(flag.name === locale) {
+                    return <GatsbyImage
+                    key={flag.id}
+                    image={flag.childImageSharp.gatsbyImageData}
+                    style={{"aspectRatio": "1/1", position: "relative", top: "2px", marginRight: "10px"}}
+                    alt="flag"
+                  />
+                  }
+                })}
+              </li>
+              <li>
+                <LanguageSwitcher className={style.l} />
+              </li>
+            </ul>
+
+            <ul className={style.pages}>
+              <li>
+                <LocalizedLink to={`/#about`}>{t("about")}</LocalizedLink>
+              </li>
+              <li className={style.worksMobile}>
+                {t("works")}
+                <ul className={style.worksList}>
+                  {categoriesRightOrder.map(category => {
+                    return categories.map(title => {
+                      if(category === title.frontmatter.slug && title.fields.locale === locale) {
+                        return <li key={title.id}>
+                          <LocalizedLink to={`/${title.frontmatter.slug}`}>{title.frontmatter.title}</LocalizedLink>
+                        </li>
+                      }
+                    })
+                  })}     
+                </ul>
+              </li>
+              <li>
+                <LocalizedLink to="/contacts">
+                  {t("contacts")}
+                </LocalizedLink>
+              </li>
+
+            </ul>
+            
+            <ul className={style.socials}>
+              <li className={style.socialsItem}>             
+                <a href="https://www.facebook.com/wisotskiy">
+                  <img className={style.fb} src={fb}></img>
+                </a>
+              </li>
+              <li className={style.socialsItem}>             
+                <a href="https://www.youtube.com/watch?v=zhJha7ePr3w">
+                  <img className={style.yt} src={yt}></img>
+                </a>
+              </li>
+            </ul>                                         
+          </nav>     
           </div>
         </div>
 

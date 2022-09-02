@@ -19,9 +19,9 @@ console.log(data)
   return (
     <Layout>
       <Seo title={projectData?.frontmatter?.title} />
-
+      <div className={style.gap}></div>
       <div className={`${style.container} ${style.itemService}`}>
-        <h1>{projectData?.frontmatter?.title}</h1>
+        <h1 className={style.title}>{projectData?.frontmatter?.title}</h1>
 
         {projectData ? 
           <GatsbyImage

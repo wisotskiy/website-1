@@ -23,6 +23,10 @@ h3 {
     margin-top: 30px;
 }
 
+.gap {
+    height: 50px;
+}
+
 .about {
     display: flex;
     padding: 0 30px;
@@ -55,7 +59,8 @@ article {
     margin: auto;
     display: grid;
     column-gap: 70px;
-    margin: 50px;
+    margin: 50px 0;
+    padding: 0 20px;
 }
 
 article .teaser-photo {

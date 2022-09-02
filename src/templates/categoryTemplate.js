@@ -18,9 +18,9 @@ const Category = ({data}) => {
   return (
     <Layout>
       <Seo title={categoryData.frontmatter.title} />
-
+      <div className={style.gap}></div>
       <div className={style.container}>
-        <h1  className={style.title}>{categoryData.frontmatter.title}</h1>
+        <h1 className={style.title}>{categoryData.frontmatter.title}</h1>
 
         <article>
           <MDXRenderer>{categoryData.body}</MDXRenderer>
