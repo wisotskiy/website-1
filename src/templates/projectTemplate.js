@@ -2,14 +2,10 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
-//import { useTranslation } from "react-i18next"
 import Seo from "../components/seo"
 import * as style from "../style/_style.module.scss"
 import Layout from "../components/layout"
-
-
 import Gallery from "../components/Carousel/Carousel"
-
 
 
 const Project = ({ data }) => {

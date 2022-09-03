@@ -156,7 +156,7 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
               <img className={style.hamburger} src={close} alt="close menu"></img>
             </button>
             <div className={style.logo}>
-          <LocalizedLink to="/"><img src={logo} alt="logo"></img></LocalizedLink>
+          <LocalizedLink to="/"><img onClick={() => setShow(false)} src={logo} alt="logo"></img></LocalizedLink>
           </div>
           <nav className={style.mainMenu}>
 
@@ -174,13 +174,13 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
                 })}
               </li>
               <li>
-                <LanguageSwitcher className={style.l} />
+                <LanguageSwitcher onClick={() => setShow(false)} />
               </li>
             </ul>
 
             <ul className={style.pages}>
               <li>
-                <LocalizedLink to={`/#about`}>{t("about")}</LocalizedLink>
+                <LocalizedLink to={`/#about`} onClick={() => setShow(false)}>{t("about")}</LocalizedLink>
               </li>
               <li className={style.worksMobile}>
                 {t("works")}
@@ -189,7 +189,7 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
                     return categories.map(title => {
                       if(category === title.frontmatter.slug && title.fields.locale === locale) {
                         return <li key={title.id}>
-                          <LocalizedLink to={`/${title.frontmatter.slug}`}>{title.frontmatter.title}</LocalizedLink>
+                          <LocalizedLink to={`/${title.frontmatter.slug}`} onClick={() => setShow(false)}>{title.frontmatter.title}</LocalizedLink>
                         </li>
                       }
                     })
@@ -197,22 +197,20 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
                 </ul>
               </li>
               <li>
-                <LocalizedLink to="/contacts">
-                  {t("contacts")}
-                </LocalizedLink>
+                <LocalizedLink to="/contacts" onClick={() => setShow(false)}>{t("contacts")}</LocalizedLink>
               </li>
 
             </ul>
             
             <ul className={style.socials}>
               <li className={style.socialsItem}>             
-                <a href="https://www.facebook.com/wisotskiy">
-                  <img className={style.fb} src={fb}></img>
+                <a href="https://www.facebook.com/wisotskiy" target="_blank" rel="noopener noreferrer">
+                  <img className={style.fb} src={fb} onClick={() => setShow(false)}></img>
                 </a>
               </li>
               <li className={style.socialsItem}>             
-                <a href="https://www.youtube.com/watch?v=zhJha7ePr3w">
-                  <img className={style.yt} src={yt}></img>
+                <a href="https://www.youtube.com/channel/UCARc7cdl8tt5e2Dr1OVokig" target="_blank" rel="noopener noreferrer">
+                  <img className={style.yt} src={yt} onClick={() => setShow(false)}></img>
                 </a>
               </li>
             </ul>                                         
