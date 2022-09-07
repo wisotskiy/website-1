@@ -58,9 +58,8 @@ article {
     width: 100%;
     margin: auto;
     display: grid;
-    column-gap: 70px;
-    margin: 50px 0;
-    padding: 0 20px;
+    column-gap: 5%;
+    margin: 3%;
 }
 
 article .teaser-photo {
@@ -72,7 +71,7 @@ article h3 {
 
     a {
         text-decoration: none;
-        color: #f1f1f1;
+        color: #525252;
     }
 }
 
@@ -100,7 +99,7 @@ article .see-more {
     }
 
     .container {
-        background: #353535;
+        background: #f3f3f3;
     }   
 }
 
@@ -190,17 +189,6 @@ button[type="submit"] {
 
 @media screen and (max-width: 1280px){
 
-    .aside {
-
-        .container {
-
-            .logo {
-                width: 170px;
-                margin: 10px 0;
-            }
-        }
-    }
-
     .about {
         padding: 0;
     
@@ -219,6 +207,7 @@ button[type="submit"] {
 
         article {
             margin: 3vw;
+            padding: 0;
         }
     }
 
@@ -227,7 +216,6 @@ button[type="submit"] {
     .teaser-photo {
         max-width: 30vw;
     }
-
 }
 
 @media screen and (max-width: 1024px){

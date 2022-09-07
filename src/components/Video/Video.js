@@ -10,6 +10,8 @@ const Video = ({ videoSrcURL, videoTitle, ...props }) => (
       webkitallowfullscreen="true"
       mozallowfullscreen="true"
       allowFullScreen
+      width="100%"
+      style={{"aspectRatio": "16/9"}}
     />
   </div>
 )

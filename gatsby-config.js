@@ -48,6 +48,17 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: 'Montserrat',
+            weights: ['200..500']
+          }
+        ]
+      }
+    },
+    {
       // Gatsby will automatically resolve from the 
       // /plugins directory
       resolve: `gatsby-theme-i18n-i18next-wrapper`,

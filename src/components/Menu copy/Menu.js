@@ -10,7 +10,6 @@ import * as style from "./_Menu.module.scss"
 import logo from "../../images/logo_png_1.png"
 import yt from "../../images/yt-icon.svg"
 import fb from "../../images/fb.svg"
-import insta from "../../images/insta_logo.svg"
 import menu from "../../images/menu_2.svg"
 import close from "../../images/close_menu.svg"
 
@@ -36,7 +35,7 @@ const Menu = () => {
   }
 
   const query = useStaticQuery(graphql`
-    query MainMenu {
+    query Menu {
       allFile(filter: {extension: {eq: "png"}}) {
         nodes {
           relativePath
@@ -76,85 +75,76 @@ const categories = query.allMdx.nodes
 const categoriesRightOrder = query.file.childMdx.exports.categories
   
   return (
-    <>     
-      <nav className={style.header}>
-        <div className={style.logo}>
-        <LocalizedLink to="/"><img src={logo} alt="logo"></img></LocalizedLink>
-        </div>
-        {/* <nav className={style.mainMenu}> */}
+    <>
+      <aside className={style.aside}>
+        <div className={style.asideContainer}>
+          <div className={style.logo}>
+          <LocalizedLink to="/"><img src={logo} alt="logo"></img></LocalizedLink>
+          </div>
+          <nav className={style.mainMenu}>
 
-          <ul className={style.pages}>
-            <li>
-              <LocalizedLink to={`/#about`}>{t("about")}</LocalizedLink>
-            </li>
-            <li className={style.works}>
-              {t("works")}&nbsp;
-                <span style={{
-                  display: "inline-block"}}>&#10095;
-                </span>
-              <ul className={style.worksList}>
-                {categoriesRightOrder.map(category => {
-                  return categories.map(title => {
-                    if(category === title.frontmatter.slug && title.fields.locale === locale) {
-                      return <li key={title.id}>
-                        <LocalizedLink to={`/${title.frontmatter.slug}`}>{title.frontmatter.title}</LocalizedLink>
-                      </li>
-                    }
-                  })
-                })}     
-              </ul>
-            </li>
-            <li>
-              <LocalizedLink to="/prices">
-                {t("prices")}
-              </LocalizedLink>
-            </li>
-            <li>
-              <LocalizedLink to="/contacts">
-                {t("contacts")}
-              </LocalizedLink>
-            </li>
-          </ul>
+            <ul className={style.languages}>
+              <li>
+                {flags.map(flag => {
+                  if(flag.name === locale) {
+                    return <GatsbyImage
+                    key={flag.id}
+                    image={flag.childImageSharp.gatsbyImageData}
+                    style={{"aspectRatio": "1/1", position: "relative", top: "2px", marginRight: "10px"}}
+                    alt="flag"
+                  />
+                  }
+                })}
+              </li>
+              <li>
+                <LanguageSwitcher />
+              </li>
+            </ul>
 
-          <ul className={style.languages}>
-            <li>
-              {flags.map(flag => {
-                if(flag.name === locale) {
-                  return <GatsbyImage
-                  key={flag.id}
-                  image={flag.childImageSharp.gatsbyImageData}
-                  style={{"aspectRatio": "1/1", position: "relative", top: "2px", marginRight: "10px"}}
-                  alt="flag"
-                />
-                }
-              })}
-            </li>
-            <li>
-              <LanguageSwitcher />
-            </li>
-          </ul>
-          
-                                        
-        {/* </nav> */}         
-      </nav>       
-      
-      <div className={style.socials}>
-            <div className={style.socialsItem}>             
-              <a href="https://www.facebook.com/wisotskiy">
-                <img className={style.fb} src={fb}></img>
-              </a>
-            </div>
-            <div className={style.socialsItem}>             
-              <a href="https://www.youtube.com/watch?v=zhJha7ePr3w">
-                <img className={style.yt} src={yt}></img>
-              </a>
-            </div>
-            <div className={style.socialsItem}>             
-              <a href="https://www.youtube.com/watch?v=zhJha7ePr3w">
-                <img className={style.insta} src={insta}></img>
-              </a>
-            </div>
-          </div> 
+            <ul className={style.pages}>
+              <li>
+                <LocalizedLink to={`/#about`}>{t("about")}</LocalizedLink>
+              </li>
+              <li className={style.works}>
+                {t("works")}&nbsp;
+                  <span style={{
+                    display: "inline-block"}}>&#10095;
+                  </span>
+                <ul className={style.worksList}>
+                  {categoriesRightOrder.map(category => {
+                    return categories.map(title => {
+                      if(category === title.frontmatter.slug && title.fields.locale === locale) {
+                        return <li key={title.id}>
+                          <LocalizedLink to={`/${title.frontmatter.slug}`}>{title.frontmatter.title}</LocalizedLink>
+                        </li>
+                      }
+                    })
+                  })}     
+                </ul>
+              </li>
+              <li>
+                <LocalizedLink to="/contacts">
+                  {t("contacts")}
+                </LocalizedLink>
+              </li>
+
+            </ul>
+            
+            <ul className={style.socials}>
+              <li className={style.socialsItem}>             
+                <a href="https://www.facebook.com/wisotskiy">
+                  <img className={style.fb} src={fb}></img>
+                </a>
+              </li>
+              <li className={style.socialsItem}>             
+                <a href="https://www.youtube.com/watch?v=zhJha7ePr3w">
+                  <img className={style.yt} src={yt}></img>
+                </a>
+              </li>
+            </ul>                                         
+          </nav>         
+        </div>       
+      </aside>
 
       <div className={style.mobileMenu}>
         <button onClick={() => setShow(true)}>

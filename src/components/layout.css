@@ -37,7 +37,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: var(--color-text);
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-family: var(--font-sans);
   font-weight: normal;
   margin: 0;
@@ -225,13 +225,13 @@ pre tt:after {
 
 /* custom styles */
 
-#gatsby-focus-wrapper {
+/* #gatsby-focus-wrapper {
   display: flex;
-}
+} */
 .content {
-  width: calc(100% - 300px);
-  background-color: #1f1f1f;
-  color: #ffffff;
+  /* width: calc(100% - 300px); */
+  background-color: #fafafa;
+  color: #1f1f1f;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
