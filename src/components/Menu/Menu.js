@@ -138,19 +138,19 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
         {/* </nav> */}         
       </nav>       
       
-      <div className={style.socials}>
+      <div className={style.socialsDescktop}>
             <div className={style.socialsItem}>             
-              <a href="https://www.facebook.com/wisotskiy">
+              <a href="https://www.facebook.com/wisotskiy" target="_blank" rel="noopener noreferrer">
                 <img className={style.fb} src={fb}></img>
               </a>
             </div>
             <div className={style.socialsItem}>             
-              <a href="https://www.youtube.com/watch?v=zhJha7ePr3w">
+              <a href="https://www.youtube.com/channel/UCARc7cdl8tt5e2Dr1OVokig" target="_blank" rel="noopener noreferrer">
                 <img className={style.yt} src={yt}></img>
               </a>
             </div>
             <div className={style.socialsItem}>             
-              <a href="https://www.youtube.com/watch?v=zhJha7ePr3w">
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                 <img className={style.insta} src={insta}></img>
               </a>
             </div>
@@ -221,6 +221,11 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
               <li className={style.socialsItem}>             
                 <a href="https://www.youtube.com/channel/UCARc7cdl8tt5e2Dr1OVokig" target="_blank" rel="noopener noreferrer">
                   <img className={style.yt} src={yt} onClick={() => setShow(false)}></img>
+                </a>
+              </li>
+              <li className={style.socialsItem}>             
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                  <img className={style.insta} src={insta} onClick={() => setShow(false)}></img>
                 </a>
               </li>
             </ul>                                         

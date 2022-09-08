@@ -1,12 +1,12 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
 import * as style from "../style/_style.module.scss"
 import Layout from "../components/layout"
 import Gallery from "../components/Carousel/Carousel"
-import Video from "../components/Video/Video"
+//import Video from "../components/Video/Video"
 
 
 const Project = ({ data }) => {
@@ -19,8 +19,15 @@ console.log(data.mdx.frontmatter.link)
       <div className={style.gap}></div>
       <div className={`${style.container} ${style.itemService}`}>
         <h1 className={style.title}>{projectData?.frontmatter?.title}</h1>
+        <a href={data.mdx.frontmatter.link} target="_blank" rel="noopener noreferrer">
+            <GatsbyImage
+            alt={projectData?.frontmatter?.hero_image?.alt}
+            image={getImage(projectData?.frontmatter?.hero_image?.image)}
+            layout="constrained"
+          />
+        </a>
 
-        {!data.mdx.frontmatter.link ? 
+{/*         {!data.mdx.frontmatter.link ? 
         <GatsbyImage
           alt={projectData?.frontmatter?.hero_image?.alt}
           image={getImage(projectData?.frontmatter?.hero_image?.image)}
@@ -29,7 +36,7 @@ console.log(data.mdx.frontmatter.link)
         <Video 
           videoSrcURL={data.mdx.frontmatter.link}
           videoTitle="Official Music Video on YouTube"
-        />}
+        />} */}
 
         <article>
           <MDXRenderer>{projectData?.body}</MDXRenderer>

@@ -48,15 +48,15 @@ img {
 .logo {
     max-width: 200px;
 
-    img {
+/*     img {
         margin: 0;
-    }
+    } */
 }
 
 .pages a, .pages .works {
     color: #181818;
     text-transform: uppercase;
-    font-family: Montserrat, sans-serif;
+    /* font-family: Montserrat, sans-serif; */
     font-weight: 400;
     transition:  color 0.5s ease;
 
@@ -65,11 +65,22 @@ img {
     }
 }
 
-
-
 .works-list {
     display: none;
 }
+
+.socials-descktop {
+    position: fixed;
+    right: 20px;
+    z-index: 10;
+    bottom: calc(50% - 50px);
+
+    .fb, .yt, .insta {
+        width: 35px;
+        margin-bottom: 20px;
+    }
+}
+
 /* mobile */
 
 .mobile-menu {
@@ -110,9 +121,9 @@ img {
         font-size: 20px;
     }
 
-    img {
+/*     img {
         margin-bottom: 0;
-    }
+    } */
 
     .logo {
         width: 65%;
@@ -128,9 +139,10 @@ img {
         }
 
         .pages {
-
+            margin-bottom: 40px;
+            
             li {
-                margin: 22px 0;
+                /* margin: 22px 0; */
                 font-size: 18px;
                 text-transform: uppercase;
                 width: fit-content;
@@ -139,6 +151,7 @@ img {
             a {
                 color: #787878;
                 text-decoration: none;
+                font-weight: 400;
             }
             
             li:hover, span:hover {
@@ -161,10 +174,12 @@ img {
 
             li.works-mobile {
                 color: #787878;
-                font-weight: 500;
+                font-weight: 400;
+                margin: 22px 0 0 0;
             }
 
             .works-list {
+                display: block;
                 left: 40px;
                 width: max-content;
                 padding: 10px 12px;
@@ -174,7 +189,7 @@ img {
                     color: #353535;
 
                     a {
-                        font-weight: 400;
+                        font-weight: 300;
                     }
                 }
             }
@@ -200,19 +215,18 @@ img {
             }
         }
     }
-}
 
-.socials {
-    position: fixed;
-    right: 20px;
-    z-index: 10;
-    bottom: calc(50% - 50px);
+    .socials {
+        display: flex;
 
-    .fb, .yt, .insta {
-        width: 35px;
-        margin-bottom: 20px;
+        .fb, .yt, .insta {
+            height: 25px;
+            margin-right: 35px;
+        }
     }
 }
+
+
 
 @media screen and (max-width: 1280px) {
 
@@ -244,5 +258,9 @@ img {
                 display: block;
             }
         }
+    }
+
+    .socials-descktop {
+        display: none;
     }
 }
