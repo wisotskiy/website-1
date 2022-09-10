@@ -5,6 +5,7 @@ import Seo from "../components/seo"
 import Layout from "../components/layout"
 
 import * as style from "../style/_style.module.scss"
+import video from "../video/nevesta_toci.mp4"
 
 const Contacts = () => {
   
@@ -13,6 +14,9 @@ const Contacts = () => {
   return (
     <Layout>
       <Seo title={t("contacts")} />
+      <video autoPlay loop width="1300px" style={{margin: "auto"}}>
+        <source src={video} type="video/mp4" />
+      </video>
       <div className={style.gap}></div>
       <div className={style.container}>
         <h1 className={style.title}>{t("bundles")}</h1>
@@ -28,6 +32,7 @@ const Contacts = () => {
               <li className={style.bundleItem}>{t("bundle15")}</li>
               <li className={style.bundleItem}>{t("bundle16")}</li>
             </ul>
+            <div className={style.price}>{t("bundle1price")}</div>
           </div>
           <div className={style.bundle}>
             <h3 className={style.bundleTitle}>{t("bundle2")}</h3>
@@ -41,6 +46,7 @@ const Contacts = () => {
               <li className={style.bundleItem}>{t("bundle27")}</li>
               <li className={style.bundleItem}>{t("bundle28")}</li>
             </ul>
+            <div className={style.price}>{t("bundle2price")}</div>
           </div>
           <div className={style.bundle}>
             <h3 className={style.bundleTitle}>{t("bundle3")}</h3>
@@ -52,6 +58,7 @@ const Contacts = () => {
               <li className={style.bundleItem}>{t("bundle15")}</li>
               <li className={style.bundleItem}>{t("bundle16")}</li>
             </ul>
+            <div className={style.price}>{t("bundle3price")}</div>
           </div>
         </div>
 

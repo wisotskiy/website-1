@@ -174,13 +174,29 @@ article .see-more {
 }
 
 .bundle {
-    padding: 20px 3vw;
+    padding: 20px 8%;
+    display: grid;
+    grid-template-rows: min-content;
+
+    .bundle-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .bundleItem:last-child {
+        margin-bottom: 40px;
+    }
+    
+    .price {
+        font-size: 20px;
+        font-weight: 500;
+        bottom: 20px;
+        align-self: end;
+        justify-self: center;
+    }
 }
 
-.bundle-title {
-    text-align: center;
-    margin-bottom: 20px;
-}
+
 
 /* end of prices */
 
