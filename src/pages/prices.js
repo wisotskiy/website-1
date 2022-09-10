@@ -5,8 +5,6 @@ import Seo from "../components/seo"
 import Layout from "../components/layout"
 
 import * as style from "../style/_style.module.scss"
-import video from "../video/nevesta_toci.mp4"
-//import Video from "../components/Video/Video"
 
 const Contacts = () => {
   
@@ -15,16 +13,6 @@ const Contacts = () => {
   return (
     <Layout>
       <Seo title={t("contacts")} />
-      <video autoPlay loop style={{ width: `100%` }}>
-        <source src={video} type="video/mp4" />
-      </video>
-{/*               <Video 
-              loop
-              autoPlay
-              controls={false}
-          videoSrcURL={video}
-          videoTitle="Official Music Video on YouTube"
-        /> */}
       <div className={style.gap}></div>
       <div className={style.container}>
         <h1 className={style.title}>{t("bundles")}</h1>

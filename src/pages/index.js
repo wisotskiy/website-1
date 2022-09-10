@@ -8,7 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from "../components/layout"
 
 import * as style from "../style/_style.module.scss"
-import CarouselSlider from "../components/CarouselSlider/CarouselSlider"
+
+import video from "../video/nevesta_toci.mp4"
+//import CarouselSlider from "../components/CarouselSlider/CarouselSlider"
 
 
 const IndexPage = ({ data }) => {
@@ -19,7 +21,10 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo title={t("home")} />
-      <CarouselSlider />
+      <video autoPlay loop style={{ width: `100%` }}>
+        <source src={video} type="video/mp4" />
+      </video>
+      {/* <CarouselSlider /> */}
       <div id="about" className={style.container}>
         <h1 className={style.title}>{t("main_page_title")}</h1>
         <div className={style.about}>
