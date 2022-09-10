@@ -61,12 +61,33 @@ img {
     transition:  color 0.5s ease;
 
     &:hover {
-        color: #ffffff;
+        color: #d8d8d8;
+    }
+}
+
+.works {
+
+    span {
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+
+    &:hover {
+
+        .works-list {
+            display: block;
+        }
+
+        span {
+            transform: rotate(270deg);
+        }
     }
 }
 
 .works-list {
     display: none;
+    position: absolute;
+    margin: 0;
 }
 
 .socials-descktop {

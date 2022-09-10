@@ -88,9 +88,8 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
               <LocalizedLink to={`/#about`}>{t("about")}</LocalizedLink>
             </li>
             <li className={style.works}>
-              {t("works")}&nbsp;
-                <span style={{
-                  display: "inline-block"}}>&#10095;
+              {t("works")}&nbsp;&nbsp;
+                <span>&#10095;
                 </span>
               <ul className={style.worksList}>
                 {categoriesRightOrder.map(category => {

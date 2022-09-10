@@ -13,6 +13,7 @@ const Contacts = () => {
   return (
     <Layout>
       <Seo title={t("contacts")} />
+      <div className={style.gap}></div>
       <div className={style.container}>
         <h1 className={style.title}>{t("contacts")}</h1>
 

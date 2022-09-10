@@ -13,16 +13,49 @@ const Contacts = () => {
   return (
     <Layout>
       <Seo title={t("contacts")} />
+      <div className={style.gap}></div>
       <div className={style.container}>
-        <h1 className={style.title}>{t("contacts")}</h1>
+        <h1 className={style.title}>{t("bundles")}</h1>
 
-        <form action="https://submit-form.com/m6LCQqtH">
-          <textarea id={style.message} name="message" placeholder={t("your_message")}></textarea>
-          {/* <input id={style.message} type="text" name="message" placeholder={t("your_message")} /> */}
-          <input id={style.phone} type="tel" name="phone" placeholder={t("your_phone")} />
-          <input id={style.email} type="email" name="email" placeholder={t("your_email")} />
-          <button id={style.submit} type="submit">{t("send")}</button>
-        </form>
+        <div className={style.bundlesList}>
+          <div className={style.bundle}>
+            <h3 className={style.bundleTitle}>{t("bundle1")}</h3>
+            <ul>
+              <li className={style.bundleItem}>{t("bundle11")}</li>
+              <li className={style.bundleItem}>{t("bundle12")}</li>
+              <li className={style.bundleItem}>{t("bundle13")}</li>
+              <li className={style.bundleItem}>{t("bundle14")}</li>
+              <li className={style.bundleItem}>{t("bundle15")}</li>
+              <li className={style.bundleItem}>{t("bundle16")}</li>
+            </ul>
+          </div>
+          <div className={style.bundle}>
+            <h3 className={style.bundleTitle}>{t("bundle2")}</h3>
+            <ul>
+              <li className={style.bundleItem}>{t("bundle21")}</li>
+              <li className={style.bundleItem}>{t("bundle22")}</li>
+              <li className={style.bundleItem}>{t("bundle23")}</li>
+              <li className={style.bundleItem}>{t("bundle24")}</li>
+              <li className={style.bundleItem}>{t("bundle25")}</li>
+              <li className={style.bundleItem}>{t("bundle26")}</li>
+              <li className={style.bundleItem}>{t("bundle27")}</li>
+              <li className={style.bundleItem}>{t("bundle28")}</li>
+            </ul>
+          </div>
+          <div className={style.bundle}>
+            <h3 className={style.bundleTitle}>{t("bundle3")}</h3>
+            <ul>
+              <li className={style.bundleItem}>{t("bundle11")}</li>
+              <li className={style.bundleItem}>{t("bundle12")}</li>
+              <li className={style.bundleItem}>{t("bundle13")}</li>
+              <li className={style.bundleItem}>{t("bundle14")}</li>
+              <li className={style.bundleItem}>{t("bundle15")}</li>
+              <li className={style.bundleItem}>{t("bundle16")}</li>
+            </ul>
+          </div>
+        </div>
+
+        
 
       </div>     
     </Layout>
