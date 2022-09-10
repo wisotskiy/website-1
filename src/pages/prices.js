@@ -14,7 +14,7 @@ const Contacts = () => {
   return (
     <Layout>
       <Seo title={t("contacts")} />
-      <video autoPlay loop width="1300px" style={{margin: "auto"}}>
+      <video autoPlay loop width="100%" style={{margin: "auto"}}>
         <source src={video} type="video/mp4" />
       </video>
       <div className={style.gap}></div>
