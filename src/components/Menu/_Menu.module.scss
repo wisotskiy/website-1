@@ -32,6 +32,12 @@ img {
     margin: auto;
     width: 100%;
     z-index: 10;
+
+    .works-list {
+        display: none;
+        position: absolute;
+        margin: 0;
+    }
 }
 
 .header, .main-menu, .pages, .languages {
@@ -84,11 +90,11 @@ img {
     }
 }
 
-.works-list {
+/* .works-list {
     display: none;
     position: absolute;
     margin: 0;
-}
+} */
 
 .socials-descktop {
     position: fixed;
