@@ -152,6 +152,7 @@ article .see-more {
 .bundles-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 1fr 1fr;
     gap: 20px;
     margin: 20px 0 50px;
 
@@ -170,6 +171,12 @@ article .see-more {
         border: 1px solid #0078af;
         border-radius: 5px;
         background: #75d3ff;
+    }
+
+    .bundle:nth-child(4) {
+        border: 1px solid #ffd900;
+        border-radius: 5px;
+        background: #f6ff7d;
     }
 }
 

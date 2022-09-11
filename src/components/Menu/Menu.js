@@ -149,7 +149,7 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
           </a>
         </div>
         <div className={style.socialsItem}>             
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/yaroslaw.wisotskiy/" target="_blank" rel="noopener noreferrer">
             <img className={style.insta} src={insta}></img>
           </a>
         </div>
@@ -206,6 +206,9 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
                 </ul>
               </li>
               <li>
+                <LocalizedLink to="/prices" onClick={() => setShow(false)}>{t("prices")}</LocalizedLink>
+              </li>
+              <li>
                 <LocalizedLink to="/contacts" onClick={() => setShow(false)}>{t("contacts")}</LocalizedLink>
               </li>
 
@@ -223,7 +226,7 @@ const categoriesRightOrder = query.file.childMdx.exports.categories
                 </a>
               </li>
               <li className={style.socialsItem}>             
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/yaroslaw.wisotskiy/" target="_blank" rel="noopener noreferrer">
                   <img className={style.insta} src={insta} onClick={() => setShow(false)}></img>
                 </a>
               </li>

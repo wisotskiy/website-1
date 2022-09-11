@@ -1,4 +1,5 @@
 import * as React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 
 import Seo from "../components/seo"
@@ -13,7 +14,13 @@ const Contacts = () => {
   return (
     <Layout>
       <Seo title={t("contacts")} />
-      <div className={style.gap}></div>
+      <StaticImage 
+        src="../images/header_pr.jpg" 
+        alt="slider"
+        layout="fullWidth"
+        placeholder="blurred"
+    />
+      {/* <div className={style.gap}></div> */}
       <div className={style.container}>
         <h1 className={style.title}>{t("bundles")}</h1>
 
@@ -24,9 +31,6 @@ const Contacts = () => {
               <li className={style.bundleItem}>{t("bundle11")}</li>
               <li className={style.bundleItem}>{t("bundle12")}</li>
               <li className={style.bundleItem}>{t("bundle13")}</li>
-              <li className={style.bundleItem}>{t("bundle14")}</li>
-              <li className={style.bundleItem}>{t("bundle15")}</li>
-              <li className={style.bundleItem}>{t("bundle16")}</li>
             </ul>
             <div className={style.price}>{t("bundle1price")}</div>
           </div>
@@ -36,25 +40,29 @@ const Contacts = () => {
               <li className={style.bundleItem}>{t("bundle21")}</li>
               <li className={style.bundleItem}>{t("bundle22")}</li>
               <li className={style.bundleItem}>{t("bundle23")}</li>
-              <li className={style.bundleItem}>{t("bundle24")}</li>
-              <li className={style.bundleItem}>{t("bundle25")}</li>
-              <li className={style.bundleItem}>{t("bundle26")}</li>
-              <li className={style.bundleItem}>{t("bundle27")}</li>
-              <li className={style.bundleItem}>{t("bundle28")}</li>
             </ul>
             <div className={style.price}>{t("bundle2price")}</div>
           </div>
           <div className={style.bundle}>
             <h3 className={style.bundleTitle}>{t("bundle3")}</h3>
             <ul>
-              <li className={style.bundleItem}>{t("bundle11")}</li>
-              <li className={style.bundleItem}>{t("bundle12")}</li>
-              <li className={style.bundleItem}>{t("bundle13")}</li>
-              <li className={style.bundleItem}>{t("bundle14")}</li>
-              <li className={style.bundleItem}>{t("bundle15")}</li>
-              <li className={style.bundleItem}>{t("bundle16")}</li>
+              <li className={style.bundleItem}>{t("bundle31")}</li>
+              <li className={style.bundleItem}>{t("bundle32")}</li>
+              <li className={style.bundleItem}>{t("bundle33")}</li>
+              <li className={style.bundleItem}>{t("bundle34")}</li>
+              <li className={style.bundleItem}>{t("bundle35")}</li>
             </ul>
             <div className={style.price}>{t("bundle3price")}</div>
+          </div>
+          <div className={style.bundle}>
+            <h3 className={style.bundleTitle}>{t("bundle4")}</h3>
+            <ul>
+              <li className={style.bundleItem}>{t("bundle41")}</li>
+              <li className={style.bundleItem}>{t("bundle42")}</li>
+              <li className={style.bundleItem}>{t("bundle43")}</li>
+              <li className={style.bundleItem}>{t("bundle44")}</li>
+            </ul>
+            <div className={style.price}>{t("bundle4price")}</div>
           </div>
         </div>
 
