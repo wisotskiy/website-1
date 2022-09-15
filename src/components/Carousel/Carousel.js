@@ -38,7 +38,7 @@ const Gallery = ({images}) => {
 
   return (
   <>
-    {!isFull ? <Carousel cols={4} rows={1} gap={10} loop>
+{/*     {!isFull ? <Carousel cols={4} rows={1} gap={10} loop>
         {images.map(image => {
                         return (                       
                           <Carousel.Item key={image.id}>
@@ -55,13 +55,35 @@ const Gallery = ({images}) => {
                     })}
     </Carousel> :
     <div onClick={() => showFullImage(currentImage)} className={style.fullScreenShadow}>
-      <GatsbyImage                                  
-        /* style={styleFullSize} */
+      <GatsbyImage
         className={style.fullScreenImage}
         alt="aaa"
         image={getImage(currentImage)}
       />
-    </div>}
+    </div>} */}
+        <Carousel cols={4} rows={1} gap={10} loop>
+        {images.map(image => {
+                        return (                       
+                          <Carousel.Item key={image.id}>
+                              <div onClick={() => showFullImage(image)}>
+                                <GatsbyImage                                  
+                                  style={styleRegular}
+                                  alt="aaa"
+                                  image={getImage(image)}
+                                />
+                            </div>
+                          </Carousel.Item>
+                          
+                        )
+                    })}
+    </Carousel>
+    <div onClick={() => showFullImage(currentImage)} className={style.fullScreenShadow} style={isFull ? {display: "flex"} : {display: "none"}}>
+      <GatsbyImage
+        className={style.fullScreenImage}
+        alt="aaa"
+        image={getImage(currentImage)}
+      />
+    </div>
   </>)
 }
 
