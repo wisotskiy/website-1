@@ -12,11 +12,15 @@ export default function Teaser({ cat }) {
 
   return (
     <article>
-      <GatsbyImage
-        className={style.teaserPhoto}
-        image={getImage(cat.frontmatter?.hero_image.image)}
-        alt={cat.frontmatter.hero_image.alt}
-      />
+      <div className={style.photoBackground}>
+        <Link to={`/${cat.frontmatter.slug}`}>
+          <GatsbyImage
+            className={style.teaserPhoto}
+            image={getImage(cat.frontmatter?.hero_image.image)}
+            alt={cat.frontmatter.hero_image.alt}
+          />      
+        </Link>
+      </div>
       
       <h3 className={style.teaserTitle}>
         <Link to={`/${cat.frontmatter.slug}`}>
@@ -24,9 +28,9 @@ export default function Teaser({ cat }) {
         </Link>
       </h3>
       <p className={style.teaserDescription}>{cat.excerpt}</p>
-      <Button variant="outline-light"
-        className={style.seeMore}
-      >{t("slider_link")}</Button>
+      <Link to={`/${cat.frontmatter.slug}`} className={style.seeMore}>
+        <Button variant="outline-dark">{t("slider_link")}</Button>
+      </Link>
       
     </article>
   )

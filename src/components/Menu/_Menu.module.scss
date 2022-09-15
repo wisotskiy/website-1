@@ -173,6 +173,7 @@ img {
                 font-size: 18px;
                 text-transform: uppercase;
                 width: fit-content;
+                margin-bottom: 20px;
             }
             
             a {
@@ -202,7 +203,7 @@ img {
             li.works-mobile {
                 color: #787878;
                 font-weight: 400;
-                margin: 22px 0 0 0;
+                margin-bottom: 10px;
             }
 
             .works-list {
@@ -214,6 +215,7 @@ img {
                 li {
                     margin: 10px 5px;
                     color: #353535;
+                    max-width: 250px;
 
                     a {
                         font-weight: 300;

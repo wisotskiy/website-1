@@ -31,10 +31,15 @@ const Category = ({data}) => {
             return (
               <div key={node.id}>
                 <h3><LocalizedLink to={`/${node.frontmatter.category}/${node.frontmatter.slug}`}>{node.frontmatter.title}</LocalizedLink></h3>
-                <GatsbyImage 
-                  image={getImage(node.frontmatter.hero_image.image)}
-                  alt={node.frontmatter.hero_image.alt}
-                />
+                <div className={style.photoBackground}>
+                <LocalizedLink to={`/${node.frontmatter.category}/${node.frontmatter.slug}`}>
+                  <GatsbyImage 
+                    className={style.categoryPhoto}
+                    image={getImage(node.frontmatter.hero_image.image)}
+                    alt={node.frontmatter.hero_image.alt}
+                  />
+                </LocalizedLink>
+                </div>
               </div>
             )
           })}       

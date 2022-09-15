@@ -17,10 +17,11 @@ console.log(data.mdx.frontmatter.link)
     <Layout>
       <Seo title={projectData?.frontmatter?.title} />
       <div className={style.gap}></div>
-      <div className={`${style.container} ${style.itemService}`}>
+      <div className={style.container}>
         <h1 className={style.title}>{projectData?.frontmatter?.title}</h1>
         <a href={data.mdx.frontmatter.link} target="_blank" rel="noopener noreferrer">
-            <GatsbyImage
+          <GatsbyImage
+            className={style.projectMainImage}
             alt={projectData?.frontmatter?.hero_image?.alt}
             image={getImage(projectData?.frontmatter?.hero_image?.image)}
             layout="constrained"
@@ -42,9 +43,10 @@ console.log(data.mdx.frontmatter.link)
           <MDXRenderer>{projectData?.body}</MDXRenderer>
         </article>
       </div>
-      {!data.mdx.frontmatter.link && <div className={style.container}>
-        <Gallery images={images}/>
-      </div>}
+      {!data.mdx.frontmatter.link && 
+        <div className={`${style.container} ${style.projectGallery}`}>
+          <Gallery images={images}/>
+        </div>}
  
     </Layout>
   )
