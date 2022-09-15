@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState, useEffect } from 'react'
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -6,13 +6,21 @@ import Seo from "../components/seo"
 import * as style from "../style/_style.module.scss"
 import Layout from "../components/layout"
 import Gallery from "../components/Carousel/Carousel"
+import GalleryFull from "../components/CarouselFull/CarouselFull"
 //import Video from "../components/Video/Video"
 
 
 const Project = ({ data }) => {
   const projectData = data.mdx || `Title placeholder`
   const images = data.allFile.nodes
-  
+
+  const[isFull, setIsfull] = useState(false)
+
+  const showFullImage = () => {
+    console.log('e.target')
+    return setIsfull(true)
+  }
+
   return (
     <Layout>
       <Seo title={projectData?.frontmatter?.title} />
@@ -25,6 +33,7 @@ const Project = ({ data }) => {
             alt={projectData?.frontmatter?.hero_image?.alt}
             image={getImage(projectData?.frontmatter?.hero_image?.image)}
             layout="constrained"
+            
           />
         </a>
 
@@ -46,6 +55,7 @@ const Project = ({ data }) => {
       {!data.mdx.frontmatter.link && 
         <div className={`${style.container} ${style.projectGallery}`}>
           <Gallery images={images}/>
+          {/* <Gallery images={images}/> */}
         </div>}
  
     </Layout>
