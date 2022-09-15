@@ -12,7 +12,7 @@ import Gallery from "../components/Carousel/Carousel"
 const Project = ({ data }) => {
   const projectData = data.mdx || `Title placeholder`
   const images = data.allFile.nodes
-console.log(data.mdx.frontmatter.link)
+  
   return (
     <Layout>
       <Seo title={projectData?.frontmatter?.title} />
