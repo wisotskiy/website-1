@@ -2,87 +2,103 @@ import React, { useState, useEffect } from 'react'
 import Carousel from 'better-react-carousel'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as style from "./_Carousel.module.scss"
-
-//import FullSizeImage from "../FullSizeImage/FullSizeImage"
+import left from "../../images/left.svg"
+import right from "../../images/right.svg"
 
 const Gallery = ({images}) => {
 
   const[isFull, setIsfull] = useState(false)
   const[currentImage, setСurrentImage] = useState(null)
+  const[currentImageId, setСurrentImageId] = useState(null)
 
   const styleRegular = {
     aspectRatio: "1/1"
   }
 
-  const a = {
-        position: "absolute",
-        top: 0,
-        bottom: 0,
-        aspectRatio: "auto"
-      }
-
-  const styleFullSize = {
-/*     position: "absolute",
-    top: "5vw",
-    bottom: "5vw",
-    width: "100%",
-    height: "100%" */
-    aspectRatio: "auto"
-  }
-
   const showFullImage = (image) => {
-    console.log('e')
     setIsfull(!isFull)
     setСurrentImage(image)
+    setСurrentImageId(image.id)
   }
+
+  const swipeLeft = () => {
+    let curIdx
+    images.forEach((image, i) => {
+      if(image.id === currentImage.id) curIdx = i
+    })
+    console.log(curIdx)
+    setСurrentImage(images[curIdx - 1])
+
+    curIdx === 0 && setIsfull(false)
+  }
+
+  const swipeRight = () => {
+    let curIdx
+    images.forEach((image, i) => {
+      if(image.id === currentImage.id) curIdx = i
+    })
+    console.log(curIdx)
+    setСurrentImage(images[curIdx + 1])
+    console.log(images.length)
+    curIdx >= images.length - 1 && setIsfull(false)
+  }
+
+/*   useEffect((image) => {
+    setСurrentImage(image)
+  }, [currentImage]) */
 
   return (
   <>
-{/*     {!isFull ? <Carousel cols={4} rows={1} gap={10} loop>
-        {images.map(image => {
-                        return (                       
-                          <Carousel.Item key={image.id}>
-                              <div onClick={() => showFullImage(image)}>
-                                <GatsbyImage                                  
-                                  style={styleRegular}
-                                  alt="aaa"
-                                  image={getImage(image)}
-                                />
-                            </div>
-                          </Carousel.Item>
-                          
-                        )
-                    })}
-    </Carousel> :
-    <div onClick={() => showFullImage(currentImage)} className={style.fullScreenShadow}>
-      <GatsbyImage
-        className={style.fullScreenImage}
-        alt="aaa"
-        image={getImage(currentImage)}
-      />
-    </div>} */}
-        <Carousel cols={4} rows={1} gap={10} loop>
-        {images.map(image => {
-                        return (                       
-                          <Carousel.Item key={image.id}>
-                              <div onClick={() => showFullImage(image)}>
-                                <GatsbyImage                                  
-                                  style={styleRegular}
-                                  alt="aaa"
-                                  image={getImage(image)}
-                                />
-                            </div>
-                          </Carousel.Item>
-                          
-                        )
-                    })}
+
+    <Carousel cols={4} rows={1} gap={10} loop>
+      {images.map(image => {
+          return (                       
+            <Carousel.Item key={image.id}>
+              <div onClick={() => showFullImage(image)}>
+                <GatsbyImage                                  
+                  style={styleRegular}
+                  alt="aaa"
+                  image={getImage(image)}
+                />
+              </div>
+            </Carousel.Item>                   
+          )
+      })}
     </Carousel>
-    <div onClick={() => showFullImage(currentImage)} className={style.fullScreenShadow} style={isFull ? {display: "flex"} : {display: "none"}}>
-      <GatsbyImage
-        className={style.fullScreenImage}
-        alt="aaa"
-        image={getImage(currentImage)}
-      />
+
+   
+    
+{/*     <div onClick={() => showFullImage(currentImage)} 
+      className={style.fullScreenShadow} 
+      style={isFull ? {display: "flex"} : {display: "none"}}>
+        <Carousel cols={1} rows={1} gap={0} loop>
+        <Carousel.Item>
+        <GatsbyImage
+          className={style.fullScreenImage}
+          alt="aaa"
+          image={getImage(currentImage)}
+        /></Carousel.Item>
+        </Carousel>
+    </div> */}
+    
+
+    <div
+      className={style.fullScreenShadow} 
+      style={isFull ? {display: "flex"} : {display: "none"}}>
+        <div className={style.wrapper}>
+          
+          <img className={style.left} src={left} onClick={swipeLeft}></img>
+            <div onClick={() => showFullImage(currentImage)} className={style.fullScreenImage}>
+              <GatsbyImage
+                
+                id={currentImageId}
+                alt="aaa"
+                image={getImage(currentImage)}             
+              />
+              <div className={style.fullSizeClose}>&#10005;</div>
+            </div>
+          <img className={style.right} src={right} onClick={swipeRight}></img>
+        </div>
     </div>
   </>)
 }

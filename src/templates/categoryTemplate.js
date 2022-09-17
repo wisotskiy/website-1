@@ -12,8 +12,9 @@ import { LocalizedLink} from "gatsby-theme-i18n"
 
 
 const Category = ({data}) => {
-  //const { locale/* , defaultLang, config  */} = useLocalization()
+  
   const categoryData = data.mdx
+  console.log(categoryData)
 
   return (
     <Layout>

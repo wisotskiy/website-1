@@ -75,7 +75,7 @@ query Categories($locale: String) {
         title
       }
       id
-      excerpt(pruneLength: 170, truncate: true)
+      excerpt(pruneLength: 150, truncate: true)
     }
   }
   file(name: {eq: "order"}, sourceInstanceName: {eq: "works"}) {
