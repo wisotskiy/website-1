@@ -55,7 +55,6 @@ const Project = ({ data }) => {
       {!data.mdx.frontmatter.link && 
         <div className={`${style.container} ${style.projectGallery}`}>
           <Gallery images={images}/>
-          {/* <Gallery images={images}/> */}
         </div>}
  
     </Layout>
