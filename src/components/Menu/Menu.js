@@ -7,7 +7,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import * as style from "./_Menu.module.scss"
-import logo from "../../images/logo_png_1.png"
+import logo from "../../images/logo.png"
 import yt from "../../images/yt-icon.svg"
 import fb from "../../images/fb.svg"
 import insta from "../../images/insta_logo.svg"

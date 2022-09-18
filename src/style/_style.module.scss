@@ -50,7 +50,7 @@ h3 {
 
 .services-list {
     display: block;
-    padding: 70px 0;
+    padding: 70px 30px;
 }
 
 /* teaser */
@@ -164,7 +164,7 @@ h3 {
 
 .storefront {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
     gap: 10px;
     width: 77%;
     margin: 0 auto 50px;
@@ -386,6 +386,22 @@ button[type="submit"] {
     background: #3b3b3b;
     color: white;
     margin-top: auto;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .button-top {
+        width: 50px;
+        align-self: center;
+        margin: 10px;
+    }
+
+    p {
+        align-self: center;
+    }
 }
 
 
@@ -466,7 +482,19 @@ button[type="submit"] {
         }
     }
 
+    form {
+        text-align: right;
+    }
 
+    #phone, #email {
+        width: 50%;
+    }
+
+    #submit {
+        margin-top: 10px;
+        width: fit-content;
+        padding: 0 12px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -505,6 +533,10 @@ button[type="submit"] {
                 } 
             }
         }
+    }
+
+    #phone, #email {
+        width: 100%;
     }
 }
 

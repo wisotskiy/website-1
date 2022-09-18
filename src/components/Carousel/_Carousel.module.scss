@@ -8,7 +8,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: #00000041;
+    background: #00000094;
     z-index: 100;
 }
 
@@ -21,7 +21,8 @@
     
 
     .full-screen-image {
-
+        border: 6px solid #d1d1d1;
+        box-shadow: 0 0 10px #3b3b3b;
 
         img {
             max-width: 100%;

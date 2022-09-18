@@ -58,14 +58,10 @@ const Gallery = ({images}) => {
     images.forEach((image, i) => {
       if(image.id === currentImage.id) curIdx = i
     })
-    console.log(curIdx)
+
     setСurrentImage(images[curIdx + 1])
     curIdx >= images.length - 1 && setIsfull(false)
   }
-
-/*   useEffect((image) => {
-    setСurrentImage(image)
-  }, [currentImage]) */
 
   return (
   <>
@@ -107,7 +103,7 @@ const Gallery = ({images}) => {
       style={isFull ? {display: "flex"} : {display: "none"}}>
         <div className={style.wrapper}>
           
-          <img className={style.left} src={left} onClick={swipeLeft}></img>
+          <img className={style.left} src={left} onTouchStart={swipeLeft}></img>
             <div className={style.fullScreenImage}>
               <GatsbyImage
                 

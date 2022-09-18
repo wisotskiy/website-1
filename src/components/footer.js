@@ -1,30 +1,26 @@
 import * as React from "react"
 import { Trans } from "react-i18next"
+import { useTranslation } from "react-i18next"
+import { LocalizedLink } from "gatsby-theme-i18n"
 import * as style from "../style/_style.module.scss"
+
+import top from "../images/to_top.svg"
 
 function Footer() {
   const year = new Date().getFullYear()
+  const { t } = useTranslation()
+
+  const locale = `${window.location.origin}${window.location.pathname}`
+
+  console.log(locale)
 
   return (
     <footer className={style.footer}>
-      <Trans i18nKey="footer">
-        © {{ year }} | Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com" className="underline">
-          Gatsby
-        </a>{" "}
-        for the{" "}
-        <a href="https://phrase.com/blog/" className="underline">
-          Phrase Blog
-        </a>{" "}
-        | Content from{" "}
-        <a
-          href="https://en.wikipedia.org/wiki/F._Scott_Fitzgerald_bibliography"
-          className="underline"
-        >
-          Wikipedia
-        </a>
-      </Trans>
+      <div className={style.container}>
+        <LocalizedLink  className={style.buttonTop} to={window.location.pathname}><img src={top} alt="to top button"></img></LocalizedLink>
+        <p><Trans i18nKey="footer">{{ year }}</Trans></p>
+
+      </div>
     </footer>
   )
 }

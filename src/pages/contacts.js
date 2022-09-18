@@ -26,7 +26,6 @@ const Contacts = () => {
 
         <form action="https://submit-form.com/m6LCQqtH">
           <textarea id={style.message} name="message" placeholder={t("your_message")}></textarea>
-          {/* <input id={style.message} type="text" name="message" placeholder={t("your_message")} /> */}
           <input id={style.phone} type="tel" name="phone" placeholder={t("your_phone")} />
           <input id={style.email} type="email" name="email" placeholder={t("your_email")} />
           <button id={style.submit} type="submit">{t("send")}</button>
