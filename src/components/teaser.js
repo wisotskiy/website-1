@@ -11,7 +11,7 @@ export default function Teaser({ cat }) {
   const { t } = useTranslation()
 
   return (
-    <article>
+    <article className={style.teaser}>
       <div className={style.photoBackground}>
         <Link to={`/${cat.frontmatter.slug}`}>
           <GatsbyImage

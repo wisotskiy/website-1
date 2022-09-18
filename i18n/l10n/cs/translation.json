@@ -42,6 +42,10 @@
     "your_phone": "vaše telefonní číslo",
     "your_email": "vaš email",
     "send": "poslat",
+    "phone": "Telefon",
+    "email": "Email",
+    "social": "Sociální sítě",
+    
     "articles_published_one": "{{count}} article",
     "articles_published_other": "{{count}} articles",
     "footer": "© {{year}} | Built with <4>Gatsby</4> for the <8>Phographer and videographer Vysotskii Yaroslav</8>",

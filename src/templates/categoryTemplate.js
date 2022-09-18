@@ -23,14 +23,14 @@ const Category = ({data}) => {
       <div className={style.container}>
         <h1 className={style.title}>{categoryData.frontmatter.title}</h1>
 
-        <article>
+        <article className={style.categoryDescription}>
           <MDXRenderer>{categoryData.body}</MDXRenderer>
         </article>
 
         <div className={style.storefront}>         
           {data.allMdx.nodes.map(node => {
             return (
-              <div key={node.id}>
+              <div className={style.storefrontItem} key={node.id}>
                 <h3><LocalizedLink to={`/${node.frontmatter.category}/${node.frontmatter.slug}`}>{node.frontmatter.title}</LocalizedLink></h3>
                 <div className={style.photoBackground}>
                 <LocalizedLink to={`/${node.frontmatter.category}/${node.frontmatter.slug}`}>

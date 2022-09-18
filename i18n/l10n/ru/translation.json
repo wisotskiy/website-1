@@ -15,7 +15,7 @@
   "bundle11": "Съёмка от сборов до банкета (max 12 час.)",
   "bundle12": "1 камера",
   "bundle13": "Highlights 3 - 10 мин.",
-  "bundle1price": "Цена:  15 000 ,- Kč",
+  "bundle1price": "15 000 ,- Kč",
 
   "bundle2": "Фотосъёмка",
   "bundle21": "Съёмка от сборов до банкета (max 10 час.)",
@@ -43,6 +43,10 @@
   "your_email": "ваш email",
   "your_phone": "ваш телефон",
   "send": "отослать",
+  "phone": "Телефон",
+  "email": "Email",
+  "social": "Социальные сети",
+  
   "articles_published_one": "{{count}} article",
   "articles_published_other": "{{count}} articles",
   "footer": "© {{year}} | Built with <4>Gatsby</4> for the <8>Phographer and videographer Vysotskii Yaroslav</8>",

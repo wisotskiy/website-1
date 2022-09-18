@@ -41,6 +41,10 @@
   "your_email": "your email",
   "your_phone": "your phone",
   "send": "send",
+  "phone": "Phone",
+  "email": "Email",
+  "social": "Social media",
+  
   "articles_published_one": "{{count}} article",
   "articles_published_other": "{{count}} articles",
   "footer": "© {{year}} | Built with <4>Gatsby</4> for the <8>Phographer and videographer Vysotskii Yaroslav</8>",
