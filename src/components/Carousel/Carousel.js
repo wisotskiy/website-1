@@ -17,26 +17,22 @@ const Gallery = ({images}) => {
   }
 
   const responsiveLayout = [
+
     {
-      breakpoint: 800,
+      breakpoint: 600,
       cols: 3,
       rows: 1,
       gap: 10,
-      loop: true
-    },
-    {
-      breakpoint: 600,
-      cols: 2,
-      rows: 1,
-      gap: 10,
-      loop: true
+      loop: true,
+      scrollSnap: true
     },
     {
       breakpoint: 400,
       cols: 2,
       rows: 1,
       gap: 10,
-      loop: true
+      loop: true,
+      scrollSnap: true
     },
 
   ]
@@ -74,7 +70,7 @@ const Gallery = ({images}) => {
   return (
   <>
     <Carousel 
-      cols={4} rows={1} gap={10} loop responsiveLayout={responsiveLayout} mobileBreakpoint={320}>
+      cols={4} rows={1} gap={10} loop responsiveLayout={responsiveLayout} mobileBreakpoint={320} scrollSnap={true}>
       {images.map(image => {
           return (                       
             <Carousel.Item key={image.id}>
