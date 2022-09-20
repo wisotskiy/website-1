@@ -12,7 +12,7 @@ function Footer() {
   const year = new Date().getFullYear()
   const { t } = useTranslation()
 
-  let locale
+  let locale = "/"
   if (isBrowser) {
     locale = window.location.pathname
     
