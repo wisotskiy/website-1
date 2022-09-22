@@ -454,6 +454,13 @@ button[type="submit"] {
             width: 50vw;
         }
     }
+
+    .footer {
+
+        .container {
+            padding: 0 20px;
+        }
+    }
 }
 
 
@@ -535,17 +542,25 @@ button[type="submit"] {
         }
     }
 
+    .storefront {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(160px, 1fr));
+    }
+
     #phone, #email {
         width: 100%;
     }
 }
 
-/* @media screen and (max-width: 450px) {
+@media screen and (max-width: 428px) {
 
-    .project-gallery {
-        max-height: 250px;
-        overflow: hidden;
+    .storefront {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
 
-
+        .photo-background {
+            min-width: 55vw;
+            aspect-ratio: 1/1;
+        }
     }
-} */
+}

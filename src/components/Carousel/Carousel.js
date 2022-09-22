@@ -103,7 +103,7 @@ const Gallery = ({images}) => {
       style={isFull ? {display: "flex"} : {display: "none"}}>
         <div className={style.wrapper}>
           
-          <img className={style.left} src={left} onTouchStart={swipeLeft}></img>
+          <img className={style.left} src={left} onClick={swipeLeft}></img>
             <div className={style.fullScreenImage}>
               <GatsbyImage
                 
