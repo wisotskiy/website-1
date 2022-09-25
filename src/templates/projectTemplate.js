@@ -11,7 +11,7 @@ import GalleryFull from "../components/CarouselFull/CarouselFull"
 
 
 const Project = ({ data }) => {
-  const projectData = data.mdx || `Title placeholder`
+  const projectData = data.mdx
   const images = data.allFile.nodes
 
   const[isFull, setIsfull] = useState(false)
@@ -27,7 +27,7 @@ const Project = ({ data }) => {
       <div className={style.gap}></div>
       <div className={style.container}>
         <h1 className={style.title}>{projectData?.frontmatter?.title}</h1>
-        <a href={data.mdx.frontmatter.link} target="_blank" rel="noopener noreferrer">
+{/*         <a href={data.mdx.frontmatter.link} target="_blank" rel="noopener noreferrer">
           <GatsbyImage
             className={style.projectMainImage}
             alt={projectData?.frontmatter?.hero_image?.alt}
@@ -35,27 +35,42 @@ const Project = ({ data }) => {
             layout="constrained"
             
           />
-        </a>
+        </a> */}
 
-{/*         {!data.mdx.frontmatter.link ? 
-        <GatsbyImage
-          alt={projectData?.frontmatter?.hero_image?.alt}
-          image={getImage(projectData?.frontmatter?.hero_image?.image)}
-          layout="constrained"
-        /> :
-        <Video 
-          videoSrcURL={data.mdx.frontmatter.link}
-          videoTitle="Official Music Video on YouTube"
-        />} */}
+        {!data.mdx.frontmatter.link ? 
+
+        <div className={`${style.container} ${style.photosGallery}`}>
+          {images.map(image => {
+            return (
+              <GatsbyImage
+                className={style.photo}
+                key={image.id}
+                alt={projectData?.frontmatter?.title}
+                image={getImage(image)}      
+              />
+            )
+          })}
+        </div> :
+
+        <a href={data.mdx.frontmatter.link} target="_blank" rel="noopener noreferrer">
+          <GatsbyImage
+            className={style.projectMainImage}
+            alt="ff"
+            //alt={projectData?.frontmatter?.hero_image?.alt}
+            image={getImage(projectData?.frontmatter?.hero_image?.image)}
+            layout="constrained"
+            
+          />
+        </a>} 
 
         <article>
           <MDXRenderer>{projectData?.body}</MDXRenderer>
         </article>
       </div>
-      {!data.mdx.frontmatter.link && 
+{/*       {!data.mdx.frontmatter.link && 
         <div className={`${style.container} ${style.projectGallery}`}>
           <Gallery images={images}/>
-        </div>}
+        </div>} */}
  
     </Layout>
   )
