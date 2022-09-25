@@ -494,28 +494,6 @@ button[type="submit"] {
         }
     }
 
-    /* category template */
-
-    .storefront {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(160px, 33%));
-        grid-auto-rows: 1fr;
-        column-gap: 1%;
-        row-gap: 2%;
-        width: 86vw;
-    
-        .storefront-item {
-            display: grid;
-            grid-template-rows: 1fr auto;
-            justify-items: center;
-            overflow: hidden;
-
-            .photo-background {
-                width: 43vw;
-                height: 43vw;
-            }
-        }
-    }
 }
 
 @media screen and (max-width: 1024px){
@@ -539,6 +517,29 @@ button[type="submit"] {
 
         .container {
             padding: 0 20px;
+        }
+    }
+    
+    /* category template */
+
+    .storefront {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(160px, 33%));
+        grid-auto-rows: 1fr;
+        column-gap: 1%;
+        row-gap: 2%;
+        width: 86vw;
+    
+        .storefront-item {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            justify-items: center;
+            overflow: hidden;
+
+            .photo-background {
+                width: 28vw;
+                height: 28vw;
+            }
         }
     }
 }
@@ -582,6 +583,29 @@ button[type="submit"] {
         width: fit-content;
         padding: 0 12px;
     }
+    
+    /* category template */
+
+    /* .storefront {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(160px, 33%));
+        grid-auto-rows: 1fr;
+        column-gap: 1%;
+        row-gap: 2%;
+        width: 86vw;
+    
+        .storefront-item {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            justify-items: center;
+            overflow: hidden;
+
+            .photo-background {
+                width: 43vw;
+                height: 43vw;
+            }
+        }
+    } */
 }
 
 @media screen and (max-width: 576px) {
@@ -618,9 +642,28 @@ button[type="submit"] {
         margin: 22px 0;
     }
 
+    
+    /* category template */
+
     .storefront {
         display: grid;
-        grid-template-columns: repeat(2, minmax(160px, 1fr));
+        grid-template-columns: repeat(2, minmax(160px, 48%));
+        grid-auto-rows: 1fr;
+        column-gap: 1%;
+        row-gap: 2%;
+        width: 86vw;
+    
+        .storefront-item {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            justify-items: center;
+            overflow: hidden;
+
+            .photo-background {
+                width: 43vw;
+                height: 43vw;
+            }
+        }
     }
 
     #phone, #email {
