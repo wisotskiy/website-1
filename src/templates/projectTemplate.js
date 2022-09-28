@@ -5,27 +5,52 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
 import * as style from "../style/_style.module.scss"
 import Layout from "../components/layout"
-import Gallery from "../components/Carousel/Carousel"
-import GalleryFull from "../components/CarouselFull/CarouselFull"
+import { useTranslation } from "react-i18next"
+import { LocalizedLink as Link } from "gatsby-theme-i18n"
 //import Video from "../components/Video/Video"
 
 
 const Project = ({ data }) => {
+
+  const { t } = useTranslation()
   const projectData = data.mdx
   const images = data.allFile.nodes
 
   const[isFull, setIsfull] = useState(false)
+  const[isShow, setIsShow] = useState(false)
+
+  const styleShow = {
+    display: "block"
+  }
+
+  const styleHidden = {
+    display: "none"
+  }
 
   const showFullImage = () => {
     console.log('e.target')
     return setIsfull(true)
   }
+  useEffect(() => {
+    
+    const showReturnButton = () => {
+      window.scrollY > 200 && setIsShow(true)
+      window.scrollY <= 200 && setIsShow(false)
+    };
+
+    window.addEventListener('scroll', showReturnButton);
+
+    return () => {
+      window.removeEventListener('scroll', showReturnButton);
+    };
+  }, []);
 
   return (
     <Layout>
       <Seo title={projectData?.frontmatter?.title} />
       <div className={style.gap}></div>
       <div className={style.container}>
+        <Link to={`/${data.mdx.frontmatter.category}`} className={style.buttonReturn} style={isShow ? styleShow : styleHidden}><button>{t("return")}</button></Link>
         <h1 className={style.title}>{projectData?.frontmatter?.title}</h1>
 {/*         <a href={data.mdx.frontmatter.link} target="_blank" rel="noopener noreferrer">
           <GatsbyImage
@@ -62,7 +87,7 @@ const Project = ({ data }) => {
             
           />
         </a>} 
-
+        
         <article>
           <MDXRenderer>{projectData?.body}</MDXRenderer>
         </article>
@@ -92,6 +117,7 @@ query ProjectBySlug($slug: String, $locale: String, $fullSlug: String) {
         alt
       }
       link
+      category
     }
     body
   }

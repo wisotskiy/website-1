@@ -14,7 +14,6 @@ import { LocalizedLink} from "gatsby-theme-i18n"
 const Category = ({data}) => {
   
   const categoryData = data.mdx
-  console.log(categoryData)
 
   return (
     <Layout>

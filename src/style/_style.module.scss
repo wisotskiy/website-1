@@ -245,6 +245,15 @@ h3 {
     display: block !important;
 }
 
+.button-return {
+    /* display: none; */
+    /* position: fixed; */
+    position: fixed;
+    bottom: 50vh;
+    left: 25vw;
+    z-index: 10;
+}
+
 /* .project-gallery {
     margin-bottom: 70px;
 } */
