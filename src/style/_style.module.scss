@@ -249,9 +249,17 @@ h3 {
     /* display: none; */
     /* position: fixed; */
     position: fixed;
-    bottom: 50vh;
-    left: 25vw;
+    top: 20vh;
+    left: 8vw;
+    background: #ffffff81;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    padding: 5px;
     z-index: 10;
+
+    button {
+        background: transparent;
+    }
 }
 
 /* .project-gallery {
