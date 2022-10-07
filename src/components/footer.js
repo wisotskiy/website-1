@@ -14,7 +14,7 @@ const isBrowser = typeof window !== "undefined"
 function Footer() {
   const year = new Date().getFullYear()
   const { t } = useTranslation()
-  console.log(window.scrollY)
+
   let locale = "/"
   if (isBrowser) {
     locale = window.location.pathname
