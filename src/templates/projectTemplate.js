@@ -16,8 +16,8 @@ const Project = ({ data }) => {
   const projectData = data.mdx
   const images = data.allFile.nodes
 
-  const[isFull, setIsfull] = useState(false)
-  const[isShow, setIsShow] = useState(false)
+  const [isFull, setIsfull] = useState(false)
+  const [isShow, setIsShow] = useState(false)
 
   const styleShow = {
     display: "block"

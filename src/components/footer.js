@@ -1,8 +1,11 @@
-import React, {useEffect}  from "react"
+import React, { useState, useEffect } from "react"
 import { Trans } from "react-i18next"
 import { useTranslation } from "react-i18next"
 import { LocalizedLink } from "gatsby-theme-i18n"
 import * as style from "../style/_style.module.scss"
+import yt from "../images/yt_mc.svg"
+import fb from "../images/fb_monochrome.svg"
+import insta from "../images/insta_monochrome.svg"
 
 import top from "../images/to_top.svg"
 
@@ -11,23 +14,54 @@ const isBrowser = typeof window !== "undefined"
 function Footer() {
   const year = new Date().getFullYear()
   const { t } = useTranslation()
-
+  console.log(window.scrollY)
   let locale = "/"
   if (isBrowser) {
     locale = window.location.pathname
-    
   }
 
-  //const locale = `${window.location.origin}${window.location.pathname}`
+  const [isVisible, setIsVisible] = useState(false)
 
-  //console.log(locale)
+  const styleVisible = {
+    display: "block"
+  }
+
+  const styleInisible = {
+    display: "none"
+  }
+
+  useEffect(() => {
+    
+    const showTopButton = () => {
+      window.scrollY > 300 && setIsVisible(true)
+      window.scrollY <= 300 && setIsVisible(false)
+    }
+    
+    window.addEventListener('scroll', showTopButton)
+
+    return () => {
+      window.removeEventListener('scroll', showTopButton)
+    }
+  }, [])
 
   return (
     <footer className={style.footer}>
       <div className={style.container}>
-        <LocalizedLink  className={style.buttonTop} to={locale}><img src={top} alt="to top button"></img></LocalizedLink>
+        
+        <div className={style.socials}>
+          <a href="https://www.facebook.com/wisotskiy" target="_blank" rel="noopener noreferrer">
+            <img className={style.fb} src={fb}></img>
+          </a>
+          <a href="https://www.youtube.com/channel/UCARc7cdl8tt5e2Dr1OVokig" target="_blank" rel="noopener noreferrer">
+            <img className={style.yt} src={yt}></img>
+          </a>
+          <a href="https://www.instagram.com/yaroslaw.wisotskiy/" target="_blank" rel="noopener noreferrer">
+            <img className={style.insta} src={insta}></img>
+          </a>
+        </div>
         <p><Trans i18nKey="footer">{{ year }}</Trans></p>
 
+        <LocalizedLink style={isVisible ? styleVisible : styleInisible} className={style.buttonTop} to={locale}><img src={top} alt="to top button"></img></LocalizedLink>
       </div>
     </footer>
   )

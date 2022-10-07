@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next"
 import Seo from "../components/seo"
 import Teaser from "../components/teaser"
 import Layout from "../components/layout"
+//import "bootstrap/dist/css/bootstrap.min.css"
 
 import * as style from "../style/_style.module.scss"
 

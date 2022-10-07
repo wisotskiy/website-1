@@ -8,9 +8,9 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import * as style from "./_Menu.module.scss"
 import logo from "../../images/logo.png"
-import yt from "../../images/yt-icon.svg"
-import fb from "../../images/fb.svg"
-import insta from "../../images/insta_logo.svg"
+import yt from "../../images/yt_monochrome.svg"
+import fb from "../../images/fb_monochrome.svg"
+import insta from "../../images/insta_monochrome.svg"
 import menu from "../../images/menu_2.svg"
 import close from "../../images/close_menu.svg"
 
@@ -165,28 +165,7 @@ const Menu = () => {
         </ul>
 
         </ul>
-
-        
-      
-      </nav>       
-      
-      <div className={style.socialsDescktop}>
-        <div className={style.socialsItem}>             
-          <a href="https://www.facebook.com/wisotskiy" target="_blank" rel="noopener noreferrer">
-            <img className={style.fb} src={fb}></img>
-          </a>
-        </div>
-        <div className={style.socialsItem}>             
-          <a href="https://www.youtube.com/channel/UCARc7cdl8tt5e2Dr1OVokig" target="_blank" rel="noopener noreferrer">
-            <img className={style.yt} src={yt}></img>
-          </a>
-        </div>
-        <div className={style.socialsItem}>             
-          <a href="https://www.instagram.com/yaroslaw.wisotskiy/" target="_blank" rel="noopener noreferrer">
-            <img className={style.insta} src={insta}></img>
-          </a>
-        </div>
-      </div> 
+      </nav> 
 
       <div className={style.mobileMenu}>
         <button onClick={() => setShow(true)}>

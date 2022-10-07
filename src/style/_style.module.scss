@@ -394,8 +394,7 @@ button[type="submit"] {
 
 .footer {
     min-height: 50px;
-/*     background: #3b3b3b;
-    color: white; */
+    color: #3b3b3b;
     margin-top: auto;
 
     .container {
@@ -405,14 +404,36 @@ button[type="submit"] {
     }
 
     .button-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
         width: 50px;
         align-self: center;
         margin: 10px;
     }
 
+    .socials {
+        text-align: center;
+        padding: 50px 0 30px;
+
+        img {
+            height: 25px;
+            margin: 0 10px;
+        }
+    }
+
     p {
         align-self: center;
     }
+}
+
+.footer::before {
+    display: block;
+    content: "";
+    height: 1px;
+    background: #1f1f1f;
+    width: 30%;
+    margin: auto;
 }
 
 

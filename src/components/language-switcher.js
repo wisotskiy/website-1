@@ -23,7 +23,7 @@ function LanguageSwitcher() {
     <div> 
       {/* <img className={style.flag} src={`../images/${locale}.png`}></img> */}    
       <Form.Select value={locale}
-        onChange={switchLanguage}>
+        onChange={switchLanguage} /* style={{height: "15px"}} */>
         {config.map(c => (
           <option key={c.code} value={c.code}>
             {c.localName}         
