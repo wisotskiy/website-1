@@ -23,15 +23,14 @@ img {
 }
 
 .header {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
     margin: 0 auto;
-    max-width: 1100px;
+    padding: 50px 0 10px;
+    max-width: 1200px;
     margin: auto;
     width: 100%;
     z-index: 10;
+    background: #ffffff;
+    transition: all ease 0.5s;
 
     .works-list {
         display: none;
@@ -40,29 +39,40 @@ img {
     }
 }
 
-.header, .main-menu, .pages, .languages {
+.main-menu, .pages, .languages {
+    position: relative;
     display: flex;
     align-self: center;
     align-items: center;
 }
 
+.languages {
+    position: absolute;
+    right: 0;
+}
+
 .pages {
-    flex-grow: 1;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .logo {
-    max-width: 200px;
+    /* max-width: 200px; */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
 
-/*     img {
-        margin: 0;
-    } */
+    img {
+        max-width: 200px;
+    }
 }
 
 .pages a, .pages .works {
-    color: #181818;
+    position: relative;
+    margin: 0 25px;
+    padding: 8px 0;
+    color: #2d2d2d;
+    letter-spacing: .1em;
     text-transform: uppercase;
-    /* font-family: Montserrat, sans-serif; */
     font-weight: 400;
     transition:  color 0.5s ease;
 
@@ -70,6 +80,49 @@ img {
         color: #d8d8d8;
     }
 }
+
+.pages>li::before {
+    position: relative;
+    right: 0;
+    color: #2d2d2d;
+    display: block;
+    content: "";
+    top: 14px;
+    width: 5px;
+    height: 5px;
+    margin-top: -2px;
+    border-radius: 50%;
+    background: #2d2d2d;
+}
+
+.pages>li:nth-child(1)::before {
+    display: none;
+}
+
+.pages a::after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+    left: 0;
+    height: 1px;
+    transform: scaleX(0) translate(0, 0);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: #2d2d2d;
+
+    &:hover {
+        visibility: visible;
+        transform: scaleX(1) translate(0, 0);
+    }
+}
+
+.pages a:hover::after {
+    visibility: visible;
+    transform: scaleX(1) translate(0, 0);
+} 
+
 
 .works {
 
@@ -82,6 +135,7 @@ img {
 
         .works-list {
             display: block;
+            width: max-content;
         }
 
         span {
@@ -90,11 +144,9 @@ img {
     }
 }
 
-/* .works-list {
-    display: none;
-    position: absolute;
-    margin: 0;
-} */
+.works::before {
+    right: 25px !important;
+}
 
 .socials-descktop {
     position: fixed;

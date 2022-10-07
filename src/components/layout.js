@@ -18,7 +18,6 @@ const Layout = ({ children }) => {
   return (
     <>
       <Menu siteTitle={t("app_name") || `Title`} />
-      {/* <Aside siteTitle={t("app_name") || `Title`} /> */}
       <div className="content">
         <main>{children}</main>
 

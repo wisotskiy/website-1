@@ -23,6 +23,14 @@ const Contacts = () => {
       <div className={style.gap}></div>
       <div className={style.container}>
         <h1 className={style.title}>{t("contacts")}</h1>
+        <div className={style.about}>
+          <StaticImage 
+            className={style.aboutPhoto}
+            src="../images/me.jpg" 
+            alt="my foto"
+             />
+          <p className={style.aboutText}>{t("main_page_desc", { count: 3 })}</p>
+        </div>
 
         <form action="https://submit-form.com/m6LCQqtH">
           <textarea id={style.message} name="message" placeholder={t("your_message")}></textarea>

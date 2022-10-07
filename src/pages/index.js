@@ -1,16 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+//import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import Seo from "../components/seo"
 import Teaser from "../components/teaser"
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from "../components/layout"
 
 import * as style from "../style/_style.module.scss"
-
-import video from "../video/nevesta_toci.mp4"
-//import CarouselSlider from "../components/CarouselSlider/CarouselSlider"
 
 
 const IndexPage = ({ data }) => {
@@ -21,34 +17,36 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo title={t("home")} />
-      <video autoPlay loop style={{ width: `100%` }}>
-        <source src={video} type="video/mp4" />
-      </video>
-      {/* <CarouselSlider /> */}
       <div id="about" className={style.container}>
         <h1 className={style.title}>{t("main_page_title")}</h1>
-        <div className={style.about}>
-          <StaticImage 
-            className={style.aboutPhoto}
-            src="../images/me.jpg" 
-            alt="my foto"
-             />
-          <p className={style.aboutText}>{t("main_page_desc", { count: 3 })}</p>
-        </div>
       </div>
 
-      <div className={style.servicesList}>  
-        {categoriesRightOrder.map(category => {
-          return data.allMdx.nodes.map(cat => {
-            if(category === cat.frontmatter.slug) {
-              return <div className={style.serviceItem} key={cat.id}>
+      <div className={style.categoriesList}>  
+        {categoriesRightOrder.map(categorySlug => {
+          
+          return data.allMdx.nodes.map(category => {
+            if(categorySlug === category.frontmatter.slug) {
+              
+              return <section className={style.categoryItem} key={category.id}>
               <div className={style.container}>
-                <Teaser cat={cat} />
+                <h2>{category.frontmatter.title}</h2>
+                {data.allFile.nodes.map(project => {
+
+                  if(project.childMdx.frontmatter.category === category.frontmatter.slug) {
+
+                    return (
+                      <div className={style.bestWorks} key={project.childMdx.id}>
+                        <Teaser project={project} />
+                      </div>
+                    )
+                  }
+                  
+                })}
               </div>
-            </div>
+            </section>
             } else return false
           })
-        })}       
+        })}     
       </div>      
     </Layout>
   )
@@ -82,6 +80,30 @@ query Categories($locale: String) {
     childMdx {
       exports {
         categories
+      }
+    }
+  }
+  allFile(
+    filter: {extension: {eq: "mdx"}, sourceInstanceName: {eq: "projects"}, childMdx: {frontmatter: {show_in_main_page: {eq: "yes"}}, fields: {locale: {eq: $locale}}}}
+  ) {
+    nodes {
+      childMdx {
+        id
+        frontmatter {
+          category
+          link
+          show_in_main_page
+          slug
+          title
+          hero_image {
+            image {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+            alt
+          }
+        }
       }
     }
   }
