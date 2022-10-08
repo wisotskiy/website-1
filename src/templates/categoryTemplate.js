@@ -18,7 +18,7 @@ const Category = ({data}) => {
   return (
     <Layout>
       <Seo title={categoryData.frontmatter.title} />
-      <div className={style.gap}></div>
+
       <div className={style.container}>
         <h1 className={style.title}>{categoryData.frontmatter.title}</h1>
 
@@ -30,15 +30,16 @@ const Category = ({data}) => {
           {data.allMdx.nodes.map(node => {
             return (
               <div className={style.storefrontItem} key={node.id}>
-                <h3><LocalizedLink to={`/${node.frontmatter.category}/${node.frontmatter.slug}`}>{node.frontmatter.title}</LocalizedLink></h3>
+                
                 <div className={style.photoBackground}>
-                <LocalizedLink to={`/${node.frontmatter.category}/${node.frontmatter.slug}`}>
-                  <GatsbyImage 
-                    className={style.categoryPhoto}
-                    image={getImage(node.frontmatter.hero_image.image)}
-                    alt={node.frontmatter.hero_image.alt}
-                  />
-                </LocalizedLink>
+                  <div className={style.projectTitle}>{node.frontmatter.title}</div>
+                  <LocalizedLink to={`/${node.frontmatter.category}/${node.frontmatter.slug}`}>
+                    <GatsbyImage 
+                      className={style.categoryPhoto}
+                      image={getImage(node.frontmatter.hero_image.image)}
+                      alt={node.frontmatter.hero_image.alt}
+                    />
+                  </LocalizedLink>
                 </div>
               </div>
             )

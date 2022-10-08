@@ -27,9 +27,6 @@ img {
     padding: 50px 0 10px;
     max-width: 1200px;
     margin: auto;
-    width: 100%;
-    z-index: 10;
-    background: #ffffff;
     transition: all ease 0.5s;
 
     .works-list {
@@ -37,6 +34,11 @@ img {
         position: absolute;
         margin: 0;
     }
+}
+
+.pages-background {
+    z-index: 10;
+    transition: all ease 0.5s;
 }
 
 .main-menu, .pages, .languages {
@@ -53,6 +55,9 @@ img {
 
 .pages {
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 10;
 }
 
 .logo {

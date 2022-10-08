@@ -7,6 +7,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import * as style from "./_Menu.module.scss"
+import * as mainStyles from "../../style/_style.module.scss"
 import logo from "../../images/logo.png"
 import yt from "../../images/yt_monochrome.svg"
 import fb from "../../images/fb_monochrome.svg"
@@ -79,26 +80,27 @@ const Menu = () => {
   }
   
   const styleNormal = {
-    position: "static",
+    position: "relative",
     transition: "all ease 0.5s",
-    top: "-250px"
+    top: "0"
   }
   
   const styleFixed = {
     position: "fixed",
     left: 0,
     right: 0,
-    top: "-190px",
+    top: 0,
     marginRight: "auto",
     marginLeft: "auto",
+    background: "#fff",
     transition: "all ease 0.5s"
   } 
 
   useEffect(() => {
     
     const fixMenu = () => {
-      window.scrollY > 200 && setIsFixed(true)
-      window.scrollY <= 200 && setIsFixed(false)
+      window.scrollY > 300 && setIsFixed(true)
+      window.scrollY <= 300 && setIsFixed(false)
     };
 
     window.addEventListener('scroll', fixMenu);
@@ -110,11 +112,13 @@ const Menu = () => {
 
   return (
     <>     
-      <nav className={style.header} style={isFixed ? styleFixed : styleNormal}>
+    
+      <nav className={style.header}>
         <div className={style.logo}>
         <LocalizedLink to="/"><img src={logo} alt="logo"></img></LocalizedLink>
         </div>
 
+        <div className={style.pagesBackground} style={isFixed ? styleFixed : styleNormal}>
         <ul className={style.pages}>
           <li>
             <LocalizedLink to={`/`}>{t("home")}</LocalizedLink>
@@ -147,26 +151,26 @@ const Menu = () => {
           </li>
 
           <ul className={style.languages}>
-          <li>
-            {flags.map(flag => {
-              if(flag.name === locale) {
-                return <GatsbyImage
-                key={flag.id}
-                image={flag.childImageSharp.gatsbyImageData}
-                style={{"aspectRatio": "1/1", position: "relative", top: "2px", marginRight: "10px"}}
-                alt="flag"
-              />
-              }
-            })}
-          </li>
-          <li>
-            <LanguageSwitcher />
-          </li>
-        </ul>
+            <li>
+              {flags.map(flag => {
+                if(flag.name === locale) {
+                  return <GatsbyImage
+                  key={flag.id}
+                  image={flag.childImageSharp.gatsbyImageData}
+                  style={{"aspectRatio": "1/1", position: "relative", top: "2px", marginRight: "10px"}}
+                  alt="flag"
+                />
+                }
+              })}
+            </li>
+            <li>
+              <LanguageSwitcher />
+            </li>
+          </ul>
 
-        </ul>
+        </ul></div>
       </nav> 
-
+      
       <div className={style.mobileMenu}>
         <button onClick={() => setShow(true)}>
           <img className={style.hamburger} src={menu} alt="menu"></img>

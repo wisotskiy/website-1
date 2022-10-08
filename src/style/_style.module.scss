@@ -136,32 +136,43 @@ h3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(160px, 353.333333px));
     grid-auto-rows: 1fr;
-    column-gap: 5px;
+    column-gap: 20px;
     row-gap: 20px;
     width: 90%;
     margin: 0 auto 50px;
 
     .storefront-item {
-        display: grid;
-        grid-template-rows: 1fr auto;
-        justify-items: center;
+        position: relative;
         overflow: hidden;
 
-        h3 {
-            text-align: center;
-            background: #fafafa8f;
-        }
-
         .photo-background {
-            /* width: 350px; */
-            height: 350px;
+            position: relative;
+            height: 200px;
             background: #000000;
             transform: scale(1);
             transition: all .1s ease;
+            border-radius: 10px;
+            overflow: hidden;
 
         
             &:hover {
                 transform: scale(1.002);
+                
+                .project-title {
+                    z-index: 1;
+                    transition: all ease .5s;
+                }
+
+            }
+
+            .project-title {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                z-index: 0;
+                transition: all ease .5s;
             }
 
             .category-photo {
@@ -173,8 +184,13 @@ h3 {
                 &:hover {
                     opacity: 0.8;
                 }
+
             }
+
+
         }
+
+
     }
 
 
