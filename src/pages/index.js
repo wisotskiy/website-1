@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-//import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import Seo from "../components/seo"
 import Teaser from "../components/teaser"
@@ -18,8 +18,9 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo title={t("home")} />
-      <div id="about" className={style.container}>
+      <div className={style.container}>
         <h1 className={style.title}>{t("main_page_title")}</h1>
+        <p className={style.aboutText}>{t("main_page_desc")}</p>
       </div>
 
       <div className={style.categoriesList}>  
@@ -48,7 +49,10 @@ const IndexPage = ({ data }) => {
             } else return false
           })
         })}     
-      </div>      
+      </div>   
+      <div className={style.container}>
+        <StaticImage className={style.awards} src="../images/awards.jpg" alt="The award icons" />  
+      </div>   
     </Layout>
   )
 }

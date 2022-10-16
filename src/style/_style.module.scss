@@ -34,7 +34,12 @@ h3 {
     height: 120px;
 }
 
-.about {
+.about-text {
+    width: 50%;
+    margin: 10px auto 30px;
+    text-align: center;
+} 
+/* .about {
     display: flex;
     padding: 0 30px;
     justify-content: space-evenly;
@@ -48,14 +53,16 @@ h3 {
         width: 50%;
         align-self: center;
     }
+} */
+
+.awards {
+    max-width: $containerWidth;
 }
 
 /* teaser */
 
 .categories-list {
     padding: 0 30px 70px;
-
-
 }
 
 .category-item {
@@ -74,6 +81,15 @@ h3 {
             padding: 25px;
         }
     }
+}
+
+.category-item::after {
+    display: block;
+    content: "";
+    height: 1px;
+    background: #d3d3d3;
+    width: 30%;
+    margin: 25px auto;
 }
 
 .teaser .photo-background {
@@ -139,7 +155,7 @@ h3 {
     column-gap: 20px;
     row-gap: 20px;
     width: 90%;
-    margin: 0 auto 50px;
+    margin: 0 auto 80px;
 
     .storefront-item {
         position: relative;
@@ -153,16 +169,14 @@ h3 {
             transition: all .1s ease;
             border-radius: 10px;
             overflow: hidden;
-
         
             &:hover {
                 transform: scale(1.002);
                 
                 .project-title {
                     z-index: 1;
-                    transition: all ease .5s;
+                    transition: all ease .7s;
                 }
-
             }
 
             .project-title {
@@ -172,7 +186,7 @@ h3 {
                 transform: translate(-50%, -50%);
                 color: white;
                 z-index: 0;
-                transition: all ease .5s;
+                transition: all ease .7s;
             }
 
             .category-photo {
@@ -184,13 +198,8 @@ h3 {
                 &:hover {
                     opacity: 0.8;
                 }
-
             }
-
-
         }
-
-
     }
 
 
@@ -411,7 +420,7 @@ button[type="submit"] {
 .footer {
     min-height: 50px;
     color: #3b3b3b;
-    margin-top: auto;
+    margin-top: 30px;
 
     .container {
         display: flex;
@@ -443,14 +452,14 @@ button[type="submit"] {
     }
 }
 
-.footer::before {
+/* .footer::before {
     display: block;
     content: "";
     height: 1px;
     background: #1f1f1f;
     width: 30%;
     margin: auto;
-}
+} */
 
 
 /* mobile */
