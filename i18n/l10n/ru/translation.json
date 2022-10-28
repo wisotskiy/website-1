@@ -3,6 +3,8 @@
   "about": "Обо мне",
   "app_author": "Phrase",
   "app_description": "Phographer and videographer Vysotskii Yaroslav",
+  "main_page_title": "Фото и видео услуги",
+  "main_page_desc": "Меня зовут Ярослав Высоцкий, я профессиональный фотограф и видеограф. С удовольствием запечатлю ваши самые искренние, радостные эмоции и неповторимые моменты вашей свадьбы. Я люблю то что делаю, именно поэтому вы обязательно останетесь довольны моей работой.",
   "app_name": "fslivre",
   "slider_titles_1": "Видеосъемка с дрона",
   "slider_titles_2": "Предметное фото",
@@ -42,6 +44,8 @@
   "bundle4price": "20 000 ,- Kč",
 
   "contacts": "Контакты",
+  "name_title": "Vysotskyi Yaroslav",
+  "your_name": "ваше имя",
   "your_message": "ваше сообщение",
   "your_email": "ваш email",
   "your_phone": "ваш телефон",
@@ -53,7 +57,5 @@
   "articles_published_one": "{{count}} article",
   "articles_published_other": "{{count}} articles",
   "footer": "© 2021 - {{year}} Фотограф и видеограф Ярослав Высоцкий",
-  "published": "Vytvořeno {{date}}",
-  "main_page_title": "Фото и видео услуги",
-  "main_page_desc": "Меня зовут Ярослав Высоцкий, я профессиональный фотограф и видеограф. С удовольствием запечатлю ваши самые искренние, радостные эмоции и неповторимые моменты вашей свадьбы. Я люблю то что делаю, именно поэтому вы обязательно останетесь довольны моей работой."
+  "published": "Vytvořeno {{date}}"
 }

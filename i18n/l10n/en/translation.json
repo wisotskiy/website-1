@@ -3,6 +3,8 @@
   "about": "About me",
   "app_author": "Phrase",
   "app_description": "Phographer and videographer Vysotskii Yaroslav",
+  "main_page_title": "Photo and video services",
+  "main_page_desc": "My name is Yaroslav Vysotsky, I am a professional photographer and videographer. I will be happy to capture your most sincere, joyful emotions and unique moments of your wedding. I love what I do, which is why you will definitely be satisfied with my work.",
   "app_name": "fslivre",
   "slider_titles_1": "Drone video",
   "slider_titles_2": "Subject photos",
@@ -41,6 +43,8 @@
   "bundle3price": "10 000Kč",
 
   "contacts": "Contacts",
+  "name_title": "Vysotskyi Yaroslav",
+  "your_name": "your name",
   "your_message": "your message",
   "your_email": "your email",
   "your_phone": "your phone",
@@ -52,7 +56,5 @@
   "articles_published_one": "{{count}} article",
   "articles_published_other": "{{count}} articles",
   "footer": "© 2021 - {{year}} Photograf a videografer Vysotskyi Yaroslav",
-  "published": "Vytvořeno {{date}}",
-  "main_page_title": "Photo and video services",
-  "main_page_desc": "My name is Vysotskii Yaroslav, I am a professional photographer in Prague. I love to catch moments of your conscious love for each other, and for yourself. I photograph marriage proposal, couples, women, men, moms and their daughters. I like to watch how all the heroes of the photo walk get pleasure from themselves and from each other. I am pleased to make a photoshoot in Prague for you, I will show you the most interesting and mysterious streets, large and beautiful squares, the environs of the magnificent and monumental buildings of Prague. I will capture your most sincere, joyful emotions on the photo, your unforgettable journey to the city of dreams!"
+  "published": "Vytvořeno {{date}}"
 }

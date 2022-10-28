@@ -4,6 +4,8 @@
     "app_author": "Phrase",
     "app_description": "Phographer and videographer Vysotskii Yaroslav",
     "app_name": "fslivre",
+    "main_page_title": "Služby foto a videa",
+    "main_page_desc": "Jmenuji se Yaroslav Vysockij a jsem profesionální fotograf a kameraman. Rád zachytím vaše nejupřímnější, nejradostnější emoce a jedinečné okamžiky vaší svatby. Miluji to, co dělám, a proto budete s mou prací určitě spokojeni.",
     "slider_titles_1": "Videa z dronu",
     "slider_titles_2": "Předmetní foto",
     "slider_link": "Podivát se",
@@ -41,6 +43,8 @@
     "bundle3price": "10 000Kč",
 
     "contacts": "Kontakty",
+    "name_title": "Vysotskyi Yaroslav",
+    "your_name": "vaše jméno",
     "your_message": "vaše zpráva",
     "your_phone": "vaše telefonní číslo",
     "your_email": "vaš email",
@@ -52,7 +56,5 @@
     "articles_published_one": "{{count}} article",
     "articles_published_other": "{{count}} articles",
     "footer": "© 2021 - {{year}} Fotograf a videograf Vysotskyi Yaroslav",
-    "published": "Vytvořeno {{date}}",
-    "main_page_title": "Služby foto a videa",
-    "main_page_desc": "Jmenuji se Vysotskii Yaroslav, jsem profesionální fotograf v Teplicích. Velmi rád chytám okamžiky vaší lásky k sobě navzájem i k sobě samým. Fotím nabídky k sňatku, zamilované páry, ženy, muži, maminky a jejich dcery. Rád sleduji, jak všichni účastníci focení zachycují vzrušení od sebe a od sebe navzájem. S radostí zorganizuji pro vás focení v Praze, ukážu vám nejzajímavější a tajemné ulice, velké a krásné náměstí, okolí nádherných a monumentálních budov Prahy. Na fotografii zachytím vaše nejúprimnější a nejradostnější emoce, nezapomenutelnou cestu do města snů!"
+    "published": "Vytvořeno {{date}}"
   }
