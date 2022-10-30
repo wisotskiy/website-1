@@ -61,7 +61,8 @@ const Project = ({ data }) => {
       window.removeEventListener('scroll', showReturnButton);
     };
   }, []);
-  let isRowFull, counter = 0
+  let counter = 0
+  let styled = {}
   return (
     <Layout>
       <Seo title={projectData?.frontmatter?.title} />
@@ -83,91 +84,63 @@ const Project = ({ data }) => {
 
         <div className={`${style.container} ${style.photosGallery}`}>
           {images.map((image, i) => {
-            //let isRowFull, counter = 0
-            let styled = {}
+            console.log(counter)
+            console.log(i+1)
             
+            //counter = 0
 
-            if (image.childImageSharp.gatsbyImageData.width > image.childImageSharp.gatsbyImageData.height) {
-              isRowFull = true
-              counter = 0
-            } 
-            if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height) {
-              isRowFull = false
-              counter < 1 ? counter += 1 : counter = 0
-            } 
-            
-            
-            
-/*             else if (images[i - 2]?.childImageSharp.gatsbyImageData.width > images[i - 2]?.childImageSharp.gatsbyImageData.height &&
-              images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height &&
-              image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height) {
-              isRowFull = true
-            } else {
-              isRowFull = false
-            } */
-            
-            if (images[i - 1]?.childImageSharp.gatsbyImageData.width > images[i - 1]?.childImageSharp.gatsbyImageData.height) {
+            if (counter === 0) {
 
-              if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
-                  images[i + 1]?.childImageSharp.gatsbyImageData.width > images[i + 1]?.childImageSharp.gatsbyImageData.height) {
+              if (image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height &&
+                images[i + 1]?.childImageSharp.gatsbyImageData.width >= images[i + 1]?.childImageSharp.gatsbyImageData.height) {
                   
-                    styled = {width: `calc(33.333333% - 10px)`}
-                    isRowFull = false
+                  styled = {width: `100%`}
+                  counter = 0
+              } else if (image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height &&
+                images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {
+                  
+                  styled = {width: `100%`}
+                  counter = 1
               } else if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
-                        images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {
-                  
-                    styled = {width: `calc(50% - 10px)`}
-                    isRowFull = false
+                images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {
+                  styled = {width: `calc(50% - 10px)`}
+                  counter = 1
+              } else if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
+                images[i + 1]?.childImageSharp.gatsbyImageData.width >= images[i + 1]?.childImageSharp.gatsbyImageData.height) {
+                  styled = {width: `calc(33.333333% - 10px)`}
+                  counter = 1
               } 
-            }
+              //counter > 1 ? counter = 0 : counter += 1
+              
+            } 
 
-            if (images[i - 2]?.childImageSharp.gatsbyImageData.width > images[i - 2]?.childImageSharp.gatsbyImageData.height) {
-
-              if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height && 
-                  image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height) {
-                  
-                    styled = {width: `calc(50% - 10px)`}
-                    isRowFull = true //the current row is full; we start filling the next one
-              } else if (image.childImageSharp.gatsbyImageData.width > image.childImageSharp.gatsbyImageData.height &&
-                        images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height) {
-                  
-                  styled = {width: `calc(66.666667% - 10px)`}
-                  isRowFull = true
-                  //isRowFull = true since after every horizontal photo isRowFull is set to true (look above)
-              } 
-            }
-
-            if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height) {
+            if (counter === 1) {
 
               if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {
-                  
-                    styled = {width: `calc(50% - 10px)`}
-                    isRowFull = false
+                  styled = {width: `calc(50% - 10px)`}
+                  counter = 2
+              } else if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
+                images[i + 1]?.childImageSharp.gatsbyImageData.width >= images[i + 1]?.childImageSharp.gatsbyImageData.height) {
+                  styled = {width: `calc(33.333333% - 10px)`}
+                  counter = 2
+              }             
+            } 
+
+            if (counter === 2) {
+
+              /* if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height && 
+                image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height) {                
+                  styled = {width: `calc(50% - 10px)`}
+                  counter = 0
+              } else */ if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height && 
+                image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height) {
+                  styled = {width: `calc(66.666667% - 10px)`}
+                  counter = 0
               } 
             }
 
-            if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height) {
-
-              if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height && 
-                images[i + 1]?.childImageSharp.gatsbyImageData.width > images[i + 1]?.childImageSharp.gatsbyImageData.height) {
-                
-                  styled = styled = {width: `calc(33.333333% - 10px)`}
-                  isRowFull = true
-              } 
-            }
-
-            if (images[i - 2]?.childImageSharp.gatsbyImageData.width < images[i - 2]?.childImageSharp.gatsbyImageData.height && counter === 0) {
-
-              if (image.childImageSharp.gatsbyImageData.width > image.childImageSharp.gatsbyImageData.height && 
-                images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height) {
-                
-                  styled = styled = {width: `calc(66.666667% - 10px)`}
-                  isRowFull = true
-              } 
-            }
-
-            console.log(counter)
+            //console.log(counter)
             console.log(styled)
             //console.log(currentWidth)
             return (
