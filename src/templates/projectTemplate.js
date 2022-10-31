@@ -62,7 +62,7 @@ const Project = ({ data }) => {
     };
   }, []);
   let counter = 0
-  let styled = {}
+  let width = ""
   return (
     <Layout>
       <Seo title={projectData?.frontmatter?.title} />
@@ -94,54 +94,71 @@ const Project = ({ data }) => {
               if (image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width >= images[i + 1]?.childImageSharp.gatsbyImageData.height) {
                   
-                  styled = {width: `100%`}
+                  width =`100%`
                   counter = 0
+                  console.log('a')
               } else if (image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {
                   
-                  styled = {width: `100%`}
+                  width =`100%`
                   counter = 1
+                  console.log('b')
               } else if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {
-                  styled = {width: `calc(50% - 10px)`}
+                  width = `calc(50% - 10px)`
                   counter = 1
+                  console.log('c')
               } else if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width >= images[i + 1]?.childImageSharp.gatsbyImageData.height) {
-                  styled = {width: `calc(33.333333% - 10px)`}
+                  width = `calc(33.333333% - 10px)`
                   counter = 1
+                  console.log('d')
               } 
               //counter > 1 ? counter = 0 : counter += 1
               
-            } 
-
-            if (counter === 1) {
+            } else if (counter === 1) {
 
               if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {
-                  styled = {width: `calc(50% - 10px)`}
+                  width = `calc(50% - 10px)`
                   counter = 2
+                  console.log('e')
               } else if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width >= images[i + 1]?.childImageSharp.gatsbyImageData.height) {
-                  styled = {width: `calc(33.333333% - 10px)`}
+                  width = `calc(33.333333% - 10px)`
                   counter = 2
+                  console.log('f')
               }             
-            } 
+            } else if (counter === 2) {
 
-            if (counter === 2) {
-
-              /* if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height && 
-                image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height) {                
-                  styled = {width: `calc(50% - 10px)`}
+              if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height && 
+                image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
+                images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {                
+                  width = `calc(50% - 10px)`
+                  counter = 1
+                  console.log('g')
+              } else if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height && 
+                image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
+                images[i + 1]?.childImageSharp.gatsbyImageData.width >= images[i + 1]?.childImageSharp.gatsbyImageData.height) {
+                  width = `calc(50% - 10px)`
                   counter = 0
-              } else */ if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height && 
-                image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height) {
-                  styled = {width: `calc(66.666667% - 10px)`}
+                  console.log('h')
+              } else if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height && 
+                image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height &&
+                images[i + 1]?.childImageSharp.gatsbyImageData.width >= images[i + 1]?.childImageSharp.gatsbyImageData.height) {
+                  width = `calc(66.666667% - 10px)`
                   counter = 0
-              } 
-            }
-
+                  console.log('i')
+              } else if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height && 
+                image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height &&
+                images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {
+                  width = `calc(66.666667% - 10px)`
+                  counter = 1
+                  console.log('j')
+              }
+          }
             //console.log(counter)
-            console.log(styled)
+            console.log(width)
             //console.log(currentWidth)
             return (
               <GatsbyImage
@@ -149,7 +166,7 @@ const Project = ({ data }) => {
                 key={image.id}
                 alt={projectData?.frontmatter?.title}
                 image={getImage(image)}  
-                style={styled}
+                style={{width: width}}
               />
             )
           })}
