@@ -544,15 +544,11 @@ button[type="submit"] {
 
     /* project template */
     .photos-gallery {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(160px, 42vw));
-        grid-auto-rows: 42vw;
-        gap: 10px;      
-        width: 85vw;
+        display: flex;
+        width: 100%;
 
         .photo {
-            width: 42vw;
-            height: 42vw;
+            width: 100% !important;
         }
     }
 
