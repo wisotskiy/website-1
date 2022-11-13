@@ -104,7 +104,7 @@ const Project = ({ data }) => {
               } else if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {
                   width = `calc(50% - 10px)`
-                  counter = 1
+                  counter = 2
                   console.log(i + 1)
                   console.log('c')
                   console.log(counter)
@@ -112,7 +112,7 @@ const Project = ({ data }) => {
               } else if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width >= images[i + 1]?.childImageSharp.gatsbyImageData.height) {
                   width = `calc(33.333333% - 10px)`
-                  counter = 1
+                  counter = 2
                   console.log(i + 1)
                   console.log('d')
                   console.log(counter)
