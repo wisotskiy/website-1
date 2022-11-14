@@ -4,7 +4,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: #ff00003d;
+    background: #ffffff;
     z-index: 1000;
     width: 100%;
     justify-content: space-between;
@@ -14,8 +14,9 @@
     .arrow-left {
         /* position: absolute; */
         width: 20px;
-        left: 10px;
-        top: 50vh;
+        margin-left: 20px;
+/*         left: 10px;
+        top: 50vh; */
         background: transparent;
         cursor: pointer;
     }
@@ -53,8 +54,9 @@
     .arrow-right {
         /* position: absolute; */
         width: 20px;
-        right: 10px;
-        top: 50vh;
+        margin-right: 20px;
+/*         right: 10px;
+        top: 50vh; */
         background: transparent;
         cursor: pointer;
     }

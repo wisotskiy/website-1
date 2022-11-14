@@ -9,6 +9,10 @@ const GalleryItem = (props) => {
     const [currentImage, setCurrentImage] = useState(props.image)
     const [index, setIndex] = useState(props.index)
 
+    const closeFullImage = () => {
+        props.toggleIsFullImage(false)       
+    }
+
     useEffect(() => {
 
         setCurrentImage(props.images[index])
@@ -19,6 +23,14 @@ const GalleryItem = (props) => {
             props.toggleIsFullImage(false)
         }
     }, [index])
+
+    useEffect(() => {
+
+        window.addEventListener('scroll', closeFullImage);
+        return () => {
+            window.removeEventListener('scroll', closeFullImage);
+        };
+    }, [])
 
     return (
         <div className={style.photoItem} 
@@ -32,7 +44,7 @@ const GalleryItem = (props) => {
                  onClick={() => setIndex(index - 1)}>
                 <img src={leftArrow} alt="left arrow icon"></img>
             </button>
-            <div className={style.giContainer} onClick={(e) => setIndex(index + 1)}>
+            <div className={style.giContainer} onClick={() => setIndex(index + 1)}>
                 <GatsbyImage
                     className={style.photoItemFull}
                     alt="ff"

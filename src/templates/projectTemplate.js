@@ -33,14 +33,6 @@ const Project = ({ data }) => {
     display: "none"
   }
 
-  const styleShowFullImg = {
-    display: "block"
-  }
-
-  const styleHideFullImg = {
-    display: "none"
-  }
-
   const showFullImage = (image, index) => {
     setIsfull(true)
     setCurrentImage(image)
@@ -89,42 +81,42 @@ const Project = ({ data }) => {
                 images[i + 1]?.childImageSharp.gatsbyImageData.width >= images[i + 1]?.childImageSharp.gatsbyImageData.height) {               
                   width =`100%`
                   counter = 0
-                  console.log(i + 1)
-                  console.log('a')
-                  console.log(counter)
-            console.log(width)
+                  //console.log(i + 1)
+                  //console.log('a')
+                  //console.log(counter)
+            //console.log(width)
               } else if (image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {         
                   width =`100%`
                   counter = 1
-                  console.log(i + 1)
-                  console.log('b')
-                  console.log(counter)
-            console.log(width)
+                  //console.log(i + 1)
+                  //console.log('b')
+                  //console.log(counter)
+            //console.log(width)
               } else if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {
                   width = `calc(50% - 10px)`
                   counter = 2
-                  console.log(i + 1)
-                  console.log('c')
-                  console.log(counter)
-            console.log(width)
+                  //console.log(i + 1)
+                  //console.log('c')
+                  //console.log(counter)
+            //console.log(width)
               } else if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width >= images[i + 1]?.childImageSharp.gatsbyImageData.height) {
                   width = `calc(33.333333% - 10px)`
                   counter = 2
-                  console.log(i + 1)
-                  console.log('d')
-                  console.log(counter)
-            console.log(width)
+                  //console.log(i + 1)
+                  //console.log('d')
+                  //console.log(counter)
+            //console.log(width)
               } else if (image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height &&
                 !images[i + 1]) {
                   width = `100%`
                   counter = 0
-                  console.log(i + 1)
-                  console.log('dd')
-                  console.log(counter)
-            console.log(width)
+                  //console.log(i + 1)
+                  //console.log('dd')
+                  //console.log(counter)
+           // console.log(width)
                 } 
 
             } else if (counter === 1) {
@@ -133,26 +125,26 @@ const Project = ({ data }) => {
                 images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {
                   width = `calc(50% - 10px)`
                   counter = 2
-                  console.log(i + 1)
-                  console.log('e')
-                  console.log(counter)
-            console.log(width)
+                  //console.log(i + 1)
+                  //console.log('e')
+                  //console.log(counter)
+            //console.log(width)
               } else if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width >= images[i + 1]?.childImageSharp.gatsbyImageData.height) {
                   width = `calc(33.333333% - 10px)`
                   counter = 2
-                  console.log(i + 1)
-                  console.log('f')
-                  console.log(counter)
-            console.log(width)
+                  //console.log(i + 1)
+                  //console.log('f')
+                  //console.log(counter)
+            //console.log(width)
               }  else if (image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
                 !images[i + 1]) {
                   width = `100%`
                   counter = 0
-                  console.log(i + 1)
-                  console.log('ff')
-                  console.log(counter)
-            console.log(width)
+                  //console.log(i + 1)
+                  //console.log('ff')
+                  //console.log(counter)
+            //console.log(width)
               }                    
             } else if (counter === 2) {
 
@@ -161,55 +153,55 @@ const Project = ({ data }) => {
                 images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {                
                   width = `calc(50% - 10px)`
                   counter = 1
-                  console.log(i + 1)
-                  console.log('g')
-                  console.log(counter)
-            console.log(width)
+                  //console.log(i + 1)
+                  //console.log('g')
+                  //console.log(counter)
+            //console.log(width)
               } else if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height && 
                 image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width >= images[i + 1]?.childImageSharp.gatsbyImageData.height) {
                   width = `calc(50% - 10px)`
                   counter = 0
-                  console.log(i + 1)
-                  console.log('h')
-                  console.log(counter)
-            console.log(width)
+                  //console.log(i + 1)
+                  //console.log('h')
+                  //console.log(counter)
+            //console.log(width)
               } else if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height && 
                 image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width >= images[i + 1]?.childImageSharp.gatsbyImageData.height) {
                   width = `calc(66.666667% - 10px)`
                   counter = 0
-                  console.log(i + 1)
-                  console.log('i')
-                  console.log(counter)
-            console.log(width)
+                  //console.log(i + 1)
+                  //console.log('i')
+                  //console.log(counter)
+            //console.log(width)
               } else if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height && 
                 image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height &&
                 images[i + 1]?.childImageSharp.gatsbyImageData.width < images[i + 1]?.childImageSharp.gatsbyImageData.height) {
                   width = `calc(66.666667% - 10px)`
                   counter = 1
-                  console.log(i + 1)
-                  console.log('j')
-                  console.log(counter)
-            console.log(width)
+                  //console.log(i + 1)
+                  //console.log('j')
+                  //console.log(counter)
+            //console.log(width)
               } else if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height &&
                 image.childImageSharp.gatsbyImageData.width < image.childImageSharp.gatsbyImageData.height &&
                 !images[i + 1]) {
                   width = `calc(50% - 10px)`
                   counter = 0
-                  console.log(i + 1)
-                  console.log('jj')
-                  console.log(counter)
-            console.log(width)
+                  //console.log(i + 1)
+                  //console.log('jj')
+                  //console.log(counter)
+            //console.log(width)
                 } else if (images[i - 1]?.childImageSharp.gatsbyImageData.width < images[i - 1]?.childImageSharp.gatsbyImageData.height &&
                   image.childImageSharp.gatsbyImageData.width >= image.childImageSharp.gatsbyImageData.height &&
                   !images[i + 1]) {
                     width = `calc(66.666667% - 10px)`
                     counter = 0
-                    console.log(i + 1)
-                    console.log('jjj')
-                    console.log(counter)
-              console.log(width)
+                    //console.log(i + 1)
+                    //console.log('jjj')
+                    //console.log(counter)
+              //console.log(width)
                   }
           }
             
@@ -246,8 +238,7 @@ const Project = ({ data }) => {
                   image={currentImage} 
                   images={images} 
                   index={index} 
-                  toggleIsFullImage={toggleIsFullImage}
-                  /* display={isFull ? styleShowFullImg : styleHideFullImg} */ />}
+                  toggleIsFullImage={toggleIsFullImage} />}
     </Layout>
   )
 }
