@@ -14,12 +14,12 @@ const Contacts = () => {
   return (
     <Layout>
       <Seo title={t("contacts")} />
-      <StaticImage 
+{/*       <StaticImage 
         src="../images/header_pr.jpg" 
         alt="slider"
         layout="fullWidth"
         placeholder="blurred"
-    />
+    /> */}
       {/* <div className={style.gap}></div> */}
       <div className={style.container}>
         <h1 className={style.title}>{t("bundles")}</h1>
