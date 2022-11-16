@@ -24,6 +24,7 @@ const Project = ({ data }) => {
   const [isShow, setIsShow] = useState(false)
   const [currentImage, setCurrentImage] = useState({})
   const [index, setIndex] = useState(0)
+  const [deviceWidth, setDeviceWidth] = useState('')
 
   const styleShow = {
     display: "block"
@@ -56,6 +57,16 @@ const Project = ({ data }) => {
       window.removeEventListener('scroll', showReturnButton);
     };
   }, []);
+
+  
+  useEffect(() => {
+
+    setDeviceWidth(window.innerWidth)
+    window.addEventListener('resize', () => setDeviceWidth(window.innerWidth))
+    window.removeEventListener('resize', () => setDeviceWidth(window.innerWidth))
+    return () => { 
+      setDeviceWidth('')}
+  }, [])
 
 
   return (
@@ -207,6 +218,8 @@ const Project = ({ data }) => {
             
             //console.log(currentWidth)
             return (
+              <>
+              {deviceWidth > 1024 ? 
               <div className={style.photo} style={{width: width}} onClick={(e) => showFullImage(image, i)}>
                 <GatsbyImage
                   key={image.id}
@@ -214,7 +227,16 @@ const Project = ({ data }) => {
                   image={getImage(image)}  
                   style={{width: "100%", height: "100%"}}               
                 />
-              </div>
+              </div> :
+              <div className={style.photo} style={{width: width}}>
+              <GatsbyImage
+                key={image.id}
+                alt={projectData?.frontmatter?.title}
+                image={getImage(image)}  
+                style={{width: "100%", height: "100%"}}               
+              />
+            </div>}
+              </>
             )
           })}
         </div> :

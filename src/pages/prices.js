@@ -1,5 +1,5 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+//import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 
 import Seo from "../components/seo"
@@ -66,7 +66,7 @@ const Contacts = () => {
           </div>
         </div>
 
-        
+        {/* <div className={style.gap}></div> */}
 
       </div>     
     </Layout>

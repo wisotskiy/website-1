@@ -99,8 +99,8 @@ const Menu = () => {
   useEffect(() => {
     
     const fixMenu = () => {
-      window.scrollY > 300 && setIsFixed(true)
-      window.scrollY <= 300 && setIsFixed(false)
+      window.scrollY > 250 && setIsFixed(true)
+      window.scrollY <= 250 && setIsFixed(false)
     };
 
     window.addEventListener('scroll', fixMenu);

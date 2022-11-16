@@ -31,10 +31,10 @@ const GalleryItem = (props) => {
             window.removeEventListener('scroll', closeFullImage);
         };
     }, [])
-
+    
     return (
         <div className={style.photoItem} 
-            style={index >= 0 && index <= props.images.length - 1 ? {display: "flex"} : {display: "none"}}
+            style={index >= 0 && index <= props.images.length - 1 ? {display: "flex", transition: "all 1s ease", background: "#ffffff", zIndex: 1000} : {display: "none", transition: "all 1s ease", background: "#ffffff00", zIndex: 0}}
             onClick={(e) => {
                     e.target.localName === "div" && props.toggleIsFullImage(false)
                     }
