@@ -20,12 +20,6 @@ export default function Teaser({ project }) {
           />      
         </Link>
       </div>
-      
-{/*       <h3 className={style.teaserTitle}>
-        <Link to={`/${project.childMdx.frontmatter.slug}`}>
-          {project.childMdx.frontmatter.title}
-        </Link>
-      </h3> */}
     </div>
   )
 }
