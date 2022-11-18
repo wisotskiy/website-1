@@ -49,7 +49,7 @@ img {
 }
 
 .languages {
-    /* position: absolute; */
+    position: absolute;
     right: 0;
 }
 
@@ -295,9 +295,11 @@ img {
 
 
     .languages {
+        position: static;
         display: flex;
         align-items: center;
         padding: 0 0 20px 0;
+        height: 34px;
 
         li {
             margin: 0;

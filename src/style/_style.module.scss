@@ -642,6 +642,57 @@ button[type="submit"] {
     .storefront {
         width: 80%;
         grid-template-columns: repeat(2, minmax(160px, 45vw));
+
+        .storefront-item {
+    
+            .photo-background {
+            text-align: center;
+                &:hover {
+                    transform: none;
+                    
+/*                     .project-title {
+                        position: static;
+                        z-index: 1;
+                        transition: none;
+                        bottom: 5px;
+                    } */
+                }
+    
+                .project-title {
+                    position: absolute;
+                    width: 100%;
+                    top: auto;
+                    left: auto;
+                    right: auto;
+                    bottom: 0;
+                    transform: none;
+                    background-color: #5e5e5e;
+                    z-index: 1;
+
+                    display: block;
+                }
+    
+                .category-photo {
+                    width: 100%;
+                    height: 100%;
+                    opacity: 1;
+                    transition: none;
+    
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    
+        a {
+            text-decoration: none;
+            color: #424242;
+        }
+    
+        a:hover {
+            color: #979797;
+        }
     }
 
     /* project template */
@@ -739,7 +790,17 @@ button[type="submit"] {
     
     /* category template */
 
-   
+    .storefront {
+        width: 80%;
+        grid-template-columns: repeat(1, 100%);
+
+        .storefront-item {
+    
+            .photo-background {
+                height: 50vw;
+            }
+        }
+    } 
 }
 
 @media screen and (max-width: 576px) {
@@ -751,6 +812,7 @@ button[type="submit"] {
     .categories-list {
         padding: 0 20px 70px;
     }
+
     .category-item .container {
 
         h2 {
@@ -791,34 +853,12 @@ button[type="submit"] {
         margin: 22px 0;
     } */
 
-    
-    /* category template */
-
-    .storefront {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(160px, 48%));
-    
-        .storefront-item {
-            grid-template-rows: 1fr 41vw;
-        }
-    }
-
     #phone, #email {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 428px) {
-
-    .storefront {
-        display: grid;
-        grid-template-columns: repeat(1, minmax(200px, 70%));
-        justify-content: center;
-
-        .storefront-item {
-            grid-template-rows: 1fr 60vw;
-        }
-    }
 
     .photos-gallery {
         grid-template-columns: repeat(1, minmax(160px, 1fr));
