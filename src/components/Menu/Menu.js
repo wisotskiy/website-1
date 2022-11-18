@@ -172,17 +172,18 @@ const Menu = () => {
       </nav> 
       
       <div className={style.mobileMenu}>
+        <div className={style.logo}>
+          <LocalizedLink to="/"><img onClick={() => setShow(false)} src={logo} alt="logo"></img></LocalizedLink>
+        </div>
         <button onClick={() => setShow(true)}>
           <img className={style.hamburger} src={menu} alt="menu"></img>
         </button>
         <div className={style.shadow} style={show ? shadowShown : shadowHidden}>
           <div className={style.background} style={show ? backgroundShown : backgroundHidden}>
             <button onClick={() => setShow(false)}>
-              <img className={style.hamburger} src={close} alt="close menu"></img>
+              <img className={style.closeButton} src={close} alt="close menu"></img>
             </button>
-            <div className={style.logo}>
-          <LocalizedLink to="/"><img onClick={() => setShow(false)} src={logo} alt="logo"></img></LocalizedLink>
-          </div>
+            
           <nav className={style.mainMenu}>
 
             <ul className={style.languages}>
@@ -205,7 +206,7 @@ const Menu = () => {
 
             <ul className={style.pages}>
               <li>
-                <LocalizedLink to={`/#about`} onClick={() => setShow(false)}>{t("about")}</LocalizedLink>
+                <LocalizedLink to={`/`} onClick={() => setShow(false)}>{t("home")}</LocalizedLink>
               </li>
               <li className={style.worksMobile}>
                 {t("works")}

@@ -49,7 +49,7 @@ img {
 }
 
 .languages {
-    position: absolute;
+    /* position: absolute; */
     right: 0;
 }
 
@@ -191,22 +191,26 @@ img {
     width: 300px;
     top: 0;
     bottom: 0;
-    padding: 0 20px 10px;
+    padding: 80px 20px 10px;
     background: #ffffff;
     z-index: 30;
     overflow-y: scroll;
 
     select {
         font-size: 20px;
-    }
-
-/*     img {
-        margin-bottom: 0;
-    } */
+    }/* 
 
     .logo {
         width: 65%;
         margin: 20px 0 50px;
+    } */
+
+    .close-button {
+        position: fixed;
+        z-index: 40;
+        height: 50px;
+        right: 20px;
+        top: 20px;
     }
 
     .main-menu {
@@ -226,12 +230,14 @@ img {
                 text-transform: uppercase;
                 width: fit-content;
                 margin-bottom: 20px;
+                list-style: none;
             }
             
             a {
                 color: #787878;
                 text-decoration: none;
                 font-weight: 400;
+                margin: 0;
             }
             
             li:hover, span:hover {
@@ -248,14 +254,15 @@ img {
 
             /* works submenu */
 
-            .works  {
+/*             .works  {
                 position: relative;
-            }
+            } */
 
             li.works-mobile {
                 color: #787878;
                 font-weight: 400;
                 margin-bottom: 10px;
+                letter-spacing: .1em;
             }
 
             .works-list {
@@ -279,6 +286,10 @@ img {
                 display: block;
             }
         } 
+
+        .pages>li::before {
+            display: none;
+        }
     }
 
 
@@ -299,10 +310,11 @@ img {
 
     .socials {
         display: flex;
+        justify-content: center;
 
         .fb, .yt, .insta {
             height: 25px;
-            margin-right: 35px;
+            margin: 0 15px;
         }
     }
 }
@@ -323,6 +335,11 @@ img {
     .header {
         display: none;
     }
+  
+    h1 {
+        width: 85%;
+        margin: 0 auto 20px;
+    }
 
     .hamburger {
         display: block;
@@ -330,7 +347,20 @@ img {
 
     .mobile-menu {
         display: block;
-        position: absolute;
+        width: 100%;
+        /* position: absolute; */
+
+        .logo {
+            text-align: left;
+            margin: 0;
+
+            a {
+                img {
+                    margin: 10px 0 0 30px;
+                }
+            }
+            
+        }
 
         .main-menu {
             display: block;
@@ -343,5 +373,25 @@ img {
 
     .socials-descktop {
         display: none;
+    }
+
+    footer {
+
+        p {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .mobile-menu {
+
+        .logo {
+
+            img {
+                max-width: 160px;
+            }           
+        }
     }
 }
