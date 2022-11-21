@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next"
 import Seo from "../components/seo"
 import Teaser from "../components/teaser"
 import Layout from "../components/layout"
+
+import og from "../images/social.jpg"
 //import "bootstrap/dist/css/bootstrap.min.css"
 
 import * as style from "../style/_style.module.scss"
@@ -17,10 +19,10 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title={t("home")} />
+      <Seo title={t("seo_title_main")} description={t("seo_description_main")} />
       <div className={style.container}>
         <h1 className={style.title}>{t("main_page_title")}</h1>
-        <p className={style.aboutText}>{t("main_page_desc")}</p>
+        <p className={style.aboutText}>{t("about_text")}</p>
       </div>
 
       <div className={style.categoriesList}>  
@@ -69,7 +71,11 @@ query Categories($locale: String) {
         hero_image {
           image {
             childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF], layout: FULL_WIDTH)
+              gatsbyImageData(
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+                layout: FULL_WIDTH
+              )
             }
           }
           alt

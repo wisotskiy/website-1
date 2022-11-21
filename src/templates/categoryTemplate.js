@@ -17,7 +17,7 @@ const Category = ({data}) => {
 
   return (
     <Layout>
-      <Seo title={categoryData.frontmatter.title} />
+      <Seo title={categoryData.frontmatter.seo_title} description={categoryData.frontmatter.seo_description} />
 
       <div className={style.container}>
         <h1 className={style.title}>{categoryData.frontmatter.title}</h1>
@@ -57,6 +57,8 @@ query CategoryBySlug($slug: String, $locale: String) {
   mdx(frontmatter: {slug: {eq: $slug}}, fields: {locale: {eq: $locale}}) {
     frontmatter {
       title
+      seo_title
+      seo_description
       slug
       hero_image {
         image {

@@ -13,7 +13,7 @@ const Contacts = () => {
 
   return (
     <Layout>
-      <Seo title={t("contacts")} />
+      <Seo title={t("seo_title_prices")} description={t("seo_description_prices")} />
 {/*       <StaticImage 
         src="../images/header_pr.jpg" 
         alt="slider"
@@ -50,6 +50,7 @@ const Contacts = () => {
               <li className={style.bundleItem}>{t("bundle32")}</li>
               <li className={style.bundleItem}>{t("bundle33")}</li>
               <li className={style.bundleItem}>{t("bundle34")}</li>
+              <li className={style.bundleItem}>{t("bundle35")}</li>
               <li className={style.bundleItem}>{t("bundle35")}</li>
             </ul>
             <div className={style.price}>{t("bundle3price")}</div>

@@ -71,7 +71,7 @@ const Project = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title={projectData?.frontmatter?.title} />
+      <Seo title={projectData?.frontmatter?.seo_title} description={projectData?.frontmatter?.seo_description} />
       <div className={style.gap}></div>
       <div className={style.container}>
         <Link to={`/${data.mdx.frontmatter.category}`} className={style.buttonReturn} style={isShow ? styleShow : styleHidden}><button>{t("return")}</button></Link>

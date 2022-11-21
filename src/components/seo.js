@@ -10,8 +10,8 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function Seo({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+function Seo({ description, lang, meta, title, ogImageDefault, ogImageAlt }) {
+  const data = useStaticQuery(
     graphql`
       query {
         site {
@@ -19,14 +19,26 @@ function Seo({ description, lang, meta, title }) {
             title
             description
             author
+            siteUrl
+          }
+        }
+        ogImageDefault: file(relativePath: { eq: "social.jpg" }) {
+          childImageSharp {
+            fixed(height: 630, width: 1200) {
+              src
+            }
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || data.site.siteMetadata.description
+  const defaultTitle = data.site.siteMetadata?.title
+  const imagePath = constructUrl(
+    data.site.siteMetadata.siteUrl,
+    data.ogImageDefault?.childImageSharp?.fixed?.src
+  )
 
   return (
     <Helmet
@@ -58,7 +70,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: data.site.siteMetadata?.author || ``,
         },
         {
           name: `twitter:title`,
@@ -68,6 +80,17 @@ function Seo({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          property: `og:image`,
+          content: imagePath,
+        },
+        {
+          name: `twitter:image`,
+          content: imagePath,
+        },
+        { property: `twitter:image:alt`, 
+          content: ogImageAlt || "Yaroslav Vysotskyi website", 
+        }, 
       ].concat(meta)}
     />
   )
@@ -84,6 +107,11 @@ Seo.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+}
+
+function constructUrl(baseUrl, path) {
+  if (baseUrl === "" || path === "") return "";
+  return `${baseUrl}${path}`;
 }
 
 export default Seo

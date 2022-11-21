@@ -13,7 +13,7 @@ const Contacts = () => {
 
   return (
     <Layout>
-      
+      <Seo title={t("seo_title_contacts")} description={t("seo_description_contacts")} />
       <div className={style.container}>
         <h1 className={style.title}>{t("about")}</h1>
 

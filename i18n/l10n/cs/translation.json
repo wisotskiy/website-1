@@ -1,20 +1,20 @@
 {
+    "seo_title_main": "Fotograf a kameraman Vysotskyi Yaroslav",
+    "seo_description_main": "Yaroslav Vysotskyi - profesionální svatební foto a videa Teplice, Ústí nad Labem, Ústecký kraj",
     "home": "Domů",
     "about": "O mě",
-    "app_author": "Phrase",
-    "app_description": "Phographer and videographer Vysotskii Yaroslav",
-    "app_name": "fslivre",
     "main_page_title": "Služby foto a videa",
-    "main_page_desc": "Jmenuji se Yaroslav Vysockij a jsem profesionální fotograf a kameraman. Rád zachytím vaše nejupřímnější, nejradostnější emoce a jedinečné okamžiky vaší svatby. Miluji to, co dělám, a proto budete s mou prací určitě spokojeni.",
-    "slider_titles_1": "Videa z dronu",
-    "slider_titles_2": "Předmetní foto",
-    "slider_link": "Podivát se",
+    "about_text": "Jmenuji se Yaroslav Vysotskyi a jsem profesionální fotograf a kameraman. Rád zachytím vaše nejupřímnější, nejradostnější emoce a jedinečné okamžiky vaší svatby. Miluji to, co dělám, a proto budete s mou prací určitě spokojeni.",
+    
     "works": "Služby",
 
     "return": "Zpět",
 
     "prices": "Ceník",
+    "seo_title_prices": "Ceník fota a videa",
+    "seo_description_prices": "Nízké ceny - profesionální svatební foto a videa - Vysotskyi Yaroslav, fotograf a kameraman",
     "bundles": "Svatební baličky",
+
     "bundle1": "FILMOVÝ KLIP",
     "bundle11": "First service",
     "bundle12": "Second service",
@@ -43,7 +43,8 @@
     "bundle3price": "10 000Kč",
 
     "contacts": "Kontakty",
-    "name_title": "Vysotskyi Yaroslav",
+    "seo_title_contacts": "Kontakty Vysotskyi Yaroslav - profesionální fotograf a kameraman",
+    "seo_description_contacts": "Yaroslav Vysotskyi: Kontakty Teplice, Ústí nad Labem, Ústecký kraj",
     "your_name": "vaše jméno",
     "your_message": "vaše zpráva",
     "your_phone": "vaše telefonní číslo",
@@ -51,10 +52,6 @@
     "send": "poslat",
     "phone": "Telefon",
     "email": "Email",
-    "social": "Sociální sítě",
-    
-    "articles_published_one": "{{count}} article",
-    "articles_published_other": "{{count}} articles",
-    "footer": "© 2021 - {{year}} Fotograf a videograf Vysotskyi Yaroslav",
-    "published": "Vytvořeno {{date}}"
+
+    "footer": "© 2021 - {{year}} Fotograf a videograf Vysotskyi Yaroslav"
   }

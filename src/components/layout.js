@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Menu siteTitle={t("app_name") || `Title`} />
+      <Menu />
       <div className="content">
         <main>{children}</main>
 
