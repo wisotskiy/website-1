@@ -272,6 +272,8 @@ query ProjectBySlug($slug: String, $locale: String, $fullSlug: String) {
   mdx(frontmatter: {slug: {eq: $slug}}, fields: {locale: {eq: $locale}}) {
     frontmatter {
       title
+      seo_title
+      seo_description
       hero_image {
         image {
           childImageSharp {

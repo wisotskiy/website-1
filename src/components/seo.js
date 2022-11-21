@@ -34,7 +34,7 @@ function Seo({ description, lang, meta, title, ogImageDefault, ogImageAlt }) {
   )
 
   const metaDescription = description || data.site.siteMetadata.description
-  const defaultTitle = data.site.siteMetadata?.title
+  //const defaultTitle = data.site.siteMetadata?.title
   const imagePath = constructUrl(
     data.site.siteMetadata.siteUrl,
     data.ogImageDefault?.childImageSharp?.fixed?.src
@@ -46,7 +46,7 @@ function Seo({ description, lang, meta, title, ogImageDefault, ogImageAlt }) {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s / ${defaultTitle}` : null}
+      //titleTemplate={defaultTitle ? `%s / ${defaultTitle}` : null}
       meta={[
         {
           name: `description`,
