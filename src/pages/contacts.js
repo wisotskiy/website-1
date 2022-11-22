@@ -13,7 +13,7 @@ const Contacts = () => {
   const { t } = useTranslation()
   const a = <LocalizedLink to={"/contacts"}></LocalizedLink>
 
-  const b = `https://stirring-mermaid-d8fa23.netlify.app${a._owner.key}`
+  const b = `https://stirring-mermaid-d8fa23.netlify.app${a?._owner?.key}`
 
   return (
     <Layout>
@@ -26,7 +26,7 @@ const Contacts = () => {
             <li>
               <a className={style.resource} href="https://weva.pro/" target="_blank" rel="noopener noreferrer">
                 Weva
-              </a> — Asociația Videografilor de evenimente din toată lumea.
+              </a> — Asociația Videografilor de evenimente din toată  lumea.
             </li>
             <li>
               <a className={style.resource} href="https://www.fearlessphotographers.com/" target="_blank" rel="noopener noreferrer">
