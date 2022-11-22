@@ -52,6 +52,9 @@
   "send": "send",
   "phone": "Phone",
   "email": "Email",
+
+  "four_o_four_title": "Sorry, but this page does not exist.",
+    "four_o_four_text": "We're sorry, but we can't find the page you're looking for.",
   
   "footer": "© 2021 - {{year}} Photograf a videografer Vysotskyi Yaroslav"
 }

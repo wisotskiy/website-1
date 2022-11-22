@@ -62,6 +62,11 @@ const Contacts = () => {
             alt="my foto"
           />
           <form action="https://submit-form.com/m6LCQqtH">
+            <input
+              type="hidden"
+              name="_redirect"
+              value="https://your-website.com/thanks"
+            />
             <input id={style.name} type="text" name="name" placeholder={t("your_name")} />
             <input id={style.phone} type="tel" name="phone" placeholder={t("your_phone")} />
             <input id={style.email} type="email" name="email" placeholder={t("your_email")} />
