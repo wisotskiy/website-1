@@ -1,6 +1,7 @@
 import * as React from "react"
 import { useTranslation } from "react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
+import { LocalizedLink } from "gatsby-theme-i18n"
 
 import Seo from "../components/seo"
 import Layout from "../components/layout"
@@ -10,7 +11,10 @@ import * as style from "../style/_style.module.scss"
 const Contacts = () => {
   
   const { t } = useTranslation()
-
+  const a = <LocalizedLink to={"/contacts"}></LocalizedLink>
+console.log(a._owner.key)
+const b = `https://stirring-mermaid-d8fa23.netlify.app${a._owner.key}`
+console.log(b)
   return (
     <Layout>
       <Seo title={t("seo_title_contacts")} description={t("seo_description_contacts")} />
@@ -65,7 +69,7 @@ const Contacts = () => {
             <input
               type="hidden"
               name="_redirect"
-              value="https://your-website.com/thanks"
+              value={b}
             />
             <input id={style.name} type="text" name="name" placeholder={t("your_name")} />
             <input id={style.phone} type="tel" name="phone" placeholder={t("your_phone")} />
@@ -74,23 +78,6 @@ const Contacts = () => {
             <button id={style.submit} type="submit">{t("send")}</button>
           </form>
 
-
-
-        
-{/*           <div className={style.contactsColumn}>
-            <h4>{t("email")}</h4>
-            <p>wisotskiy@gmail.com</p>
-          </div>
-          <div className={style.contactsColumn}>
-            <h4>{t("phone")}</h4>
-            <p>+(420) 792-744-190</p>
-          </div>
-          <div className={style.contactsColumn}>
-            <h4>{t("social")}</h4>
-            <p><a href="https://www.facebook.com/wisotskiy" target="_blank" rel="noopener noreferrer">Facebook</a></p>
-            <p><a href="https://www.instagram.com/yaroslaw.wisotskiy/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
-            <p><a href="https://www.youtube.com/channel/UCARc7cdl8tt5e2Dr1OVokig" target="_blank" rel="noopener noreferrer">YouTube</a></p>
-          </div> */}
         </div>
 
       </div>     
