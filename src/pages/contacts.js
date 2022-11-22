@@ -12,9 +12,9 @@ const Contacts = () => {
   
   const { t } = useTranslation()
   const a = <LocalizedLink to={"/contacts"}></LocalizedLink>
-
+console.log(a)
   const b = `https://stirring-mermaid-d8fa23.netlify.app${a?._owner?.key}`
-
+  console.log(b)
   return (
     <Layout>
       <Seo title={t("seo_title_contacts")} description={t("seo_description_contacts")} />
