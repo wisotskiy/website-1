@@ -2,6 +2,7 @@ import * as React from "react"
 import { useTranslation } from "react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
 import { LocalizedLink } from "gatsby-theme-i18n"
+import { useLocalization } from "gatsby-theme-i18n"
 
 import Seo from "../components/seo"
 import Layout from "../components/layout"
@@ -11,10 +12,12 @@ import * as style from "../style/_style.module.scss"
 const Contacts = () => {
   
   const { t } = useTranslation()
-  const a = <LocalizedLink to={"/contacts"}></LocalizedLink>
-console.log(a)
-  const b = `https://stirring-mermaid-d8fa23.netlify.app${a?._owner?.key}`
-  console.log(b)
+  const { locale } = useLocalization()
+  console.log(locale)
+  //const a = <LocalizedLink to={"/contacts"}></LocalizedLink>
+//console.log(a)
+  const pageToReturn = `https://stirring-mermaid-d8fa23.netlify.app/${locale}/contacts`
+  console.log(pageToReturn)
   return (
     <Layout>
       <Seo title={t("seo_title_contacts")} description={t("seo_description_contacts")} />
@@ -69,7 +72,7 @@ console.log(a)
             <input
               type="hidden"
               name="_redirect"
-              value={b}
+              value={pageToReturn}
             />
             <input id={style.name} type="text" name="name" placeholder={t("your_name")} />
             <input id={style.phone} type="tel" name="phone" placeholder={t("your_phone")} />
