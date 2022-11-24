@@ -29,27 +29,27 @@ const Contacts = () => {
             <li>
               <a className={style.resource} href="https://weva.pro/" target="_blank" rel="noopener noreferrer">
                 Weva
-              </a> — Asociația Videografilor de evenimente din toată  lumea.
+              </a> — {t("weva")}
             </li>
             <li>
               <a className={style.resource} href="https://www.fearlessphotographers.com/" target="_blank" rel="noopener noreferrer">
                 Fearless Photographers
-              </a> — Asociația internațională de fotografi.
+              </a> — {t("fearless_photographers")}
             </li>
             <li>
               <a className={style.resource} href="https://www.fearlessphotographers.com/" target="_blank" rel="noopener noreferrer">
                 Mywed
-              </a> — Asociаția fotografilor din toată lumea.
+              </a> — {t("mywed")}
             </li>
             <li>
               <a className={style.resource} href="https://yourockphotographers.com/" target="_blank" rel="noopener noreferrer">
                 You Rock Photographers
-              </a> — Comunitate de fotografi.
+              </a> — {t("you-rock_photographers")}
             </li>
             <li>
               <a className={style.resource} href="https://www.ighawards.com/" target="_blank" rel="noopener noreferrer">
                 Ighawards
-              </a> — Organizația internațională de fotografi și videografi.
+              </a> — {t("ighawards")}
             </li>
 
             

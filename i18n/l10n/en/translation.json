@@ -45,6 +45,11 @@
   "contacts": "Contacts",
   "seo_title_contacts": "Contacts Vysotskyi Yaroslav a professional photographer and videographer",
   "seo_description_contacts": "Yaroslav Vysotskyi: Contacts Teplice, Ústí nad Labem, Ústecký kraj",
+  "weva": "Worldwide Events Videographers’ Association",
+  "fearless_photographers": "Amazing wedding photographers",
+  "mywed": "Association of photographers worldwide",
+  "you-rock_photographers": "Community of photographers",
+  "ighawards": "International Organization of Photographers and Videographers",
   "your_name": "your name",
   "your_message": "your message",
   "your_email": "your email",
@@ -54,7 +59,7 @@
   "email": "Email",
 
   "four_o_four_title": "Sorry, but this page does not exist.",
-    "four_o_four_text": "We're sorry, but we can't find the page you're looking for.",
+  "four_o_four_text": "We're sorry, but we can't find the page you're looking for.",
   
   "footer": "© 2021 - {{year}} Photograf a videografer Vysotskyi Yaroslav"
 }
