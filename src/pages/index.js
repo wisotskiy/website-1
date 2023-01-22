@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 import Teaser from "../components/teaser"
 import Layout from "../components/layout"
 
-import og from "../images/social.jpg"
+//import og from "../images/social.jpg"
 //import "bootstrap/dist/css/bootstrap.min.css"
 
 import * as style from "../style/_style.module.scss"
