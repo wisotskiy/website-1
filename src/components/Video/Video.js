@@ -11,7 +11,7 @@ const Video = ({ videoSrcURL, videoTitle, ...props }) => (
       mozallowfullscreen="true"
       allowFullScreen
       width="100%"
-      style={{"aspectRatio": "16/9"}}
+      style={{"aspectRatio": "16/9", "padding": "0 20px"}}
     />
   </div>
 )

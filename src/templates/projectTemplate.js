@@ -8,7 +8,7 @@ import Layout from "../components/layout"
 import { useTranslation } from "react-i18next"
 import { LocalizedLink as Link } from "gatsby-theme-i18n"
 import GalleryItem from '../components/GalleryItem/GalleryItem'
-//import Video from "../components/Video/Video"
+import Video from "../components/Video/Video"
 
 
 const Project = ({ data }) => {
@@ -17,8 +17,6 @@ const Project = ({ data }) => {
   const projectData = data.mdx
   const images = data.allFile.nodes
   let counter = 0, width = ""
-
-  //let currentImage = {}
 
   const [isFull, setIsfull] = useState(false)
   const [isShow, setIsShow] = useState(false)
@@ -240,21 +238,14 @@ const Project = ({ data }) => {
             )
           })}
         </div> :
-
-        <a href={data.mdx.frontmatter.link} target="_blank" rel="noopener noreferrer">
-          <GatsbyImage
-            className={style.projectMainImage}
-            alt="ff"
-            //alt={projectData?.frontmatter?.hero_image?.alt}
-            image={getImage(projectData?.frontmatter?.hero_image?.image)}
-            layout="constrained"
-            
-          />
-        </a>} 
         
-        <article>
+        <Video videoSrcURL={data.mdx.frontmatter.link} />        
+        } 
+               
+        <article  className={style.projectDescription}>
           <MDXRenderer>{projectData?.body}</MDXRenderer>
         </article>
+        
       </div>
       {isFull && <GalleryItem 
                   image={currentImage} 
