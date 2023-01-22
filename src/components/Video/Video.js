@@ -5,6 +5,7 @@ const Video = ({ videoSrcURL, videoTitle, ...props }) => (
     <iframe
       src={videoSrcURL}
       title={videoTitle}
+      origin="https://stirring-mermaid-d8fa23.netlify.app/"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       frameBorder="0"
       webkitallowfullscreen="true"
