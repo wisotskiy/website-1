@@ -238,8 +238,8 @@ const Project = ({ data }) => {
             )
           })}
         </div> :
-        
-        <Video videoSrcURL={data.mdx.frontmatter.link} />        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DivkNqXeAag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
         } 
                
         <article  className={style.projectDescription}>
