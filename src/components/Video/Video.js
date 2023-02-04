@@ -4,7 +4,7 @@ const Video = ({ videoSrcURL, videoTitle, ...props }) => (
   <div className="video">
     <iframe
       src={videoSrcURL}
-      referrerpolicy="no-referrer-when-downgrade"
+      referrerPolicy="no-referrer-when-downgrade"
       title={videoTitle}
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       frameBorder="0"

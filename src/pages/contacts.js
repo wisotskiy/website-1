@@ -1,7 +1,6 @@
 import * as React from "react"
 import { useTranslation } from "react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
-import { LocalizedLink } from "gatsby-theme-i18n"
 import { useLocalization } from "gatsby-theme-i18n"
 
 import Seo from "../components/seo"
@@ -14,8 +13,7 @@ const Contacts = () => {
   const { t } = useTranslation()
   const { locale } = useLocalization()
   console.log(locale)
-  //const a = <LocalizedLink to={"/contacts"}></LocalizedLink>
-//console.log(a)
+
   const pageToReturn = `https://stirring-mermaid-d8fa23.netlify.app/${locale}/contacts`
   console.log(pageToReturn)
   return (

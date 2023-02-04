@@ -198,12 +198,7 @@ img {
 
     select {
         font-size: 20px;
-    }/* 
-
-    .logo {
-        width: 65%;
-        margin: 20px 0 50px;
-    } */
+    }
 
     .close-button {
         position: fixed;
@@ -225,7 +220,6 @@ img {
             margin-bottom: 40px;
             
             li {
-                /* margin: 22px 0; */
                 font-size: 18px;
                 text-transform: uppercase;
                 width: fit-content;
@@ -251,12 +245,6 @@ img {
             a:hover {
                 color: #c4c4c4;
             }
-
-            /* works submenu */
-
-/*             .works  {
-                position: relative;
-            } */
 
             li.works-mobile {
                 color: #787878;
@@ -328,8 +316,6 @@ img {
     .header {
         max-width: 1000px;
     }
-
-    /* .logo {max-width: 150px;} */
 }
 
 @media screen and (max-width: 1024px){
@@ -350,7 +336,6 @@ img {
     .mobile-menu {
         display: block;
         width: 100%;
-        /* position: absolute; */
 
         .logo {
             text-align: left;
@@ -360,8 +345,7 @@ img {
                 img {
                     margin: 10px 0 0 30px;
                 }
-            }
-            
+            }           
         }
 
         .main-menu {

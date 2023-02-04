@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { Trans } from "react-i18next"
-import { useTranslation } from "react-i18next"
 import { LocalizedLink } from "gatsby-theme-i18n"
 import * as style from "../style/_style.module.scss"
 import yt from "../images/yt_mc.svg"
@@ -13,7 +12,6 @@ const isBrowser = typeof window !== "undefined"
 
 function Footer() {
   const year = new Date().getFullYear()
-  const { t } = useTranslation()
 
   let locale = "/"
   if (isBrowser) {
@@ -60,7 +58,8 @@ function Footer() {
           </a>
         </div>
         <p><Trans i18nKey="footer">{{ year }}</Trans></p>
-
+        <p style={{fontSize: "12px", color: "#8f8f8f"}}>Developed by
+          <a href="https://websolutionsforyou.com/" target="_blank" rel="noopener noreferrer"> websolutionsforyou.com</a></p>
         <LocalizedLink style={isVisible ? styleVisible : styleInisible} className={style.buttonTop} to={locale}><img src={top} alt="to top button"></img></LocalizedLink>
       </div>
     </footer>

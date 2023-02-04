@@ -7,7 +7,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import * as style from "./_Menu.module.scss"
-import * as mainStyles from "../../style/_style.module.scss"
 import logo from "../../images/logo.png"
 import yt from "../../images/yt_monochrome.svg"
 import fb from "../../images/fb_monochrome.svg"
@@ -17,7 +16,6 @@ import close from "../../images/close_menu.svg"
 
 
 const Menu = () => {
-
 
   const query = useStaticQuery(graphql`
     query MainMenu {
@@ -55,7 +53,7 @@ const Menu = () => {
 
   
   const { t } = useTranslation()
-  const { locale/* , defaultLang, config  */} = useLocalization()
+  const { locale } = useLocalization()
   const flags = query.allFile.nodes
   const categories = query.allMdx.nodes
   const categoriesRightOrder = query.file.childMdx.exports.categories
@@ -232,17 +230,17 @@ const Menu = () => {
             </ul>
             
             <ul className={style.socials}>
-              <li className={style.socialsItem}>             
+              <li>             
                 <a href="https://www.facebook.com/wisotskiy" target="_blank" rel="noopener noreferrer">
                   <img className={style.fb} src={fb} onClick={() => setShow(false)}></img>
                 </a>
               </li>
-              <li className={style.socialsItem}>             
+              <li>             
                 <a href="https://www.youtube.com/channel/UCARc7cdl8tt5e2Dr1OVokig" target="_blank" rel="noopener noreferrer">
                   <img className={style.yt} src={yt} onClick={() => setShow(false)}></img>
                 </a>
               </li>
-              <li className={style.socialsItem}>             
+              <li>             
                 <a href="https://www.instagram.com/yaroslaw.wisotskiy/" target="_blank" rel="noopener noreferrer">
                   <img className={style.insta} src={insta} onClick={() => setShow(false)}></img>
                 </a>
