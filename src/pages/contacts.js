@@ -24,27 +24,27 @@ const Contacts = () => {
         <div className={style.infoBlock}>
           <ul className={style.links}>
             <li>
-              <a className={style.resource} href="https://weva.pro/" target="_blank" rel="noopener noreferrer">
+              <a className={style.resource} href="https://weva.pro/" target="_blank" rel="nofollow noreferrer">
                 Weva
               </a> — {t("weva")}
             </li>
             <li>
-              <a className={style.resource} href="https://www.fearlessphotographers.com/" target="_blank" rel="noopener noreferrer">
+              <a className={style.resource} href="https://www.fearlessphotographers.com/" target="_blank" rel="nofollow noreferrer">
                 Fearless Photographers
               </a> — {t("fearless_photographers")}
             </li>
             <li>
-              <a className={style.resource} href="https://www.fearlessphotographers.com/" target="_blank" rel="noopener noreferrer">
+              <a className={style.resource} href="https://www.fearlessphotographers.com/" target="_blank" rel="nofollow noreferrer">
                 Mywed
               </a> — {t("mywed")}
             </li>
             <li>
-              <a className={style.resource} href="https://yourockphotographers.com/" target="_blank" rel="noopener noreferrer">
+              <a className={style.resource} href="https://yourockphotographers.com/" target="_blank" rel="nofollow noreferrer">
                 You Rock Photographers
               </a> — {t("you-rock_photographers")}
             </li>
             <li>
-              <a className={style.resource} href="https://www.ighawards.com/" target="_blank" rel="noopener noreferrer">
+              <a className={style.resource} href="https://www.ighawards.com/" target="_blank" rel="nofollow noreferrer">
                 Ighawards
               </a> — {t("ighawards")}
             </li>
