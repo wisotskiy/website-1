@@ -15,7 +15,8 @@ const Project = ({ data }) => {
 
   const { t } = useTranslation()
   const projectData = data.mdx
-  const images = data.allFile.nodes
+  const images = data.allFile.nodes.filter(node => node.name !== 'cover').sort((a, b) => a.name - b.name)
+  const cover = data.allFile.nodes.filter(node => node.name === 'cover')
   let counter = 0, width = ""
 
   const [isFull, setIsfull] = useState(false)

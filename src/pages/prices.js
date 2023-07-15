@@ -44,7 +44,6 @@ const Contacts = () => {
               <li className={style.bundleItem}>{t("bundle33")}</li>
               <li className={style.bundleItem}>{t("bundle34")}</li>
               <li className={style.bundleItem}>{t("bundle35")}</li>
-              <li className={style.bundleItem}>{t("bundle35")}</li>
             </ul>
             <div className={style.price}>{t("bundle3price")}</div>
           </div>
