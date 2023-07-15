@@ -17,6 +17,7 @@ const Project = ({ data }) => {
   const projectData = data.mdx
   const images = data.allFile.nodes.filter(node => node.name !== 'cover').sort((a, b) => a.name - b.name)
   const cover = data.allFile.nodes.filter(node => node.name === 'cover')
+  images.unshift(cover[0])
   let counter = 0, width = ""
 
   const [isFull, setIsfull] = useState(false)
