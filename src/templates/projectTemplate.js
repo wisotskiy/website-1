@@ -18,7 +18,7 @@ const Project = ({ data }) => {
   const images = data.allFile.nodes.filter(node => node.name !== 'cover').sort((a, b) => a.name - b.name)
   const cover = data.allFile.nodes.filter(node => node.name === 'cover')
   images.unshift(cover[0])
-  
+
   let counter = 0, width = ""
 
   const [isFull, setIsfull] = useState(false)
@@ -226,6 +226,7 @@ query ProjectBySlug($slug: String, $locale: String, $fullSlug: String) {
     nodes {
       relativeDirectory
       id
+      name
       childImageSharp {
         gatsbyImageData(
           placeholder: BLURRED
