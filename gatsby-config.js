@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Yaroslav Vysotskyi`,
     description: `Yaroslav Vysotskyi - fotograf a kameraman Teplice, Ústí nad Labem, Ústecký kraj`,
-    author: `@evg_c`,
-    siteUrl: `https://stirring-mermaid-d8fa23.netlify.app`,
+    author: `websolutionsforyou.com`,
+    siteUrl: `https://wisotskiy.cz/`,
   },
   plugins: [
     `gatsby-transformer-sharp`,
