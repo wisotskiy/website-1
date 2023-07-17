@@ -2,6 +2,7 @@ import * as React from "react"
 import { useTranslation } from "react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
 import { useLocalization } from "gatsby-theme-i18n"
+import ContactForm from "../components/ContactForm/ContactForm"
 
 import Seo from "../components/seo"
 import Layout from "../components/layout"
@@ -13,7 +14,7 @@ const Contacts = () => {
   const { t } = useTranslation()
   const { locale } = useLocalization()
 
-  const pageToReturn = `https://stirring-mermaid-d8fa23.netlify.app/${locale}/contacts`
+  //const pageToReturn = `https://wisotskiy.cz/${locale}/contacts`
   
   return (
     <Layout>
@@ -65,7 +66,7 @@ const Contacts = () => {
             src="../images/me.jpg" 
             alt="my foto"
           />
-          <form action="https://submit-form.com/m6LCQqtH">
+{/*           <form action="https://submit-form.com/m6LCQqtH">
             <input
               type="hidden"
               name="_redirect"
@@ -76,8 +77,8 @@ const Contacts = () => {
             <input id={style.email} type="email" name="email" placeholder={t("your_email")} />
             <textarea id={style.message} name="message" placeholder={t("your_message")}></textarea>
             <button id={style.submit} type="submit">{t("send")}</button>
-          </form>
-
+          </form> */}
+        <ContactForm />
         </div>
 
       </div>     
