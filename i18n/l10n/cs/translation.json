@@ -1,10 +1,10 @@
 {
-    "seo_title_main": "Fotograf a kameraman Vysotskyi Yaroslav",
-    "seo_description_main": "Yaroslav Vysotskyi - profesionální svatební foto a videa Teplice, Ústí nad Labem, Ústecký kraj",
+    "seo_title_main": "Svatební videograf v Praze, Svatební filmování v České republice, Svatební kameraman Ústí nad Labem",
+    "seo_description_main": "Nabízím služby kameramana a fotografa v Ústí nad Labem, Praze a po celé České republice. Moje svatební videa se vyznačují unikátními řešeními, skvělým střihem a harmonicky vybranou hudbou",
     "home": "Domů",
     "about": "O mě",
-    "main_page_title": "Služby foto a videa",
-    "about_text": "Jmenuji se Yaroslav Vysotskyi a jsem profesionální fotograf a kameraman. Rád zachytím vaše nejupřímnější, nejradostnější emoce a jedinečné okamžiky vaší svatby. Miluji to, co dělám, a proto budete s mou prací určitě spokojeni.",
+    "main_page_title": "Služby filmování a fotografování",
+    "about_text": "Zvu vás, abyste se dozvěděli, co se skrývá za každým záběrem a každým projektem, který jsem vytvořil. Jsem kameraman a fotograf, který svaté věří, že každý projekt začíná z duší, s unikátními příběhy lidí, kteří napsali svůj vlastní příběh lásky. Moje mise zachycení emocí a zvěčnění je pomocí mé kamery. To, čím se zabývám, mě činí šťastným člověkem. Lidé jsou mým hlavním zdrojem inspirace. Díky videofilmování jsem se stal svědkem prožitých a přeměněných do filmů příběhů lásky v České republice a na Ukrajině. Cítím zodpovědnost za každý okamžik, který mám zachytit, za upřímné emoce a smyslnost každé sekundy. Nejvíce si oblíbím zachycovat okamžik svatého tajemství sňatku. Před Bohem se tváře lidí stávají světlými, čistými a vyjadřují pravou lásku, kterou pro ně uchovávám. Mám rád vidět a natáčet to, co leží v jádru každé láskyplné historie, která se později promění ve scénář. Příběhy, které zůstanou v paměti rodin po celý život a budou předávány dalším generacím.",
     
     "works": "Služby",
     "photo": "Foto",
@@ -14,11 +14,11 @@
     "return": "Zpět",
 
     "prices": "Ceník",
-    "seo_title_prices": "Ceník fota a videa",
-    "seo_description_prices": "Nízké ceny - profesionální svatební foto a videa - Vysotskyi Yaroslav, fotograf a kameraman",
+    "seo_title_prices": "Ceny za natáčení videa a fotografie, ceník služeb, svatební ceny",
+    "seo_description_prices": "U dostupných cen - profesionální svatební videa a fotografie, kameraman a fotograf Yaroslav Vysotskyi v Ústí nad Labem",
     "bundles": "Svatební baličky",
 
-    "bundle1": "Basic",
+    "bundle1": "Basic Natáčení",
     "bundle11": "Natáčení od sběru po banket (maximálně 12 hodin)",
     "bundle12": "1 kamera",
     "bundle13": "Highlights 3 - 10 min.",
@@ -38,7 +38,7 @@
     "bundle35": "Získáte: 400 až 600 připravených fotografií",
     "bundle3price": "20 000 ,- Kč",
   
-    "bundle4": "Gold",
+    "bundle4": "Gold Natáčení",
     "bundle41": "Natáčení a focení od sběru po banket (maximálně 12 hodin)",
     "bundle42": "1 kamera + dron",
     "bundle43": "Film 20 - 30 min.",
@@ -46,8 +46,8 @@
     "bundle4price": "20 000 ,- Kč",
 
     "contacts": "Kontakty",
-    "seo_title_contacts": "Kontakty Vysotskyi Yaroslav - profesionální fotograf a kameraman",
-    "seo_description_contacts": "Yaroslav Vysotskyi: Kontakty Teplice, Ústí nad Labem, Ústecký kraj",
+    "seo_title_contacts": "Kontakty Yaroslav Vysotskyi- profesionální kameraman a fotograf v Praze",
+    "seo_description_contacts": "Yaroslav Vysotskyi: Kontakty v Praze, Ústí nad Labem, Ústeckém kraji a pracuji po celé České republice",
     "weva": "Asociace videografů událostí po celém světě",
     "fearless_photographers": "Úžasní svatební fotografové",
     "mywed": "Sdružení fotografů po celém světě",
@@ -64,5 +64,5 @@
     "four_o_four_title": "Omlouváme se, ale tato stránka neexistuje.",
     "four_o_four_text": "Je nám líto, ale nemůžeme najít stránku, kterou hledáte.",
 
-    "footer": "© 2021 - {{year}} Fotograf a videograf Vysotskyi Yaroslav"
+    "footer": "© 2018 - {{year}}  Kameraman a fotograf Yaroslav Vysotskyi"
   }
