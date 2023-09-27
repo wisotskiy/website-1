@@ -14,7 +14,6 @@ const Contacts = () => {
   const { t } = useTranslation()
   const { locale } = useLocalization()
 
-  //const pageToReturn = `https://wisotskiy.cz/${locale}/contacts`
   
   return (
     <Layout>
