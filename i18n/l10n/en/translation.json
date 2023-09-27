@@ -1,10 +1,10 @@
 {
-  "seo_title_main": "Phographer and videographer Vysotskyi Yaroslav",
-  "seo_description_main": "Yaroslav Vysotskyi - professional weddings photo and video Teplice, Ústí nad Labem, Ústecký kraj",
+  "seo_title_main": "Videographer and photographer in Prague, Czech Republic",
+  "seo_description_main": "Yaroslav Vysotskyi - professional weddings videographer and photographer, Usti nad Labem, Prague, Czech Republic",
   "home": "Home",
   "about": "About me",
   "main_page_title": "Photo and video services",
-  "about_text": "My name is Yaroslav Vysotsky, I am a professional photographer and videographer. I will be happy to capture your most sincere, joyful emotions and unique moments of your wedding. I love what I do, which is why you will definitely be satisfied with my work.",
+  "about_text": "I invite you to discover what lies behind each frame and every project I've created. I am a videographer who firmly believes that every project starts from the heart, with the unique stories of people who have written their love stories. My mission is to capture emotions and immortalize them through my camera. What I do makes me a happy person. People are my main source of inspiration. Thanks to videography, I have become a witness to love stories in the Czech Republic and Ukraine, stories that have been experienced and transformed into films. I feel a responsibility to convey honest emotions and the sensuality of every second. I especially enjoy capturing the sacred moments of weddings. In the presence of the Lord, people's faces become radiant and pure, expressing true love, which I preserve for them. I love to see and capture what underlies every love story that later becomes a screenplay. These are stories that will stay in families' memories for a lifetime and be passed down to future generations.",
   
   "works": "Works",
   "photo": "Photo",
@@ -17,7 +17,7 @@
   "seo_description_prices": "Low prices - professional weddings photo and video - Vysotskyi Yaroslav, photographer and videographer",
   "bundles": "Price bundles",
 
-  "bundle1": "Basic",
+  "bundle1": "Basic Video",
   "bundle11": "Shooting from the gathering to the banquet (max 12 hours)",
   "bundle12": "1 camera",
   "bundle13": "Highlights 3 - 10 min.",
@@ -37,7 +37,7 @@
   "bundle35": "You get: 400 - 600 prepared photos",
   "bundle3price": "20 000 ,- Kč",
 
-  "bundle4": "Gold",
+  "bundle4": "Gold Video",
   "bundle41": "Shooting from the gathering to the banquet (max 12 hours)",
   "bundle42": "1 camera + drone",
   "bundle43": "Film 20 - 30 min.",
@@ -45,8 +45,8 @@
   "bundle4price": "20 000 ,- Kč",
 
   "contacts": "Contacts",
-  "seo_title_contacts": "Contacts Vysotskyi Yaroslav a professional photographer and videographer",
-  "seo_description_contacts": "Yaroslav Vysotskyi: Contacts Teplice, Ústí nad Labem, Ústecký kraj",
+  "seo_title_contacts": "Contacts Yaroslav Vysotskyi a professional videographer and photographer",
+  "seo_description_contacts": "Yaroslav Vysotskyi: Contacts Teplice, Usti nad Labem, Prague, Czech Republic",
   "wevsy": "Wedding & Event Videographers Society",
   "weva": "Worldwide Events Videographers’ Association",
   "fearless_photographers": "Amazing wedding photographers",
@@ -64,5 +64,5 @@
   "four_o_four_title": "Sorry, but this page does not exist.",
   "four_o_four_text": "We're sorry, but we can't find the page you're looking for.",
   
-  "footer": "© 2021 - {{year}} Photograf a videografer Vysotskyi Yaroslav"
+  "footer": "© 2018 - {{year}} Videographer and Photographer Yaroslav Vysotskyi"
 }
