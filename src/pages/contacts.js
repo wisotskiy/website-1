@@ -14,7 +14,6 @@ const Contacts = () => {
   const { t } = useTranslation()
   const { locale } = useLocalization()
 
-  //const pageToReturn = `https://wisotskiy.cz/${locale}/contacts`
   
   return (
     <Layout>
@@ -25,34 +24,36 @@ const Contacts = () => {
         <div className={style.infoBlock}>
           <ul className={style.links}>
             <li>
+              <a className={style.resource} href="https://wevsy.com/uk/videographer/wisotskiy/" target="_blank" rel="nofollow noreferrer">
+                Wevsy
+              </a> — {t("wevsy")}
+            </li>
+{/*             <li>
               <a className={style.resource} href="https://weva.pro/" target="_blank" rel="nofollow noreferrer">
                 Weva
               </a> — {t("weva")}
-            </li>
-            <li>
+            </li> */}
+{/*             <li>
               <a className={style.resource} href="https://www.fearlessphotographers.com/" target="_blank" rel="nofollow noreferrer">
                 Fearless Photographers
               </a> — {t("fearless_photographers")}
-            </li>
-            <li>
+            </li> */}
+{/*             <li>
               <a className={style.resource} href="https://www.fearlessphotographers.com/" target="_blank" rel="nofollow noreferrer">
                 Mywed
               </a> — {t("mywed")}
-            </li>
-            <li>
+            </li> */}
+{/*             <li>
               <a className={style.resource} href="https://yourockphotographers.com/" target="_blank" rel="nofollow noreferrer">
                 You Rock Photographers
               </a> — {t("you-rock_photographers")}
-            </li>
-            <li>
+            </li> */}
+{/*             <li>
               <a className={style.resource} href="https://www.ighawards.com/" target="_blank" rel="nofollow noreferrer">
                 Ighawards
               </a> — {t("ighawards")}
-            </li>
-
-            
-          </ul>
-          
+            </li> */}
+          </ul>         
         </div>
         
         <div className={style.awardsContacts}>
@@ -66,18 +67,7 @@ const Contacts = () => {
             src="../images/me.jpg" 
             alt="my foto"
           />
-{/*           <form action="https://submit-form.com/m6LCQqtH">
-            <input
-              type="hidden"
-              name="_redirect"
-              value={pageToReturn}
-            />
-            <input id={style.name} type="text" name="name" placeholder={t("your_name")} />
-            <input id={style.phone} type="tel" name="phone" placeholder={t("your_phone")} />
-            <input id={style.email} type="email" name="email" placeholder={t("your_email")} />
-            <textarea id={style.message} name="message" placeholder={t("your_message")}></textarea>
-            <button id={style.submit} type="submit">{t("send")}</button>
-          </form> */}
+
         <ContactForm />
         </div>
 
