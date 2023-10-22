@@ -86,8 +86,9 @@ const Menu = () => {
   
   const styleFixed = {
     position: "fixed",
-    left: 0,
-    right: 0,
+    left: "0",
+    right: "0",
+    padding: "0 30px",
     top: 0,
     marginRight: "auto",
     marginLeft: "auto",
