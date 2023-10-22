@@ -32,7 +32,19 @@ img {
     .works-list {
         display: none;
         position: absolute;
+        left: -10px;
         margin: 0;
+        padding: 5px 10px;
+        background: #ffffffe3;
+
+        li {
+
+            a {
+                margin: 5px 0;
+            }
+        }
+
+
     }
 }
 
@@ -129,6 +141,7 @@ img {
     span {
         display: inline-block;
         transform: rotate(90deg);
+        transition: all ease 0.3s;
     }
 
     &:hover {
@@ -140,6 +153,7 @@ img {
 
         span {
             transform: rotate(270deg);
+            transition: all ease 0.3s;
         }
     }
 }

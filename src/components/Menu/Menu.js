@@ -34,6 +34,7 @@ const Menu = () => {
           frontmatter {
             slug
             title
+            in_main_menu
           }
           id
           fields {
@@ -41,7 +42,7 @@ const Menu = () => {
           }
         }
       }
-      file(name: {eq: "order"}, sourceInstanceName: {eq: "works"}) {
+      file(name: {eq: "order"}, sourceInstanceName: {eq: "categories"}) {
         childMdx {
           exports {
             categories
@@ -121,20 +122,23 @@ const Menu = () => {
           <li>
             <LocalizedLink to={`/`}>{t("home")}</LocalizedLink>
           </li>
-          <li>
+{/*           <li>
             <LocalizedLink to={`/wedding-photos`}>{t("photo")}</LocalizedLink>
           </li>
           <li>
             <LocalizedLink to={`/wedding-video`}>{t("video")}</LocalizedLink>
-          </li>
-          {/* <li className={style.works}>
-            {t("works")}&nbsp;&nbsp;
+          </li> */}
+          <li className={style.works}>
+            {t("photo")}&nbsp;&nbsp;
               <span>&#10095;
               </span>
             <ul className={style.worksList}>
               {categoriesRightOrder.map(category => {
                 return categories.map(title => {
-                  if(category === title.frontmatter.slug && title.fields.locale === locale) {
+                  if(category === title.frontmatter.slug && 
+                      title.fields.locale === locale && 
+                      title.frontmatter.in_main_menu === "photo"
+                    ) {
                     return <li key={title.id}>
                       <LocalizedLink to={`/${title.frontmatter.slug}`}>{title.frontmatter.title}</LocalizedLink>
                     </li>
@@ -142,7 +146,28 @@ const Menu = () => {
                 })
               })}     
             </ul>
-          </li> */}
+          </li> 
+
+          <li className={style.works}>
+            {t("video")}&nbsp;&nbsp;
+              <span>&#10095;
+              </span>
+            <ul className={style.worksList}>
+              {categoriesRightOrder.map(category => {
+                return categories.map(title => {
+                  if(category === title.frontmatter.slug && 
+                    title.fields.locale === locale && 
+                    title.frontmatter.in_main_menu === "video"
+                  ) {
+                    return <li key={title.id}>
+                      <LocalizedLink to={`/${title.frontmatter.slug}`}>{title.frontmatter.title}</LocalizedLink>
+                    </li>
+                  }
+                })
+              })}     
+            </ul>
+          </li>
+
           <li>
             <LocalizedLink to="/prices">
               {t("prices")}
@@ -212,18 +237,22 @@ const Menu = () => {
               <li>
                 <LocalizedLink to={`/`} onClick={() => setShow(false)}>{t("home")}</LocalizedLink>
               </li>
-              <li>
+{/*               <li>
                 <LocalizedLink to={`/wedding-photos`}>{t("photo")}</LocalizedLink>
               </li>
               <li>
                 <LocalizedLink to={`/wedding-video`}>{t("video")}</LocalizedLink>
-              </li>
-              {/* <li className={style.worksMobile}>
-                {t("works")}
+              </li> */}
+
+              <li className={style.worksMobile}>
+                {t("photo")}
                 <ul className={style.worksList}>
                   {categoriesRightOrder.map(category => {
                     return categories.map(title => {
-                      if(category === title.frontmatter.slug && title.fields.locale === locale) {
+                      if(category === title.frontmatter.slug && 
+                        title.fields.locale === locale && 
+                        title.frontmatter.in_main_menu === "photo"
+                      ) {
                         return <li key={title.id}>
                           <LocalizedLink to={`/${title.frontmatter.slug}`} onClick={() => setShow(false)}>{title.frontmatter.title}</LocalizedLink>
                         </li>
@@ -231,7 +260,26 @@ const Menu = () => {
                     })
                   })}     
                 </ul>
-              </li> */}
+              </li> 
+
+              <li className={style.worksMobile}>
+                {t("video")}
+                <ul className={style.worksList}>
+                  {categoriesRightOrder.map(category => {
+                    return categories.map(title => {
+                      if(category === title.frontmatter.slug && 
+                        title.fields.locale === locale && 
+                        title.frontmatter.in_main_menu === "video"
+                      ) {
+                        return <li key={title.id}>
+                          <LocalizedLink to={`/${title.frontmatter.slug}`} onClick={() => setShow(false)}>{title.frontmatter.title}</LocalizedLink>
+                        </li>
+                      }
+                    })
+                  })}     
+                </ul>
+              </li> 
+
               <li>
                 <LocalizedLink to="/prices" onClick={() => setShow(false)}>{t("prices")}</LocalizedLink>
               </li>
