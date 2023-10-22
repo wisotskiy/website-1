@@ -26,8 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `works`,
-        path: `${__dirname}/works`,
+        name: `categories`,
+        path: `${__dirname}/categories`,
       },
     },
     `gatsby-plugin-netlify`,

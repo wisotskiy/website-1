@@ -84,7 +84,7 @@ query Categories($locale: String) {
       excerpt(pruneLength: 150, truncate: true)
     }
   }
-  file(name: {eq: "order"}, sourceInstanceName: {eq: "works"}) {
+  file(name: {eq: "order"}, sourceInstanceName: {eq: "categories"}) {
     childMdx {
       exports {
         categories
