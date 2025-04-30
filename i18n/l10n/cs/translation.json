@@ -1,6 +1,6 @@
   {
-    "seo_title_main": "Svatební videograf v Praze, Svatební filmování v České republice, Svatební kameraman Ústí nad Labem",
-    "seo_description_main": "Nabízím služby kameramana a fotografa v Ústí nad Labem, Praze a po celé České republice. Moje svatební videa se vyznačují unikátními řešeními, skvělým střihem a harmonicky vybranou hudbou",
+    "seo_title_main": "Svatební kameraman v Teplice, Svatební filmování v České republice, Svatební kameraman Ústí nad Labem",
+    "seo_description_main": "Nabízím služby kameramana a fotografa v Ústí nad Labem, Teplice a po celé České republice. Moje svatební videa se vyznačují unikátními řešeními, skvělým střihem a harmonicky vybranou hudbou",
     "home": "Domů",
     "about": "O mě",
     "main_page_title": "Služby filmování a fotografování",
@@ -15,7 +15,7 @@
 
     "prices": "Ceník",
     "seo_title_prices": "Ceny za natáčení videa a fotografie, ceník služeb, svatební ceny",
-    "seo_description_prices": "U dostupných cen - profesionální svatební videa a fotografie, kameraman a fotograf Yaroslav Vysotskyi v Ústí nad Labem",
+    "seo_description_prices": "U dostupných cen - profesionální svatební videa a fotografie, kameraman a fotograf Jaroslav Vysockyj v Ústí nad Labem",
     "bundles": "Svatební baličky",
 
     "bundle1": "Basic Natáčení",
@@ -45,9 +45,21 @@
     "bundle44": "Highlights 2 - 3 min.",
     "bundle4price": "20 000 ,- Kč",
 
+    "bundles2": "Ceník fotoateliéru",
+    
+    "bundle5": "Fotografování",
+    "bundle51": "Fotografování Mini – 1000 Kč / 30 min (10 fotografií)",
+    "bundle52": "Fotografování Basic – 1500 Kč / 1 hodina (15-20 fotografií)",
+    "bundle53": "Těhotenské focení – 2000 Kč / 2 hodiny (20–30 fotografií)",
+    "bundle54": "Newborn – 3500 Kč / 2-3 hodiny (20–30 fotografií)",
+    "bundle55": "Zakoupení všech neupravených fotografií – 1000 Kč",
+    
+    "bundle6": "Natáčení",
+    "bundle61": "Natáčení videa – 2000 Kč / 1 hodina",
+
     "contacts": "Kontakty",
-    "seo_title_contacts": "Kontakty Yaroslav Vysotskyi- profesionální kameraman a fotograf v Praze",
-    "seo_description_contacts": "Yaroslav Vysotskyi: Kontakty v Praze, Ústí nad Labem, Ústeckém kraji a pracuji po celé České republice",
+    "seo_title_contacts": "Kontakty Jaroslav Vysockyj- profesionální kameraman a fotograf v Teplice",
+    "seo_description_contacts": "Jaroslav Vysockyj: Kontakty v Teplice, Ústí nad Labem, Ústeckém kraji a pracuji po celé České republice",
     "wevsy": "Společnost svatebních a událostních kameramanů",
     "weva": "Asociace videografů událostí po celém světě",
     "fearless_photographers": "Úžasní svatební fotografové",
@@ -65,5 +77,5 @@
     "four_o_four_title": "Omlouváme se, ale tato stránka neexistuje.",
     "four_o_four_text": "Je nám líto, ale nemůžeme najít stránku, kterou hledáte.",
 
-    "footer": "© 2018 - {{year}}  Kameraman a fotograf Yaroslav Vysotskyi"
+    "footer": "© 2018 - {{year}}  Kameraman a fotograf Jaroslav Vysockyj"
   }
