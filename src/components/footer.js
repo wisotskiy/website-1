@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Trans } from "react-i18next"
+import { useTranslation } from "react-i18next"
 import { LocalizedLink } from "gatsby-theme-i18n"
 import * as style from "../style/_style.module.scss"
 import yt from "../images/yt_mc.svg"
@@ -11,6 +12,9 @@ import top from "../images/to_top.svg"
 const isBrowser = typeof window !== "undefined"
 
 function Footer() {
+
+  const { t } = useTranslation()
+
   const year = new Date().getFullYear()
 
   let locale = "/"
@@ -57,9 +61,15 @@ function Footer() {
             <img src={insta} alt="instagram logo"></img>
           </a>
         </div>
-        <p><Trans i18nKey="footer">{{ year }}</Trans></p>
-        <p style={{fontSize: "12px", color: "#8f8f8f"}}>Developed by
+        <p style={{marginBottom: "10px"}}><Trans i18nKey="footer">{{ year }}</Trans></p>
+        <LocalizedLink style={{margin: "0 auto 10px"}} to="/terms-and-conditions"><span style={{fontSize: "16px", color: "#0108eb"}}>{t("terms_and_conditions")}</span></LocalizedLink>
+        {locale === '/' ?
+          <p style={{fontSize: "12px", color: "#8f8f8f", marginBottom: "10px"}}>Developed by
           <a href="https://websolutionsforyou.com/" target="_blank"> websolutionsforyou.com</a></p>
+          :
+          <p style={{fontSize: "12px", color: "#8f8f8f", marginBottom: "10px"}}>Developed by <span style={{fontSize: "14px", color: "#2a2a2a"}}>websolutionsforyou.com</span></p>
+        }
+
         <LocalizedLink style={isVisible ? styleVisible : styleInisible} className={style.buttonTop} to={locale}><img src={top} alt="to top button"></img></LocalizedLink>
       </div>
     </footer>

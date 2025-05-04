@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 
 import * as style from "../style/_style.module.scss"
 
-const Contacts = () => {
+const Prices = () => {
   
   const { t } = useTranslation()
 
@@ -64,5 +64,5 @@ const Contacts = () => {
   )
 }
 
-export default Contacts
+export default Prices
 
