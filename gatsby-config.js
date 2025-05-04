@@ -7,8 +7,20 @@ module.exports = {
   },
   plugins: [
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: ["auto", "webp"], 
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-image`,
+      options: {
+        formats: ["auto", "webp"], 
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
