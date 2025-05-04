@@ -54,31 +54,21 @@ module.exports = {
       },
     },
     {
-      // Gatsby will automatically resolve from the 
-      // /plugins directory
       resolve: `gatsby-theme-i18n-i18next-wrapper`,
       options: {
-        // Provide the relative path to our translation files
-        // to our plugin
         locales: `./i18n/l10n`,
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Kameraman a fotograf Jaroslav Vysockyj`,
+        short_name: `Kameraman a fotograf Jaroslav Vysockyj`,
         start_url: `/`,
         background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`, 
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

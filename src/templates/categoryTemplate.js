@@ -61,7 +61,7 @@ query CategoryBySlug($slug: String, $locale: String) {
       hero_image {
         image {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
           }
         }
         alt

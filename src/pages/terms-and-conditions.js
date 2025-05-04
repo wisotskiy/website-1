@@ -1,5 +1,4 @@
 import * as React from "react"
-//import { useTranslation } from "react-i18next"
 
 import Seo from "../components/seo"
 import Layout from "../components/layout"
@@ -7,8 +6,6 @@ import Layout from "../components/layout"
 import * as style from "../style/_style.module.scss"
 
 const TermsAndConditions = () => {
-  
-  //const { t } = useTranslation()
 
   return (
     <Layout>
