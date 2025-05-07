@@ -10,13 +10,18 @@
     "photo": "Foto",
     "video": "Video",
 
+    "photo_studio": "Fotoateliér",
+    "seo_title_photo_studio": "Fotoateliér a videoprodukce v Teplicích – Yaroslav Vysotskyi",
+    "seo_description_photo_studio": "Yaroslav Vysotskyi - Moderní fotoateliér a videoprodukce v Teplicích. Portréty, rodinné focení, těhotenské, newborn i natáčení videí.",
+    "photo_studio_text": "Vítám vás ve svém fotoateliéru v Teplicích. Nabízím profesionální focení a natáčení videí v moderně vybaveném prostoru, kde se budete cítit pohodlně a přirozeně. Specializuji se na portrétní, rodinné, těhotenské a newborn focení, ale také na videoprodukci pro osobní i firemní účely. Každému klientovi se věnuji individuálně, s důrazem na detaily a přátelskou atmosféru. Mojí prioritou je, abyste odcházeli s autentickými a kvalitními záběry, které zachytí vaše jedinečné okamžiky. Těším se na naši spolupráci.",
 
     "return": "Zpět",
 
     "prices": "Ceník",
     "seo_title_prices": "Ceny za natáčení videa a fotografie, ceník služeb, svatební ceny",
     "seo_description_prices": "U dostupných cen - profesionální svatební videa a fotografie, kameraman a fotograf Jaroslav Vysockyj v Ústí nad Labem",
-    "bundles": "Svatební baličky",
+    
+    "wedding_bundles": "Svatební baličky",
 
     "bundle1": "Basic Natáčení",
     "bundle11": "Natáčení od sběru po banket (maximálně 12 hodin)",
@@ -45,20 +50,20 @@
     "bundle44": "Highlights 2 - 3 min.",
     "bundle4price": "20 000 ,- Kč",
 
-    "bundles2": "Ceník fotoateliéru",
+    "studio_bundles": "Ceník fotoateliéru",
     
     "bundle5": "Fotografování",
-    "bundle51": "Fotografování Mini – 1000 Kč / 30 min (10 fotografií)",
-    "bundle52": "Fotografování Basic – 1500 Kč / 1 hodina (15-20 fotografií)",
-    "bundle53": "Těhotenské focení – 2000 Kč / 2 hodiny (20–30 fotografií)",
-    "bundle54": "Newborn – 3500 Kč / 2-3 hodiny (20–30 fotografií)",
-    "bundle55": "Zakoupení všech neupravených fotografií – 1000 Kč",
+    "bundle51": "Fotografování Mini - 1000 Kč / 30 min (10 fotografií)",
+    "bundle52": "Fotografování Basic - 1500 Kč / 1 hodina (15-20 fotografií)",
+    "bundle53": "Těhotenské focení - 2000 Kč / 2 hodiny (20-30 fotografií)",
+    "bundle54": "Newborn - 3500 Kč / 2-3 hodiny (20-30 fotografií)",
+    "bundle55": "Zakoupení všech neupravených fotografií - 1000 Kč",
     
     "bundle6": "Natáčení",
-    "bundle61": "Natáčení videa – 2000 Kč / 1 hodina",
+    "bundle61": "Natáčení videa - 2000 Kč / 1 hodina",
 
     "contacts": "Kontakty",
-    "seo_title_contacts": "Kontakty Jaroslav Vysockyj- profesionální kameraman a fotograf v Teplice",
+    "seo_title_contacts": "Kontakty Jaroslav Vysockyj - profesionální kameraman a fotograf v Teplice",
     "seo_description_contacts": "Jaroslav Vysockyj: Kontakty v Teplice, Ústí nad Labem, Ústeckém kraji a pracuji po celé České republice",
     "wevsy": "Společnost svatebních a událostních kameramanů",
     "weva": "Asociace videografů událostí po celém světě",

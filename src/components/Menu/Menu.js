@@ -170,6 +170,11 @@ const Menu = () => {
           </li>
 
           <li>
+            <LocalizedLink to="/photo-studio">
+              {t("photo_studio")}
+            </LocalizedLink>
+          </li>
+          <li>
             <LocalizedLink to="/prices">
               {t("prices")}
             </LocalizedLink>

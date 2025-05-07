@@ -15,8 +15,9 @@ const Prices = () => {
       <Seo title={t("seo_title_prices")} description={t("seo_description_prices")} />
 
       <div className={style.container}>
-        <h1 className={style.title}>{t("bundles")}</h1>
+        <h1 className={style.title}>{t("prices")}</h1>
 
+        <h2 className={style.bundlesListTitle}>{t("wedding_bundles")}</h2>
         <div className={style.bundlesList}>
           <div className={style.bundle}>
             <h3 className={style.bundleTitle}>{t("bundle1")}</h3>
@@ -56,6 +57,26 @@ const Prices = () => {
               <li className={style.bundleItem}>{t("bundle44")}</li>
             </ul>
             <div className={style.price}>{t("bundle4price")}</div>
+          </div>
+        </div>
+
+        <h2 className={style.bundlesListTitle}>{t("studio_bundles")}</h2>
+        <div className={style.bundlesList}>
+          <div className={style.bundle}>
+            <h3 className={style.bundleTitle}>{t("bundle5")}</h3>
+            <ul>
+              <li className={style.bundleItem}>{t("bundle51")}</li>
+              <li className={style.bundleItem}>{t("bundle52")}</li>
+              <li className={style.bundleItem}>{t("bundle53")}</li>
+              <li className={style.bundleItem}>{t("bundle54")}</li>
+              <li className={style.bundleItem}>{t("bundle55")}</li>
+            </ul>
+          </div>
+          <div className={style.bundle}>
+            <h3 className={style.bundleTitle}>{t("bundle6")}</h3>
+            <ul>
+              <li className={style.bundleItem}>{t("bundle61")}</li>
+            </ul>
           </div>
         </div>
 

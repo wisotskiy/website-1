@@ -10,12 +10,17 @@
   "photo": "Photo",
   "video": "Video",
 
+  "photo_studio": "photo studio",
+  "seo_title_photo_studio": "Photography & Video Studio in Teplice – Yaroslav Vysotskyi",
+  "seo_description_photo_studio": "Modern photography and video studio in Teplice by Yaroslav Vysotskyi. Portraits, family, maternity, newborn sessions, and video production.",
+  "photo_studio_text": "Welcome to my photography studio in Teplice. I offer professional photography and video services in a well-equipped and comfortable space where you can feel relaxed and yourself. I specialize in portrait, family, maternity, and newborn sessions, as well as video production for both personal and business needs. I approach every project with care, attention to detail, and a friendly attitude to ensure you receive authentic and high-quality visuals. I look forward to working with you and capturing your special moments.",
+
   "return": "Return",
 
   "prices": "Prices",
   "seo_title_prices": "Prices of photo and video",
   "seo_description_prices": "Low prices - professional weddings photo and video - Vysotskyi Yaroslav, photographer and videographer",
-  "bundles": "Price bundles",
+  "wedding_bundles": "Price bundles",
 
   "bundle1": "Basic Video",
   "bundle11": "Shooting from the gathering to the banquet (max 12 hours)",
@@ -43,6 +48,18 @@
   "bundle43": "Film 20 - 30 min.",
   "bundle44": "Highlights 2 - 3 min.",
   "bundle4price": "20 000 ,- Kč",
+
+"studio_bundles": "Photo Studio Price List",
+
+"bundle5": "Photography",
+"bundle51": "Mini Photoshoot – CZK 1000 / 30 min (10 photos)",
+"bundle52": "Basic Photoshoot – CZK 1500 / 1 hour (15–20 photos)",
+"bundle53": "Maternity Photoshoot – CZK 2000 / 2 hours (20–30 photos)",
+"bundle54": "Newborn – CZK 3500 / 2–3 hours (20–30 photos)",
+"bundle55": "Purchase of all unedited photos – CZK 1000",
+
+"bundle6": "Video Recording",
+"bundle61": "Video Recording – CZK 2000 / 1 hour",
 
   "contacts": "Contacts",
   "seo_title_contacts": "Contacts Yaroslav Vysotskyi a professional videographer and photographer",
