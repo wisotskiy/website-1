@@ -62,6 +62,7 @@ function Footer() {
           </a>
         </div>
         <p style={{marginBottom: "10px"}}><Trans i18nKey="footer">{{ year }}</Trans></p>
+        <p style={{marginBottom: "10px"}}>{t("photo_studio_address")}</p>
         <LocalizedLink style={{margin: "0 auto 10px"}} to="/terms-and-conditions"><span style={{fontSize: "16px", color: "#0108eb"}}>{t("terms_and_conditions")}</span></LocalizedLink>
         {locale === '/' ?
           <p style={{fontSize: "12px", color: "#8f8f8f", marginBottom: "10px"}}>Developed by
