@@ -35,10 +35,25 @@ input[type="submit"] {
     transition: all ease .3s;
 
     &:hover {
-        border: 1px solid #747474;
+        border: 1px solid #9b9b9b;
         background: #f1f1f1;
         color: #242424;
+        cursor: pointer;
     }
+
+    &:disabled {
+        background: #b9b9b9;
+        border: 1px solid #dfdfdf;
+        cursor: not-allowed;
+    }
+}
+
+input[type="checkbox"] {
+    width: min-content;
+}
+.agreement {
+    text-align: left;
+    margin-bottom: 5px;
 }
 
 

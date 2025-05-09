@@ -15,6 +15,7 @@
   "seo_description_photo_studio": "Modern photography and video studio in Teplice by Yaroslav Vysotskyi. Portraits, family, maternity, newborn sessions, and video production.",
   "photo_studio_text": "Welcome to my photography studio in Teplice. I offer professional photography and video services in a well-equipped and comfortable space where you can feel relaxed and yourself. I specialize in portrait, family, maternity, and newborn sessions, as well as video production for both personal and business needs. I approach every project with care, attention to detail, and a friendly attitude to ensure you receive authentic and high-quality visuals. I look forward to working with you and capturing your special moments.",
   "photo_studio_address": "Photography studio address: Teplice, Jankovcová 1456/41, 41501",
+  "photo_studio_text_2": "Pevnou otevírací dobu nemám – focení probíhá po předchozí domluvě. Zavolejte mi nebo napište a domluvíme si termín, který bude vyhovovat oběma stranám.",
 
   "return": "Return",
 
@@ -78,10 +79,13 @@
   "send": "send",
   "phone": "Phone",
   "email": "Email",
+  "gdpr_agreement_checkbox": "I agree to the processing of my personal data in accordance with the GDPR.",
+  "gdpr_agreement_message": "The customer has agreed to the processing of personal data in accordance with the GDPR.",
 
   "four_o_four_title": "Sorry, but this page does not exist.",
   "four_o_four_text": "We're sorry, but we can't find the page you're looking for.",
   
   "footer": "© 2018 - {{year}} Videographer and Photographer Yaroslav Vysotskyi",
-  "terms_and_conditions": "Terms and conditions (CZ)"
+  "terms_and_conditions": "Terms and conditions (CZ)",
+  "privacy_policy": "Privacy Policy"
 }

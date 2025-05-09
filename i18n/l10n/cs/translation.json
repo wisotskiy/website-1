@@ -14,6 +14,7 @@
     "seo_title_photo_studio": "Fotoateliér a videoprodukce v Teplicích – Yaroslav Vysotskyi",
     "seo_description_photo_studio": "Yaroslav Vysotskyi - Moderní fotoateliér a videoprodukce v Teplicích. Portréty, rodinné focení, těhotenské, newborn i natáčení videí.",
     "photo_studio_text": "Vítám vás ve svém fotoateliéru v Teplicích. Nabízím profesionální focení a natáčení videí v moderně vybaveném prostoru, kde se budete cítit pohodlně a přirozeně. Specializuji se na portrétní, rodinné, těhotenské a newborn focení, ale také na videoprodukci pro osobní i firemní účely. Každému klientovi se věnuji individuálně, s důrazem na detaily a přátelskou atmosféru. Mojí prioritou je, abyste odcházeli s autentickými a kvalitními záběry, které zachytí vaše jedinečné okamžiky. Těším se na naši spolupráci.",
+    "photo_studio_text_2": "Pevnou otevírací dobu nemám – focení probíhá po předchozí domluvě. Zavolejte mi nebo napište a domluvíme si termín, který bude vyhovovat oběma stranám.",
     "photo_studio_address": "Adresa fotoateliéru: Teplice, Jankovcová 1456/41, PSČ: 41501",
 
     "return": "Zpět",
@@ -79,10 +80,13 @@
     "send": "poslat",
     "phone": "Telefon",
     "email": "Email",
+    "gdpr_agreement_checkbox": "Souhlasím se zpracováním svých osobních údajů v souladu s GDPR.",
+    "gdpr_agreement_message": "Zákazník souhlasil se zpracováním osobních údajů v souladu s GDPR.",
 
     "four_o_four_title": "Omlouváme se, ale tato stránka neexistuje.",
     "four_o_four_text": "Je nám líto, ale nemůžeme najít stránku, kterou hledáte.",
 
     "footer": "© 2018 - {{year}}  Kameraman a fotograf Jaroslav Vysockyj",
-    "terms_and_conditions": "Obchodní podmínky"
+    "terms_and_conditions": "Obchodní podmínky",
+    "privacy_policy": "Zásady ochrany osobních údajů"
   }
