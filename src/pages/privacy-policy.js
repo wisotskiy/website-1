@@ -1,5 +1,5 @@
 //import * as React from "react"
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { graphql } from "gatsby"
 import { useTranslation } from "react-i18next"
 import { useLocalization } from "gatsby-theme-i18n"
@@ -13,33 +13,9 @@ const PrivacyPolicy = ({ data }) => {
 
   const { t } = useTranslation()
   const { locale } = useLocalization()
-  const [article, setArticle] = useState('')
 
   const policy = data.allFile.nodes
-/*   policy.map(node => {
-    console.log(node.childMdx)
-    return node.locale === locale && setArticle(node.childMdx.body)
 
-  }) */
-/*   policy.forEach(node => {
-    node.childMdx.fields.locale === locale && setArticle(node.childMdx.body)
-  }) */
-/*   
-  
-  
-
- */
-
-/*   
-
-console.log(article) */
-/*   useEffect(() => {
-    if (policy) {
-
-    }
-  }) */
-
-console.log(policy)
   return (
     <Layout>
       <Seo title={t("privacy_policy")} description={t("privacy_policy")} />
@@ -49,26 +25,19 @@ console.log(policy)
         <div className={style.termsAndConditions}>
 
           {policy.map(el => {
-            //console.log(el.childMdx.fields.locale)
             let a = ''
             const l = el.childMdx.fields.locale
             if (l === locale) {
               a = <MDXRenderer>{el.childMdx.body}</MDXRenderer>
             }
-            console.log(l)
-            console.log(locale)
-            console.log(a)
+
             return (
               <div key={el.id} className={style.termsAndConditions}>
                 {a}
               </div>
             )
           })}
-
-        {/* <MDXRenderer>{article.body}</MDXRenderer> */}
-        {/* <MDXRenderer>{article}</MDXRenderer> */}
-          
-          
+              
           </div>
       </div>     
     </Layout>

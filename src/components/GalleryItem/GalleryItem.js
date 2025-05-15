@@ -93,7 +93,7 @@ const GalleryItem = (props) => {
             style={index >= 0 && index <= props.images.length - 1 ? {display: "flex", transition: "all 1s ease", background: "#ffffff", zIndex: 1000} : {display: "none", transition: "all 1s ease", background: "#ffffff00", zIndex: 0}}
 
             onClick={(e) => {
-                console.log(e)
+
                     e.target.localName === "div" && props.toggleIsFullImage(false)
                     }
                 }

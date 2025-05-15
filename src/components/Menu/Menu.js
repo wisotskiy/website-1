@@ -123,12 +123,6 @@ const Menu = () => {
           <li>
             <LocalizedLink to={`/`}>{t("home")}</LocalizedLink>
           </li>
-{/*           <li>
-            <LocalizedLink to={`/wedding-photos`}>{t("photo")}</LocalizedLink>
-          </li>
-          <li>
-            <LocalizedLink to={`/wedding-video`}>{t("video")}</LocalizedLink>
-          </li> */}
           <li className={style.works}>
             {t("photo")}&nbsp;&nbsp;
               <span>&#10095;
@@ -243,13 +237,6 @@ const Menu = () => {
               <li>
                 <LocalizedLink to={`/`} onClick={() => setShow(false)}>{t("home")}</LocalizedLink>
               </li>
-{/*               <li>
-                <LocalizedLink to={`/wedding-photos`}>{t("photo")}</LocalizedLink>
-              </li>
-              <li>
-                <LocalizedLink to={`/wedding-video`}>{t("video")}</LocalizedLink>
-              </li> */}
-
               <li className={style.worksMobile}>
                 {t("photo")}
                 <ul className={style.worksList}>
@@ -285,6 +272,12 @@ const Menu = () => {
                   })}     
                 </ul>
               </li> 
+
+              <li>
+                <LocalizedLink to="/photo-studio">
+                  {t("photo_studio")}
+                </LocalizedLink>
+              </li>
 
               <li>
                 <LocalizedLink to="/prices" onClick={() => setShow(false)}>{t("prices")}</LocalizedLink>

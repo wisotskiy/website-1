@@ -10,7 +10,6 @@ const ContactForm = () => {
 
     const form = useRef()
     const [isAgreed, setIsAgreed] = useState(false)
-console.log(isAgreed)
     const date = new Date()
     const options = { month: 'short', day: '2-digit', year: 'numeric' };
     const datePart = date.toLocaleDateString('en-US', options).replace(',', '');
@@ -22,11 +21,11 @@ console.log(isAgreed)
     
         emailjs.sendForm('service_1whjcvg', 'template_ifdvs0b', form.current, '5lX6XQTQUPXX91nx8')
             .then((result) => {
-                console.log(result.text)
-                console.log(form)
+                //console.log(result.text)
+                //console.log(form)
                 form.current.reset()
         }, (error) => {
-                console.log(error.text)
+                //console.log(error.text)
         })
     }
 
